@@ -1,0 +1,93 @@
+---
+title: Week 3 - Edge Formation
+sort: 3
+format: 
+  revealjs:
+    css: /resources/custom_css.css
+    theme: white
+    progress: true
+    transition: convex
+    reveal_plugins: ['notes']
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = './')
+#source("resources/preamble.R")
+library(igraph)
+library(tidygraph)
+library(ggraph)
+```
+
+
+## Today's Dad Joke
+
+One astronaut says to another, "I can’t find any milk for my coffee"
+
+<span class='fragment'>The other astronaut replies, "In space no one can, here use cream"</span>
+
+
+## Housekeeping
+
+> - Turning in R homework
+> - 3-2-1 Assignments and Discussion Questions
+> - Readings
+>   - On Brightspace
+>   - How did reading these articles go?
+>   - Using AI to help
+>   - How to read academic articles
+> - Tech use discussion
+
+## Flash presentations
+
+> - 4 minutes of prep
+> - 1-2 minutes of presentation
+> - Tell us about one edge formation process
+
+## Edge formation review
+
+> - What is an edge?
+> - What is one reason an edge might form?
+> - What is homophily?
+> - What is reciprocity?
+> - What is an transitivity?
+> - What is balance theory?
+
+## Exercise
+
+> - Draw your social network - people you consider friends
+>   - What edge formation process(es) best explain each relationship they have with you?
+>   - Are there any relationships that are not explained by these processes? 
+>   - Does your social network exhibit homophily?
+
+## Exercise
+
+> - Now draw the relationships between your friends
+> - What would our theories suggest about which new relationships are likely to form?
+> - What about which relationships are unlikely to form?
+
+
+## Edge formation review
+
+>	- What are some causes of homophily?
+> - What are foci of activity?
+> - How do ties dissolve?
+>	- What ties have you seen dissolve in your network? What type is most likely to dissolve?
+> - What is "tie maintenance" and what forms does it take?
+
+## Discussion Questions
+
+> - How do people know what position is powerful in this network? 
+> - Isomorphism
+
+## Homework review
+
+> - Installing packages vs. loading libraries
+> - .qmd files
+> - Opening folders and trusting projects
+> - R terminal vs. system terminal
+
+## Thursday
+
+> - Keep working on R Labs

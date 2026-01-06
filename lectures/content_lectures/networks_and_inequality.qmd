@@ -1,0 +1,63 @@
+---
+title: Networks and Inequality
+format: 
+  revealjs:
+    css: /resources/custom_css.css
+    theme: white
+    progress: true
+    transition: convex
+    reveal_plugins: ['notes']
+---
+# Networks and Race
+
+## Racism in America
+
+> - Overt, animus-based racism has declined a lot
+<img src='https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/POLL/9r8-rc0zn0eloptdnsbl3a.png'/>
+
+## But racial inequality is still dramatic
+
+<img src='https://www.census.gov/content/dam/Census/library/stories/2024/04/wealth-by-race/figure-1-wealth-by-race.jpg'/>
+
+## But racial inequality is still dramatic
+
+<img src='https://www.census.gov/content/dam/Census/library/stories/2024/04/wealth-by-race/figure-2-wealth-by-race.jpg' />
+
+## There is a lot of research on the causes
+
+> - Overt social, economic, and institutional racism existed until the 1960s
+>   - Slavery, Jim Crow, Redlining, GI Bill, etc.
+> - This left black Americans with less wealth, worse jobs, worse schools, etc.
+> - Our system makes some of these inequalities self-reinforcing
+>   - E.g., school funding
+
+## Social Capital is an underappreciated cause
+
+> - Social capital is our ability to access resources through our social networks
+> - Social networks are highly segregated, and so even without overt racism, people of color have less access to social capital
+> - This can include access to mentors, jobs, etc. but also money to handle unexpected expenses or to invest in a small business
+> - We can see other inequalities, but social capital is often invisible
+
+## Networks matter a lot
+
+> - In the 90s, people were given vouchers to move to lower poverty areas
+> - Chetty at al. found that children did better as adults the longer they lived in higher income / higher mobility areas
+>	- Why? One (the best!) explanation is that people gain greater social capital
+
+## Follow up study in 2022
+
+> - Measured a few markers of social capital
+> - Most important predictor of upward mobility was high "economic connectedness" of where you lived
+> - Economic connectedness was measured as the proportion of high-income people that low-income people were connected to in the area
+
+## Follow up study in 2022
+
+<img src='/lectures/class_lectures/images/chetty_EC.webp'/>
+
+
+## Takeaways
+
+> - Networks provide a hidden inertia to society, reproducing the world as it is
+> - Differences in economic capital or cultural capital are more visible
+> - Our achievements are partially a function of our undeserved social networks
+> - Worth thinking about "network equality"

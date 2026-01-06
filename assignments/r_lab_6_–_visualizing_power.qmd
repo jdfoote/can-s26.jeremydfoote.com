@@ -1,0 +1,21 @@
+---
+title: "R Lab 6 – Visualizing Power"
+date: 2025-10-27
+---
+
+
+## Video Explanation
+
+{{< video https://www.youtube.com/watch?v=l18Jd9XCAec >}}
+
+
+
+## Assignment File
+
+[Download Assignment (right-click and save)](/assignments/r_labs/lab_6_visualizing_power.qmd)
+
+
+## Example Solution
+
+[View Example Solution](/assignments/r_lab_examples/lab_6_visualizing_power.pdf)
+

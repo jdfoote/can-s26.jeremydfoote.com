@@ -1,0 +1,38 @@
+---
+title: "Week 13: Technology and networks"
+date: "2025-11-17"
+---
+
+### Tuesday
+
+**Assignment Due:**
+
+* [Reading Review](/syllabus/syllabus.qmd#reading-review-assignments)
+    * [Discussion Questions](#discussion-questions)
+
+**Readings:**
+
+* Pariser, E. [Beware Online Filter Bubbles TED talk](https://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles)
+* Fletcher, R. [The truth behind filter bubbles: Bursting some myths](https://reutersinstitute.politics.ox.ac.uk/risj-review/truth-behind-filter-bubbles-bursting-some-myths).
+* Bail, C. [Should we break our echo chambers?](https://www.youtube.com/watch?v=nwRm_ssTarE)
+* Cohen, M. [Context Collapse](https://www.psychologytoday.com/intl/blog/finding-love-the-scientific-take/202012/context-collapse)
+* Chris Bail, et al. (2018). [Exposure to opposing views on social media can increase political polarization](https://www.pnas.org/content/115/37/9216). PNAS.
+* (Optional) Kleinberg, J. (2012). [The Convergence of Social and Technological Networks](https://link-springer-com.ezproxy.lib.purdue.edu/chapter/10.1007%2F978-3-642-29952-0_8). In M. Agrawal, S. B. Cooper, & A. Li (Eds.), Theory and Applications of Models of Computation.
+
+**Lecture Video:**
+
+{{< video https://www.youtube.com/watch?v=iTiduq9GplU >}} [19:38]
+
+* Slides
+
+<iframe class='slide-deck' src="/lectures/content_lectures/networks_and_tech.html"></iframe>
+
+
+### Thursday
+
+* In class exam!
+    * [Study Guide](https://docs.google.com/document/d/1L4-7lmGYxQ6t1Qerid8Zkhh8vIacK8kUZ-EhWIjLi-Q/edit?tab=t.0)
+
+### Discussion Questions
+
+<iframe src="https://pollev-embeds.com/discourses/e5gZH9oLKLIlkWeCP5kiQ/respond" width="800px" height="600px"></iframe>

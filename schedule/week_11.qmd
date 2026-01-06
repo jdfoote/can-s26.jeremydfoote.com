@@ -1,0 +1,40 @@
+---
+title: "Week 11: Communities and Core-periphery"
+date: "2025-11-03"
+---
+
+### Tuesday
+
+**Assignment Due:**
+
+* [Reading Review](/syllabus/syllabus.qmd#reading-review-assignments)
+  * [Discussion Questions](#discussion-questions)
+* [Visualization Challenge](/assignments/Visualization-challenge.qmd)
+* Sign up for a Self Reflection Discussion [on my calendar](https://app.simplymeet.me/jeremy-foote/15min)
+  * Please prioritize office hours (Tuesdays from 2-4)
+
+**Readings:**
+
+* Girvan, M., & Newman, M. E. (2002). [Community structure in social and biological networks](https://www.pnas.org/content/pnas/99/12/7821.full.pdf). Proceedings of the National Academy of Sciences.
+* Barberá, P., Wang, N., Bonneau, R., Jost, J. T., Nagler, J., Tucker, J., & González-Bailón, S. (2015). [The critical periphery in the growth of social protests](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0143611). PLoS ONE.
+  * [Claude.ai Summary](pages/Barbera-summary.qmd)
+* (Optional) Hanneman, R. A., & Riddle, M. (2005). [Cliques and sub-groups](http://faculty.ucr.edu/~hanneman/nettext/C11_Cliques.html). In Introduction to social network methods. University of California.
+
+**Video Lecture:**
+
+{{< video https://youtu.be/7pQMUisgv1U >}} [23:15]
+
+* Slides
+
+<iframe class='slide-deck' src="/lectures/content_lectures/communities_in_networks.html"> </iframe>
+
+### Thursday
+
+**Class Schedule:**
+
+* How the Internet Works Activity
+<!-- * [R Lab 7 - Finding and visualizing groups in networks](/assignments/r_lab_7_%E2%80%93_groups_in_networks.qmd) -->
+
+### Discussion Questions
+
+<iframe src="https://pollev-embeds.com/discourses/zuGQIaekIdASj4KjqlbRS/respond" width="900px" height="600px"></iframe>

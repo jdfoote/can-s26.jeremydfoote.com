@@ -1,0 +1,9 @@
+---
+title: Final Project Rough Draft
+---
+
+Each of the final project options includes a written report. While the format of these differs somewhat, they all include both network concepts and network visualizations.
+
+This rough draft is designed to help you to get feedback before the final version is submitted. Ideally, it should be basically complete at this point. Everyone in the class will be placed in groups of ~3 people to provide feedback on each other's projects.
+
+You should submit your rough draft to Brightspace and also send it to your group members, probably through Discord.

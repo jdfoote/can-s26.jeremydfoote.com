@@ -1,0 +1,163 @@
+---
+title: Diffusion and Contagion
+format: 
+  revealjs:
+    css: /resources/custom_css.css
+    theme: white
+    progress: true
+    transition: convex
+    reveal_plugins: ['notes']
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = './')
+source("resources/preamble.R")
+set.seed(0121)
+library(igraph)
+library(tidygraph)
+library(ggraph)
+library(tidyverse)
+```
+
+## Dad Joke
+
+Interviewer: "Where do you see yourself in 5 years?"
+
+<span class='fragment'>
+Me: "Listening. I would say listening is my biggest weakness."
+</span>
+
+## Housekeeping
+
+> - Self-assessment reflections due
+>	- In-person feedback; sign up for spot on my calendar by end of next week
+> - Wisdom or Madness of Crowds simulation + R on Thursday
+
+## Upcoming Assignments
+
+> - Exam
+>	- Submit two multiple choice or short answer questions by next week
+> - Visualization Challenge due next week
+
+## Example questions
+> - What is a "multiplex" (or multidimensional) network?
+>   - A network where there are multiple types of nodes
+>   - A network with high centralization
+>   - A network with a high clustering coefficient
+>   - A network with multiple types of edges
+> - Give an example of how social capital can be exchanged for economic capital.
+
+## Plan for today
+
+> - Diffusion and contagion review
+> - Discussion questions
+> - R Review
+
+## Review Questions
+
+> - What are some things that are diffused through a social network?
+> - What is the difference between simple contagion and complex contagion?
+
+## Simple Contagion
+
+<div class="r-stack">
+
+<div class='fragment'>
+```{r, message=F}
+create_notable('zachary') |>
+  mutate(index = 1:nrow(.N())) |>
+  mutate(infected = index %in% c(2,3)) |>
+  ggraph() +
+  geom_edge_fan(width = .1) + 
+  geom_node_point(aes(color = infected), size = 3) +
+  theme_graph()
+```
+</div>
+
+<div class='fragment'>
+```{r, message=F}
+create_notable('zachary') |>
+  mutate(index = 1:nrow(.N())) |>
+  mutate(infected = index %in% c(2,3)) |>
+  mutate(neigh_2 = index %in% neighbors(.G(), 2),
+         neigh_3 = index %in% neighbors(.G(), 3)) |>
+  mutate(infected = infected | neigh_2 | neigh_3) |>
+  ggraph() +
+  geom_edge_fan(width = .1) + 
+  geom_node_point(aes(color = infected), size = 3) +
+  theme_graph()
+```
+</div>
+
+</div>
+
+
+## Complex Contagion
+
+<div class="r-stack">
+
+<div class='fragment'>
+```{r, message=F}
+create_notable('zachary') |>
+  mutate(index = 1:nrow(.N())) |>
+  mutate(infected = index %in% c(2,3)) |>
+  ggraph() +
+  geom_edge_fan(width = .1) + 
+  geom_node_point(aes(color = infected), size = 3) +
+  theme_graph()
+```
+</div>
+
+<div class='fragment'>
+```{r, message=F}
+create_notable('zachary') |>
+  mutate(index = 1:nrow(.N())) |>
+  mutate(infected = index %in% c(2,3)) |>
+  mutate(neigh_2 = index %in% neighbors(.G(), 2),
+         neigh_3 = index %in% neighbors(.G(), 3)) |>
+  mutate(infected = infected | (neigh_2 & neigh_3)) |>
+  ggraph() +
+  geom_edge_fan(width = .1) + 
+  geom_node_point(aes(color = infected), size = 3) +
+  theme_graph()
+```
+</div>
+
+</div>
+
+## Review Questions
+
+> - What is an example of simple contagion?
+> - What is an example of something that spreads via complex contagion?
+> - What's an example of when you've been influenced?
+> - How does tie strength relate to contagion?
+> - What was the argument of the "Special People" chapter?
+
+## R Review
+
+
+## Discussion Questions
+
+> - If there was a world where we didn't HAVE to have special people or things, would there be a "best" or "most popular" of everything? Or would we simply just have certain paintings, people, and places that are better than others but not necessarily labeled as such?
+> - If what we do is influenced by what others do, how can we stay secure in our individuality in social networks?
+> - Why is it still so difficult to anticipate what will become popular or go viral when we have so much data now?
+
+## Discussion Questions
+
+> - Have marketers used the findings of the Special People chapter? If not, why not?
+> - How can we avoid being led astray by our networks?
+
+## Discussion Questions
+
+> - What do we mean by influencers?
+> - What do we mean by post hoc explanations?
+> - How can we design better decision-making systems, in government, business, or media, that limit the errors caused by overreliance on "common sense" explanations?
+> - Big data and predictability
+
+## Wisdom / Madness of Crowds
+
+> - How does the majority illusion work?
+> - How is this related to the spiral of silence?
+> - Why is it tough for beliefs to spread across bridges?
+> - What is the role of people who aren't easily influenced in contagions?

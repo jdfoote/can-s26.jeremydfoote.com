@@ -1,0 +1,43 @@
+---
+title: "Week 14: Networks and Equality"
+date: "2025-12-01"
+---
+
+
+### Tuesday
+
+**Assignment Due:**
+
+* [R Lab 8 - Calculating network statistics](/assignments/r_lab_8_%E2%80%93_network_stats.qmd)
+* [Reading Review](/syllabus/syllabus.qmd#reading-review-assignments)
+    * [Discussion Questions](#discussion-questions)
+
+**Readings:**
+
+* Fernandez, R. M., & Fernandez-Mateo, I. (2006). [Networks, Race, and Hiring](https://journals-sagepub-com.ezproxy.lib.purdue.edu/doi/pdf/10.1177/000312240607100103). American Sociological Review, 71(1), 42–71. **Read the introduction (pp. 42–47) and the Summary and Conclusion (pp. 65–67)**
+* Chetty, R., Jackson, M.O., Kuchler, T. et al. [Social capital I: measurement and associations with economic mobility](https://web.archive.org/web/20250106124751/https://www.nature.com/articles/s41586-022-04996-4). Nature 608, 108–121 (2022). 
+* (Optional) Sunstein, C. R. (1991). Why markets don’t stop discrimination. Social Philosophy and Policy, 8(02), 22–37. [https://doi.org/10.1017/S0265052500001114](https://doi.org/10.1017/S0265052500001114)
+
+**Lecture video:**
+
+{{< video https://www.youtube.com/watch?v=3OcNPd42ZJY >}} [12:50]
+
+* Slides
+
+<iframe class='slide-deck' src="/lectures/content_lectures/networks_and_inequality.html"></iframe>
+
+
+### Thursday
+
+**Assignments Due:**
+
+* [Rough draft of Final Project](/assignments/final_project/rough-draft.qmd) on Brightspace and sent to your "peers"
+* Saturday: Feedback sent back to your "peers"
+
+**Class Schedule:**
+
+* No class - work on Final Project
+
+### Discussion Questions
+
+<iframe src="https://pollev-embeds.com/discourses/kWUGIjNfOXzbbCskco0Sx/respond" width="900px" height="600px"></iframe>

@@ -1,0 +1,27 @@
+---
+title: "Week 15: Class Presentations and Final Projects"
+date: "2025-12-08"
+---
+
+### Tuesday
+
+**Assignment Due:**
+
+* Saturday: Feedback on final project to peers
+* Tuesday / Thursday: Final Project Presentation
+* Friday: [Final Project](/assignments/final_project/Final-project.qmd) on Brightspace
+* Friday: [Final Self Assessment Reflection](/assignments/Final-Self-Assessment-Reflection.qmd) on Brightspace
+
+**Class Schedule:**
+
+* Final project presentations
+
+### Thursday
+
+**Class Schedule:**
+
+* Final project presentations
+
+**Resources:**
+
+* (Optional) [Advanced network visualizations in R](/assignments/advanced_visualizations.qmd)

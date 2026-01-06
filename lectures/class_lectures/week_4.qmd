@@ -1,0 +1,89 @@
+---
+title: Week 4 - Small Group Networks
+sort: 4
+format: 
+  revealjs:
+    css: /resources/custom_css.css
+    theme: white
+    progress: true
+    transition: convex
+    reveal_plugins: ['notes']
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = './')
+#source("resources/preamble.R")
+library(igraph)
+library(tidygraph)
+library(ggraph)
+```
+
+
+## Today's Dad Joke
+
+My neighbor had the nerve to ring my doorbell at 3 o'clock in the morning.
+
+<span class='fragment'>
+Luckily I was still up playing the drums.
+</span>
+
+## Housekeeping
+
+> - Practice asking a question on Discord
+> - Which week are we on?
+
+## Housekeeping
+
+> - Self Assessment Reflections
+> 	- Goals for the class
+> 	- Feedback for me
+> - I will also
+> 	- Review the report on participation
+> 	- Review your HW
+> 	- Review your 3-2-1s
+
+## Homework review
+
+## What concepts are confusing?
+
+> -In R, what are the main differences between a tibble (from the tidyverse) and a standard data frame, and when should I use one over the other?
+
+## Review Questions
+
+> - What is centralization?
+> - When is a centralized network better?
+> - What does "embedded" mean in the context of a network?
+> - What is "transactive memory"?
+
+## Review Questions
+
+> - According to the Informal Networks article, why is it important to identify different kinds of networks?
+> - What sorts of information can be learned from an advice network?
+>	- A trust network?
+> - Have you thought about the groups that you are in from a network perspective? What insights have you had?
+
+## Technology break!
+
+## Review Questions
+
+> - What is hierarchy?
+> - What is a core-periphery structure?
+> - What is a structural hole?
+> - What is multiplexity?
+
+## Discussion Questions
+
+> - How can managers or researchers measure networks in real time to avoid relying only on static snapshots?
+> - Degree centrality vs. closeness centrality
+> - Why are they called "informal networks" if it's still people you work with?
+> - Are strong ties always better than weak ties for productivity?
+> - How common is it for businesses to utilize network mapping?
+> - What are the downsides of relying on informal networks to make decisions?
+
+
+## Thursday
+
+- R Review
+- Work on R Lab 3 - Mutating and filtering

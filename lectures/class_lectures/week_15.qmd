@@ -1,0 +1,47 @@
+---
+title: "Networks and Inequality"
+format: 
+  revealjs:
+    css: /resources/custom_css.css
+    theme: white
+    progress: true
+    transition: convex
+    reveal_plugins: ['notes']
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = './')
+source("resources/preamble.R")
+set.seed(0121)
+library(igraph)
+library(tidygraph)
+library(ggraph)
+```
+
+## Today's Dad Joke
+
+How can you identify a dogwood tree?
+
+<p class='fragment'>
+By its bark
+</p>
+
+## Housekeeping
+
+> - Get feedback to your peers! (And upload to Brightspace)
+> - Final draft DUE December 11
+> - Self Assessment Reflection
+> - Feedback for me (Purdue / Google Form / email / Discord)
+> - Sign up to meet with me (virtually is great)
+> - Presentations on Thursday
+
+## Discussion
+
+
+
+## Networks and racism
+
+> - How can networks produce or maintain racially biased outcomes?
+> - How does this tie into ideas about social/cultural/economic capital?
+> - How can we use what we know about networks to reduce racial inequality?

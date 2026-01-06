@@ -1,0 +1,30 @@
+---
+title: "Week 12: Collective behavior"
+date: "2025-11-10"
+---
+
+### Tuesday
+
+**Assignment Due:**
+
+* [R Lab 7 - Finding and visualizing groups in networks](/assignments/r_lab_7_%E2%80%93_groups_in_networks.qmd)
+* Submit two exam questions on Brightspace
+* [Reading Review](/syllabus/syllabus.qmd#reading-review-assignments)
+    * [Discussion Questions](#discussion-questions)
+
+**Readings:**
+
+* Woolley, A. et al. (2010). [Evidence for a collective intelligence factor in the performance of human groups](https://www.science.org/doi/full/10.1126/science.1193147). Science, 330(6004), 686-688.
+* Becker, J., Brackbill, D., & Centola, D. (2017). [Network dynamics of social influence in the wisdom of crowds](https://doi.org/10.1073/pnas.1615978114). Proceedings of the National Academy of Sciences, 201615978.
+* [Video discussion with Dr. Becker](https://youtu.be/sdI-b5mfjH4) (watch after reading paper)
+* (Optional) [Optimizing Collective Intelligence with Anita Woolley](https://www.youtube.com/watch?v=-qg4tS1-8qY)
+
+* [Book Guessing Form](https://forms.gle/4UY897MWH5FbFgFt7) (in-class activity)
+
+### Thursday
+
+* Exam Review
+
+### Discussion Questions
+
+<iframe src="https://pollev-embeds.com/discourses/vdKmXYn8QtlscoGdLTk9z/respond" width="900px" height="600px"></iframe>

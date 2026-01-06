@@ -1,0 +1,21 @@
+---
+title: "R Lab 3 – Mutating and Filtering"
+date: 2025-09-29
+---
+
+
+## Video Explanation
+
+{{< video https://youtu.be/1gEmjJTdcL4 >}}
+
+
+
+## Assignment File
+
+[Download Assignment (right-click and save)](/assignments/r_labs/lab_3_mutating_and_filtering.qmd)
+
+
+## Example Solution
+
+[View Example Solution](/assignments/r_lab_examples/lab_3_mutating_and_filtering.pdf)
+

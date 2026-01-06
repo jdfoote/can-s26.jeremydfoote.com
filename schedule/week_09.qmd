@@ -1,0 +1,43 @@
+---
+title: "Week 9: Scale-free networks and the friendship paradox"
+date: "2025-10-20"
+---
+
+### Tuesday
+
+**Assignment Due:**
+
+* [Final Project Idea](/assignments/final_project/project-idea.qmd)
+* Troubled Lands Reflection
+* [Reading Review](/syllabus/syllabus.qmd#reading-review-assignments)
+    * [Discussion Questions](#discussion-questions)
+
+**Readings:** 
+
+* Feld, Scott L. (1991), [Why your friends have more friends than you do](https://www-jstor-org.ezproxy.lib.purdue.edu/stable/2781907). American Journal of Sociology, 96 (6): 1464–1477. [https://doi.org/10.1086%2F229693](https://doi.org/10.1086%2F229693)
+* [Early Detection of an Outbreak using the Friendship Paradox](https://www.youtube.com/watch?v=tP2MLp7GL7Q)
+* [Networks are everywhere with Albert-László Barabási](https://www.youtube.com/watch?v=c867FlzxZ9Y)
+
+* (Optional) Christakis, N. A., & Fowler, J. H. (2010). Social Network Sensors for Early Detection of Contagious Outbreaks. PLOS ONE, 5(9), e12948. [https://doi.org/10.1371/journal.pone.0012948](https://doi.org/10.1371/journal.pone.0012948)
+
+
+**Lecture Video:**
+
+* Scale-free networks and the Friendship Paradox [18:21]
+
+{{< video https://youtu.be/3VfZGUt_tCM >}}
+
+* Slides
+
+<iframe class="slide-deck" src="/lectures/content_lectures/scale_free_and_friend_paradox.html"></iframe> 
+
+### Thursday
+
+
+**Class Schedule:**
+
+* [Six Degrees of Wikipedia Activity](/assignments/Six-Degrees-of-Wikipedia-Activity.qmd)
+
+### Discussion Questions
+
+<iframe src="https://pollev-embeds.com/discourses/efQSogKsNPDm9exEwkv1l/respond" width="900px" height="600px"></iframe>

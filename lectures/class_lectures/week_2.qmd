@@ -1,0 +1,100 @@
+---
+title: Week 2 - Network Data and Network Types
+sort: 2
+format: 
+  revealjs:
+    css: /resources/custom_css.css
+    theme: white
+    progress: true
+    transition: convex
+    reveal_plugins: ['notes']
+---
+
+## Today's Dad Joke
+
+What do you call a chess club bragging about their recent win in a hotel lobby?
+
+<span class='fragment'>Chess nuts boasting in an open foyer.</span>
+
+
+
+## Housekeeping
+
+> - Intro survey
+> - Discussion questions
+> - Homework 1
+>	- All were due Monday at noon
+
+## 3-2-1 Example
+
+![](./images/321-example.png)
+
+
+## Schedule
+
+> - Housekeeping / Announcements (5-10)
+> - Discussion and review (35-45)
+> - Consolidation and Confusion (10-15)
+>	- Response to needs
+>	- Discuss at end of class
+
+
+## Review
+
+> - Conceptual review every Tuesday
+>	- Encouragement to be prepared
+>	- Time to identify confusion - it's OK to be confused!
+> - Homework Review
+> - Discussion questions review
+
+# Homework and Reading Review
+
+## Class Questions
+
+> - What do you want to talk about today?
+
+## Basic Concepts
+
+> - What is a node?
+> - What is an edge?
+> - What is the "individual" perspective of data and how does it differ from a network perspective?
+
+## Network Representations
+
+```{r, message=F,warning=F,echo=F}
+library(igraph)
+set.seed(24)
+G = erdos.renyi.game(5, .4)
+plot(G)
+```
+
+> - What is the edgelist of this graph?
+> - What is the matrix representation of this graph?
+
+## Questions from homework?
+
+## Questions from 3-2-1s
+
+> - Is there only one way to graph social connections? So far as we have seen, there has only been one method to graph social network connections, using ties and nodes; are there other ways?
+> - If you didn't know whether a network was directed or not, could you know just by looking at the edge list?
+> - When would be the case to use a edge list compared to an adjacency list?
+
+## Questions from 3-2-1s
+
+> - What does it mean for a network to be projected?
+> - How do researchers deal with multiplex networks? Do they analyze each relation separately, or is there a way to combine them meaningfully?
+> - Adjacency lists vs. edge lists vs. matrices
+
+## Discussion Questions
+
+
+## Consolidation
+
+> - What were some of the key ideas?
+> - What are you thinking differently about now?
+> - What are remaining questions/confusions?
+
+## Thursday
+
+> - Take ~ an hour to try to install everything, work on R Lab 1
+> - Mostly working on R Lab together

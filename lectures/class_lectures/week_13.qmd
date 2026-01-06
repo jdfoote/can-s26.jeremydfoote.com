@@ -1,0 +1,95 @@
+---
+title: Week 13 - Networks and Technology
+format: 
+  revealjs:
+    css: /resources/custom_css.css
+    theme: white
+    progress: true
+    transition: convex
+    reveal_plugins: ['notes']
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = './')
+source("resources/preamble.R")
+set.seed(0121)
+library(igraph)
+library(tidygraph)
+library(ggraph)
+library(tidyverse)
+#df = read_csv('~/Teaching/communication_and_networks/week_13/lecture/wisdom_of_crowds_activity.csv')
+```
+
+## Dad Joke
+
+Why did the man get fired from the calendar factory?
+
+<p class='fragment'>
+He took too many days off!
+</p>
+
+## Housekeeping
+
+> - EXAM ON THURSDAY!!
+> - Sign up for a time to discuss self-assessment and final project
+> - Final projects are due in 2 weeks!
+>   - Rough draft to 2 peers on December 4
+>   - Feedback due by Saturday (December 6)
+> - Presentations Tuesday and Thursday (December 9 and 11)
+
+
+## Review Questions
+
+> - What is the difference between a filter bubble and an echo chamber?
+> - How do echo chambers relate to social influence?
+> - What did Chris Bail et al.'s research find about breaking out of echo chambers?
+> - How has the internet changed social networks? What are the most important positives and negatives?
+> - How do you think AI might change social networks?
+
+## Review Questions
+
+> - What is context collapse?
+> - How does context collapse relate to network principles we have discussed?
+
+## Review Questions
+
+> - Does technology help to explain the rise of extreme beliefs? (e.g., QAnon)
+> - How might we use social networks to combat misinformation and extreme beliefs?
+> - Which of your beliefs have changed? What changed them?
+
+<!--
+## Wisdom and Madness of Crowds
+
+## Questions
+
+> - What is the "majority illusion"?
+> - How does the majority illusion relate to the friendship paradox?
+> - Majority illusion from Nicky Case activity?
+
+## Discussion Questions
+
+## Housekeeping
+
+> - Exam is due on Thursday before class
+> - Under quizzes on Brightspace
+> - Remember, it will give you new random questions if you come back
+> - For the R question, turn in what you get even if you don't get the whole thing right
+> - Wisdom or Madness of Crowds on Thursday
+> - Apologies about schedule confusion!!!
+> - No class on Tuesday - discussion on Discord
+>   - Try to be online during class time
+
+
+## Upcoming Assignments
+
+> - R Lab 8 - November 28
+> - Final project rough draft (December 1)
+> - Peer feedback (Due December 6)
+
+## Review Questions
+
+> - What is "collective behavior"?
+> - What does collective behavior have to do with networks?
+
+-->

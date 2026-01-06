@@ -1,0 +1,16 @@
+---
+title: "NotebookLM as a study partner"
+---
+
+For this assignment, I created a [NotebookLM notebook](https://notebooklm.google.com/notebook/366fc620-b1ad-46b5-afc0-c74e4a619323) with all of the readings and lecture slides for the course. 
+
+I want you to have a conversation with the AI.
+
+1. Ask it to summarize one of the readings.
+2. Look up something really specific from one of the readings, and see if it is correct. (e.g., "What percent of friendships are not reciprocal in the Pentland reading?")
+3. Ask it to explain a concept that you found confusing.
+4. Ask it about the relationship between two concepts (e.g., "What does Burt's concept of structural holes have to do with Granovetter's concept of weak ties?")
+5. Ask it to quiz you on the readings. (e.g., "Quiz me on the key concepts from the Katz et al reading.")
+6. Ask it to give you feedback on an idea you have for your final project.
+
+Once you have done this, write a brief reflection (1-2 paragraphs) on your experience. What worked well? What didn't? Were there things that the AI got wrong? How does this compare to other AI tools you have used?

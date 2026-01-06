@@ -1,0 +1,13 @@
+---
+title: Project Idea
+---
+
+Some of the projects require ongoing work during the semester, such as doing a network-based intervention or gathering network data.
+
+To help you to be well-prepared for the final project, you should start thinking about your project idea early. For this assignment, you will submit a brief (~1 page) description of your project idea. This should include the following:
+
+- Which project option you are planning to do
+- A brief description of the data you will use
+- A brief description of the network concepts you will use
+
+Turn this in on Brightspace.

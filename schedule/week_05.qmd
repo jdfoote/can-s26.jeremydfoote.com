@@ -1,0 +1,43 @@
+---
+title: "Week 5: Ego networks and network perception"
+date: "2025-09-22"
+---
+
+### Tuesday
+
+**Assignment Due:**
+
+* [Reading Review Assignments](/syllabus/syllabus.qmd#reading-review-assignments)
+  * Post and vote on [Discussion Questions](#discussion-questions)
+* Turn in your [Self Assessment Reflection](/assignments/Self-Assessment-Reflection.qmd) on Brightspace
+
+**Readings:**
+
+* Hanneman, R. A., & Riddle, M. (2005). Introduction to social network methods. University of California. ([Chapter 9](https://faculty.ucr.edu/~hanneman/nettext/C9_Ego_networks.html)) - Just read the first 2 sections - Introduction and Ego Network Data
+* Marsden, P. V. (1987). [Core Discussion Networks of Americans](https://www-jstor-org.ezproxy.lib.purdue.edu/stable/2095397). American Sociological Review, 52(1), 122–131. 
+  * [Claude.ai summary](./pages/marsden-core-summary.qmd)
+* Pentland, A.S. (2016). [Research: You Have Fewer Friends than You Think](https://web.archive.org/web/20230604023300/https://hbr.org/2016/05/research-you-have-fewer-friends-than-you-think). (2016, May 12). Harvard Business Review. 
+* Smith, E. B., Menon, T., & Thompson, L. (2012). [Status Differences in the Cognitive Activation of Social Networks](https://pubsonline-informs-org.ezproxy.lib.purdue.edu/doi/full/10.1287/orsc.1100.0643). Organization Science, 23(1), 67–82. 
+  * [Claude.ai summary](./pages/smith-status-summary.qmd)
+
+**Lecture Video:**
+
+{{< video https://www.youtube.com/watch?v=c80su-DECKA >}}
+
+* Slides
+
+<iframe class='slide-deck' src="/lectures/content_lectures/ego_nets.html"></iframe>
+
+
+### Thursday
+
+**Class Schedule:**
+
+* [Ego Network Activity](/assignments/ego_networks_activity.qmd)
+* Finish [R Lab 3 - Mutating and filtering](/assignments/r_lab_3_%E2%80%93_mutating_and_filtering.qmd) and start on [R Lab 4 - Intro to ggraph](/assignments/r_lab_4_%E2%80%93_intro_to_ggraph.qmd)
+
+
+
+### Discussion Questions
+
+<iframe src="https://pollev-embeds.com/discourses/KP6o8h3j81AIXoXgbssDe/respond" width="900px" height="600px"></iframe>

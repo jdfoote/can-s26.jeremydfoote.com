@@ -1,0 +1,42 @@
+---
+title: "Week 4: Small group networks"
+date: "2025-09-15"
+---
+
+### Tuesday
+
+**Assignment Due:**
+
+* [Reading Review Assignments](/syllabus/syllabus.qmd#reading-review-assignments)
+* [R Lab 1](/assignments/r_lab_1_-_installation.qmd)
+* [R Lab 2 - Creating Networks](/assignments/r_lab_2_%E2%80%93_creating_networks.qmd)
+
+
+**Readings:** 
+
+* Krackhardt, D., & Hanson, J. R. (1993). [Informal networks: The company behind the chart](https://web.archive.org/web/20230224144321/https://hbr.org/1993/07/informal-networks-the-company-behind-the-chart). Harvard business review, 71(4), 104-111.
+* Katz, N., Lazer, D., Arrow, H., & Contractor, N. (2004). [Network theory and small groups](https://web.archive.org/web/20240429053913/http://www.davidlazer.com/sites/default/files/21%20Lazer_Katz_Small_Group.pdf). Small Group Research, 35(3), 307–332.
+
+**Lecture video:**
+
+{{< video https://www.youtube.com/watch?v=uraDLo3caXc >}} [14:43]
+
+* Slides
+
+<iframe class='slide-deck' src="/lectures/content_lectures/week_4_small_groups.html"></iframe>
+
+
+**Concepts:**
+
+* Informal networks
+* Networks and group outcomes
+
+### Thursday
+
+* If needed, finish R Labs 1/2 
+* Start [R Lab 3 - Mutating and filtering](/assignments/r_lab_3_%E2%80%93_mutating_and_filtering.qmd)
+
+
+### Discussion Questions
+
+<iframe src="https://pollev-embeds.com/discourses/AkMvK89Gda3LtwriNTeUO/respond" width="900px" height="600px"></iframe>

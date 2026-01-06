@@ -1,0 +1,95 @@
+---
+title: Weak Ties and Small Worlds
+format: 
+  revealjs:
+    css: /resources/custom_css.css
+    theme: white
+    progress: true
+    transition: convex
+    reveal_plugins: ['notes']
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = './')
+source("resources/preamble.R")
+set.seed(0121)
+library(igraph)
+library(tidygraph)
+library(ggraph)
+```
+
+## Dad Joke
+
+My wife asked me to put ketchup on the shopping list.
+
+<span class='fragment'>
+Now I can't read it at all!
+</span>
+
+## Housekeeping
+
+> - Put questions on the discussion board!
+> - Final project idea due next week
+> - Social Search assignment due October 27
+>	  - Try to find someone with driver's license from HI
+>	  - No group texts
+>	  - Diagram search network
+>	  - Instructions on website
+
+## Also upcoming
+
+> - Visualization Challenge
+>	  - Start from existing dataset (Dutch school student behavior or Harry Potter)
+>	  - Come up with a question
+>	  - Create a network visualization that helps to answer that question
+>	  - Working in pairs is great
+
+## Anatomy of ggraph
+
+<pre>
+
+<span class='fragment highlight-current-red' data-fragment-index="1">G |> </span>
+<span class='fragment highlight-current-red' data-fragment-index="2">activate(nodes) |> </span>
+<span class='fragment highlight-current-red' data-fragment-index="3">mutate(centrality = centrality_eigen()) |> </span>
+<span class='fragment highlight-current-red' data-fragment-index="4">ggraph(layout = 'kk') + </span>
+<span class='fragment highlight-current-red' data-fragment-index="5">geom_edge_fan</span><span class='fragment highlight-current-red' data-fragment-index="6">(aes(width=weight)</span>, <span class='fragment highlight-current-red' data-fragment-index="7">color = 'gray'</span>) + 
+<span class='fragment highlight-current-red' data-fragment-index="8">geom_node_point(aes(size=centrality), color = 'gold')</span>
+
+</pre>
+
+<div class="r-stack">
+<p class="fragment fade-in-then-out" data-fragment-index="1"> Loads the graph, which is stored as the variable `G` (the `|>` sends the output to the next line)</p>
+<p class="fragment fade-in-then-out" data-fragment-index="2"> Selects the nodes "spreadsheet" to edit. To activate the edges, run `activate(edges)`</p>
+<p class="fragment fade-in-then-out" data-fragment-index="3"> Calculates the eigenvector centrality and saves it as a new column in the nodes spreadsheet. Note that we keep using `|>` until we get to `ggraph()`</p>
+<p class="fragment fade-in-then-out" data-fragment-index="4"> Tells R we want to take the network and make a plot from it. This is where we set the layout</p>
+<p class="fragment fade-in-then-out" data-fragment-index="5"> Remember to add edges first.</p>
+<p class="fragment fade-in-then-out" data-fragment-index="6"> The first argument is the "aesthetic mapping" - this maps aspects of the plot to variables in your data. In this case, we change the width of the edges based on the variable "weight", which must be in our edges "spreadsheet"</p>
+<p class="fragment fade-in-then-out" data-fragment-index="7"> We can also change the look of the plot universally. These options go _outside_ of `aes()`</p>
+<p class="fragment fade-in-then-out" data-fragment-index="8"> This code does similar operations to the nodes. It changes the size based on the centrality (which we calculated and defined in line 3) and changes the color of all nodes to `gold`</p>
+
+</div>
+
+## Review Questions
+
+> - What is a "path"? What is the "path length" of a path?
+> - What is the "geodesic distance" or "diameter" of a network?
+> - What is triadic closure?
+> - Why would we expect networks with high triadic closure to have high geodesic distance?
+
+## Review Questions
+
+> - What was the Travers and Milgram experiment?
+> - How can we have such high triadic closure but still have short path lengths? What was the key insight from Watts and Strogatz?
+> - What does this have to do with Granovetter (weak ties)?
+
+## Questions from 3-2-1s
+
+> - What is a "groupy" network?
+> - How do "rewirings" work?
+> - How does gender relate to network distance?
+> - Social media and small worlds
+> - How do small-world dynamics and the strength of weak ties shape opportunities, inequality, and information flow in today's hyperconnected society?
+
+
+## R Co-working time

@@ -1,0 +1,11 @@
+---
+title: Peer Feedback
+---
+
+Write a ~1 page response for each of the rough drafts from your group members. For each response, you should provide feedback on the following:
+
+1. How well does the paper explain the goals of the project?
+2. How well does the paper incorporate network concepts?
+3. Are the visualizations clear, informative, and professional-looking? Do they help to further the arguments of the paper?
+
+You can also provide feedback on other aspects of the paper, such as the writing style, organization, or any other aspects that you think could be improved or that you think are particularly strong.

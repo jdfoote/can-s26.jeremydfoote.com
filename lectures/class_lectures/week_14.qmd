@@ -1,0 +1,90 @@
+---
+title: Week 14 - Networks and Inequality
+format: 
+  revealjs:
+    css: /resources/custom_css.css
+    theme: white
+    progress: true
+    transition: convex
+    reveal_plugins: ['notes']
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = './')
+source("resources/preamble.R")
+set.seed(0121)
+library(igraph)
+library(tidygraph)
+library(ggraph)
+```
+
+## Today's Dad Joke
+
+Within minutes, the detective knew exactly what the murder weapon was.
+
+<span class='fragment'>
+It was a brief case.
+</span>
+
+## Housekeeping
+
+> - Final project schedule
+>   - Rough draft on Thursday
+>   - Peer feedback by Saturday
+>   - Presentations next Tuesday and Thursday
+>   - Final report due on December 12
+> - May want to look at the Advanced R Rmd file (Week 15 on the schedule)
+> - No class on Thursday - work on final project
+
+
+## Review Questions
+
+> - What are some mechanisms by which networks can produce inequality?
+> - What do Fernandez and Fernandez-Mateo mean by "wrong networks"?
+> - What are some ways that networks can help reduce inequality?
+> - What social, political, or structural barriers might be preventing efforts to increase cross-class interactions?
+
+## Review Questions
+
+> - What approaches could increase cross-class and cross-race relationships?
+> - How do we balance the benefits of more cross-class ties with people's freedom to choose their own friends and communities?
+> - If someone from a high-income area moved to a low-income area, does that decrease their social capital, or does it benefit those around them and raise others' social capital? 
+> - What are the downsides of these approaches?
+
+## Debate
+
+> - Proposition: Economic outcomes are primarily driven by individual effort and ability, not social networks or structures.
+
+## R Lab 8 Review
+
+> - Tibbles
+> - ggplot
+
+<!--
+## Review Questions
+
+> - What is a public/collective good?
+> - Why do collective goods often fail?
+> - How can networks help people to collaborate and solve collective goods problems?
+> - What is "transactive memory"?
+
+<aside class='notes'>
+Rumors and defection
+
+Transactive memory
+
+Shared mental models
+</aside>
+
+## Review Questions
+
+> - What are some reasons that online collaboration works?
+
+
+## Discussion Questions
+
+
+## Exam Review
+
+-->

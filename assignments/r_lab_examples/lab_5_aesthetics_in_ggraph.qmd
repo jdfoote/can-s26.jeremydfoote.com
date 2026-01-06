@@ -1,0 +1,205 @@
+---
+title: 'Aesthetics in ggraph'
+author: "Dr. Foote's Example"
+format: pdf
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T)
+knitr::opts_knit$set(root.dir = './', warn=F, message=F)
+library(igraph)
+library(tidygraph)
+library(ggraph)
+library(tidyverse)
+set_graph_style(family='sans') # This sets the default style to the graph style
+```
+
+
+## Two types of aesthetics
+
+There are two main types of "aesthetics" in `ggraph`: changes that apply to all of the nodes/edges, and changes that differ based on some attribute of the nodes/edges.
+
+For this tutorial, we'll be visualizing data from a 1990 paper on the French financial elite (`ffe`) in the `networkdata` package.
+
+Let's load the data as a `tbl_graph`
+
+```{r}
+library(networkdata)
+
+G <- ffe_friends |> as_tbl_graph()
+```
+
+Now, let's see what it looks like it our basic `ggraph` plot.
+
+```{r}
+G |>
+  ggraph() +
+  geom_edge_fan() + 
+  geom_node_point()
+```
+
+## General aesthetics
+
+We've already learned about the first kind of aesthetics---general aesthetics that apply to the whole graph. Things like changing the size of the nodes or the color of the edges.
+
+For example, this changes the shape of the nodes to triangles and makes them a bit bigger.
+
+```{r}
+G |>
+  ggraph() +
+  geom_edge_fan() + 
+  geom_node_point(shape='triangle', size = 3)
+```
+
+
+## "Mapping" aesthetics
+
+The second type of aesthetics "maps" some aspect of the data to some aspect of the visualization. For example, we might color nodes differently based on their major or size them differently based on their centrality.
+
+Let's start by figuring out what the attributes of the nodes are in this data.
+
+```{r}
+G
+```
+
+This is rich data! There are 26 different variables, some of which are clear (e.g, `birthdate`) and some of which are confusing (e.g., `topboards` or `igyear`). Let's choose one and visualize it.
+
+Usually, you would want to be guided by a question about the data which would inform your visualizations. As our question, let's look into whether people form friendships across religions. Let's visualize different religions as different shapes.
+
+To do that, we "map" the shape of the nodes to the `religion` variable. The syntax to do this is `aesthetic=column name`. So, to change the shape based on the data in the religion column, it's `shape = religion`. We put that whole thing in `aes` (which stands for mapping aesthetic), and put it into the `geom_node_point` function.
+
+The key idea here is that things outside of `aes()` apply to all nodes or all edges, while things inside of `aes()` apply to nodes or edges differently based on some attribute of the data.
+
+```{r}
+G |>
+  mutate(religion = as_factor(religion)) |>
+  ggraph() +
+  geom_edge_fan() + 
+  geom_node_point(aes(shape=religion), size = 3)
+```
+
+Note the line `mutate(religion = as_factor(religion))` Try commenting out that line and running the code again. 
+
+You should get an error that is something like `A continuous variable can not be mapped to shape`. This is saying that in this data `religion` is a number and it doesn't make much sense to map a number to a shape, because usually numbers are ordered while shapes are unordered. So, we have to add the `mutate` step to change the `religion` variable type using `as_factor` which changes how R sees it from a number to a `factor`---in other words, a category (which is what religion really is, anyway!).
+
+## Edge aesthetics
+
+We can also map the edge aesthetics to variables from our edgelist spreadsheet. The most common approaches are to map the type of the edge to color and the weight of the edge to the `width`, `color`, or `alpha` of the edge.
+
+Looking at our data, the edges don't have weights, so let's load in a dataset that does. The code below loads the fourth network from the `animal_13` data---edges represent how long ants spent near each other---and colors the edges based on their weight.
+
+```{r}
+
+ants <- animal_13[[4]] |> as_tbl_graph()
+
+ants |>
+  ggraph() +
+  geom_edge_fan(aes(color=weight)) + 
+  geom_node_point()
+```
+
+
+## Exercises
+
+1. Load the `G` graph and change the width of the edges to .5 and their color to purple.
+
+```{r echo=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+G |>
+  ggraph() +
+  geom_edge_fan(color='purple', width=.5) + 
+  geom_node_point()
+
+```
+
+2. Load G and map the color of the nodes to `religion`, and the shape to `university`. (Hint: `as_factor`)
+
+```{r}
+# Your code here
+G |>
+  mutate(university = as_factor(university)) |>
+  mutate(religion = as_factor(religion)) |>
+  ggraph() +
+  geom_edge_fan() + 
+  geom_node_point(aes(shape=university, color=religion), size = 3)
+```
+
+
+3. Go back to your code from Lab 3 when we learned about `mutate` and figure out how to calculate the degree centrality for our network; save the centrality in a column called `degree` and change the `size` of nodes based on the `degree`.
+
+```{r}
+# Your code here
+G |>
+  mutate(degree = centrality_degree()) |>
+  ggraph() +
+  geom_edge_fan() + 
+  geom_node_point(aes(size=degree))
+
+
+```
+
+4. Load the `bkfrab` dataset (also from `networkdata`, so load it in the same way as the `ffe_friends` data above). This records how often pairs of subjects were seen talking to each other in a fraternity. Map the `alpha` of the edge to the `weight` in the `edges` dataframe.
+
+Hint: Remember to use `as_tbl_graph` to change the network type.
+
+```{r}
+# Your code here
+bkfrab <- networkdata::bkfrab |> as_tbl_graph()
+bkfrab |>
+  ggraph() +
+  geom_edge_fan(aes(alpha=weight)) +
+  geom_node_point()
+
+```
+
+5. When we look at the `bkfrab` data, there are a lot of nodes with edge weight 10. Filter to just the edges whose weight is greater than 10, and map the `color` of the edges to their weight.
+
+```{r}
+# Your code here
+bkfrab |>
+  activate(edges) |>
+  filter(weight > 10) |>
+  ggraph() +
+  geom_edge_fan(aes(color=weight)) +
+  geom_node_point()
+
+```
+
+6. The last graph leaves a lot of nodes without any edges. The default `'stress'` layout puts them along the bottom, which looks kind of odd. There are a few ways to handle this. First, try changing the layout. 
+
+You probably want a layout from [here](https://igraph.org/c/doc/igraph-Layout.html). This isn't well documented anywhere, but you just use the end of the name of the layout function. For functions with two names, you just use the initials. For example, to use `igraph_layout_davidson_harel`, you would use `ggraph(layout='dh')`.
+
+**Note**: I chose one of the layouts that I thought would look good, but yours will likely look different.
+
+```{r}
+# Your code here
+bkfrab |>
+  activate(edges) |>
+  filter(weight > 10) |>
+  ggraph(layout='dh') +
+  geom_edge_fan(aes(color=weight)) +
+  geom_node_point()
+```
+
+7. The other approach that you might take (depending on the data and your goals) is to filter out the nodes that don't have any edges. In this case, there are so many isolates (nodes with degree 0) that this is probably the best choice.
+
+There are a few ways to do this, but one approach is to filter out the nodes with degree of 0. See if you can figure out how to do that.
+
+```{r}
+# Your code here
+bkfrab |>
+  activate(edges) |>
+  filter(weight > 10) |>
+  activate(nodes) |>
+  mutate(degree = centrality_degree()) |>
+  filter(degree > 0) |>
+  ggraph() +
+  geom_edge_fan(aes(color=weight)) +
+  geom_node_point()
+
+```
+
+You now have all of the key skills to load in, `mutate` and `filter` networks, and to do some pretty cool visualizations with them. From here on out, we'll mostly be reusing these skills in new ways.

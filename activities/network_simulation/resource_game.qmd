@@ -1,0 +1,72 @@
+---
+title: The Resource Game
+format: 
+  revealjs:
+    css: /resources/custom_css.css
+    theme: white
+    progress: true
+    transition: convex
+    reveal_plugins: ['notes']
+    incremental: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = './')
+library(tidygraph)
+library(ggraph)
+```
+## Discord signup
+
+https://discord.gg/WSc5J7stgg
+
+## The game
+
+Each of you needs things that other people in the room have. These resources are represented by letters.
+
+However, you are only "friends" with a small number of people. These are the people that you can communicate with, ask for resources, and give resources to.
+
+The goal is to get the resources that you need as quickly as possible.
+
+## Rules
+
+- Only communicate through written messages, to neighbors
+- Give resources by sending '$give jdfoote A' to the NetworkGameBot
+- If you forget what you have/need, send '$status'
+- If you are an observer, send '$status' to get an updated network graph
+- You can continue playing after you have all resources, if you want
+
+## How did it go?
+
+- What worked well?
+- What didn't?
+- Who was fastest? Why?
+- What was the longest path a resource traveled?
+
+## Global network
+
+- How did you figure out what resources were available near you?
+- What would you have done differently if you could see the whole network?
+
+## Debrief topics to cover
+- Degree centrality
+- Reciprocity
+- Social capital
+- Structural holes
+- Reputation and deceit
+- Position and power
+- Multiplexity
+- Number vs. type of ties (centrality measures)
+
+## Debrief topics to cover
+- Global/local networks
+- Tie maintenance
+- Sponsorship
+- Norms and social conventions
+
+## Meta discussion
+
+- How does this differ from real-world networks?
+
+- What does this make you see differently?
+

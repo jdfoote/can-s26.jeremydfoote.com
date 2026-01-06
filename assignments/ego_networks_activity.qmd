@@ -1,0 +1,16 @@
+---
+title: "Ego Networks Activity"
+date: 2025-09-25
+---
+
+
+
+## Assignment File
+
+[Download Assignment (right-click and save)](/assignments/ego_networks/ego_analysis.qmd)
+
+
+## Example Solution
+
+[View Example Solution](/assignments/ego_networks/ego_analysis.pdf)
+

@@ -1,0 +1,21 @@
+---
+title: "R Lab 2 – Creating Networks"
+date: 2025-09-15
+---
+
+
+## Video Explanation
+
+{{< video https://youtu.be/-JjuL1UwRR0 >}}
+
+
+
+## Assignment File
+
+[Download Assignment (right-click and save)](/assignments/r_labs/lab_2_creating_networks.qmd)
+
+
+## Example Solution
+
+[View Example Solution](/assignments/r_lab_examples/lab_2_creating_networks.pdf)
+

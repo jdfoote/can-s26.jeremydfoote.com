@@ -1,0 +1,7 @@
+---
+title: "Video Lecture Slides"
+listing:
+  contents: lectures/content_lectures
+  type: table
+  sort: "date"
+---

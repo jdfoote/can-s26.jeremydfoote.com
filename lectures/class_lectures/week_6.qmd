@@ -1,0 +1,137 @@
+---
+title: Week 6 - Centrality and Centralization
+sort: 6
+format: 
+  revealjs:
+    css: /resources/custom_css.css
+    theme: white
+    progress: true
+    transition: convex
+    reveal_plugins: ['notes']
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = './')
+source("resources/preamble.R")
+library(tidygraph)
+library(ggraph)
+```
+
+## Dad Joke
+
+Can you believe my wife told me to quit acting like a flamingo?
+
+<p class='fragment'>
+I had to put my foot down.
+</p>
+
+## Housekeeping
+
+> - Self Assessment Reflection Feedback coming soonish
+> - Homework questions on Discord
+>	- How to copy and paste code
+> - A lot like qmd files
+
+<div class='fragment'>
+<code><pre>
+
+```r
+
+G |>
+  activate(nodes) |>
+  filter(age > 25)
+```
+
+</pre>
+</code>
+</div>
+
+## Housekeeping
+
+> - How did the AI assignment go?
+>   - What was it good at?
+>   - What was it bad at?
+
+
+<!--
+## Collective Norms Discussion
+
+> - I think our in-person conversations could be better
+> - Too many tech distractions
+> - Coming prepared
+> - How to have more natural conversations?
+-->
+
+
+## Concept Review
+
+> - What is centrality?
+> - What is the difference between centrality and centralization?
+
+## Flash presentations
+
+> - Choose one centrality measure
+> - 4 minutes of prep
+> - 1-2 minutes of presentation
+> - What is it? How is it calculated? What does it tell us about power/influence?
+
+<!--
+## Concept Review
+
+> - What is betweenness centrality?
+> - What is closeness centrality?
+> - What is eigenvector centrality?
+-->
+
+## Concept Review
+
+> - What aspects of power/influence do centrality measures miss?
+> - What can centralization tell us about a network?
+> - What does density tell us about a network?
+> - What is hierarchy?
+
+## Practical Review
+
+What is the degree/closeness/betweenness centrality of node A? What is the density of the network?
+
+```{r echo=FALSE}
+set.seed(123)
+G <- play_gnp(6, 0.5, directed=F) |> as_tbl_graph() |>
+  mutate(name = LETTERS[1:nrow(.N())])
+
+
+G |>
+  # Get first N letters of alphabet
+  ggraph(layout = 'stress') +
+  geom_edge_fan() +
+  #geom_node_point(aes(size = centrality_degree())) +
+  geom_node_label(aes(label = name), size = 8) +
+  theme_graph()
+```
+
+## Practical Review
+
+What is the degree/closeness/betweenness centrality of node A?
+
+```{r}
+G |>
+  mutate(degree = centrality_degree(),
+         closeness = centrality_closeness(),
+         betweenness = centrality_betweenness()) |>
+  filter(name == "A")
+
+```
+
+
+## Discussion Questions
+
+> - Could someone have high network centrality but low actual power/influence?
+> - Does network position cause influence, or vice versa?
+> - Bipartite graphs (Paul Revere)
+> - How do these approaches scale to huge networks?
+> - How are centrality measures impacted by missing data?
+
+
+## R Review
+
