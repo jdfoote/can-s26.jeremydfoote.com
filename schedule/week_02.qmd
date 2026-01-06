@@ -1,16 +1,16 @@
 ---
 title: "Week 2: Network representations"
-date: "2025-09-01"
+date: "2026-01-19"
 ---
 
 
 ### Tuesday
 
-**Assignment Due (on Monday):**
+**Assignment Due (Monday, Jan 19):**
 
-* [Homework 1](/assignments/Homework-1.html)
-* Initial Reflection (on Brightspace)
-* [Reading Review](/syllabus/syllabus.qmd#reading-review-assignments) (Due Monday at noon!)
+* [Homework 1](/assignments/Homework-1.html) (11:59 PM)
+* Initial Reflection (on Brightspace, 11:59 PM)
+* [Reading Review](/syllabus/syllabus.qmd#reading-review-assignments) (3-2-1 due 1:00 PM)
 
 
 **Readings (before class):**

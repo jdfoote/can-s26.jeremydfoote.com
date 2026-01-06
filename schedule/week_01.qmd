@@ -1,6 +1,6 @@
 ---
 title: "Week 1: Introductions and the network perspective"
-date: "2025-08-25"
+date: "2026-01-12"
 ---
 
 

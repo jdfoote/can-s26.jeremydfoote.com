@@ -1,8 +1,6 @@
 ---
-title: "Thanksgiving Week - No class"
-date: "2025-11-17"
+title: "(unused)"
+date: "2026-03-16"
 ---
 
-### Tuesday
-
-No in-person class. Use this time to work on the Final Project!
+This page is intentionally empty. Please use the main weekly schedule.

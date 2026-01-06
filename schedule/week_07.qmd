@@ -1,6 +1,6 @@
 ---
 title: "Week 7: Social Capital, structural holes, and weak ties"
-date: "2025-10-06"
+date: "2026-02-23"
 ---
 
 ### Tuesday
@@ -10,6 +10,7 @@ date: "2025-10-06"
 * [R Lab 4 - Intro to ggraph](/assignments/r_lab_4_%E2%80%93_intro_to_ggraph.qmd)
 * [Reading Review Assignments](/syllabus/syllabus.qmd#reading-review-assignments)
   * [Discussion Questions](#discussion-questions)
+* Who Dunnit game (due Feb 26, 11:59 PM)
 
 **Readings:** 
 

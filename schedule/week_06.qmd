@@ -1,6 +1,6 @@
 ---
 title: "Week 6: Power, centrality, and hierarchy"
-date: "2025-09-29"
+date: "2026-02-16"
 ---
 
 ### Tuesday
@@ -11,6 +11,7 @@ date: "2025-09-29"
 * [Reading Review Assignments](/syllabus/syllabus.qmd#reading-review-assignments)
     * [Discussion Questions](#discussion-questions)
 * [AI-assisted conversation assignment](/assignments/ai_conversation.qmd)
+* Ego Networks assignment (due Feb 12, 11:59 PM)
 
 **Readings:** 
 

@@ -1,6 +1,6 @@
 ---
 title: "Week 9: Scale-free networks and the friendship paradox"
-date: "2025-10-20"
+date: "2026-03-09"
 ---
 
 ### Tuesday
@@ -9,6 +9,7 @@ date: "2025-10-20"
 
 * [Final Project Idea](/assignments/final_project/project-idea.qmd)
 * Troubled Lands Reflection
+* Six Degrees of Wikipedia Assignment (due Mar 12, 11:59 PM)
 * [Reading Review](/syllabus/syllabus.qmd#reading-review-assignments)
     * [Discussion Questions](#discussion-questions)
 

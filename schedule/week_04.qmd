@@ -1,6 +1,6 @@
 ---
 title: "Week 4: Small group networks"
-date: "2025-09-15"
+date: "2026-02-02"
 ---
 
 ### Tuesday

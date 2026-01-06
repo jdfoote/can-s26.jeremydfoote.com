@@ -34,9 +34,9 @@ He took too many days off!
 > - EXAM ON THURSDAY!!
 > - Sign up for a time to discuss self-assessment and final project
 > - Final projects are due in 2 weeks!
->   - Rough draft to 2 peers on December 4
->   - Feedback due by Saturday (December 6)
-> - Presentations Tuesday and Thursday (December 9 and 11)
+>   - Rough draft to 2 peers on April 23
+>   - Feedback due by Saturday (April 25)
+> - Presentations Tuesday and Thursday (April 28 and 30)
 
 
 ## Review Questions
@@ -83,9 +83,9 @@ He took too many days off!
 
 ## Upcoming Assignments
 
-> - R Lab 8 - November 28
-> - Final project rough draft (December 1)
-> - Peer feedback (Due December 6)
+> - R Lab 8 - April 20
+> - Final project rough draft (April 20)
+> - Peer feedback (Due April 22)
 
 ## Review Questions
 

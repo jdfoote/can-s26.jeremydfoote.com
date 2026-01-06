@@ -1,6 +1,6 @@
 ---
 title: "Week 3: How are communication networks formed?"
-date: "2025-09-08"
+date: "2026-01-26"
 
 ---
 

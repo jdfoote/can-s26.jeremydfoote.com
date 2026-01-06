@@ -1,16 +1,14 @@
 ---
 title: "Week 8: Small worlds"
-date: "2025-10-13"
+date: "2026-03-02"
 ---
 
 ### Tuesday
 
-**No Class - FALL BREAK**
+**Assignments Due (Wednesday):**
 
-**Assignment Due (Wednesday):**
-
-* [R Lab 5 - Aesthetics in ggraph](/assignments/r_lab_5_%E2%80%93_aesthetics_in_ggraph.qmd)
-* [Reading Review Assignments](/syllabus/syllabus.qmd#reading-review-assignments) 
+* [R Lab 5 - Aesthetics in ggraph](/assignments/r_lab_5_%E2%80%93_aesthetics_in_ggraph.qmd) (due Mar 4)
+* [Reading Review Assignments](/syllabus/syllabus.qmd#reading-review-assignments) (due Mar 4)
   * [Discussion Questions](#discussion-questions)
 
 **Readings:** 

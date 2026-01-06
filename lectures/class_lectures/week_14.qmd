@@ -33,7 +33,7 @@ It was a brief case.
 >   - Rough draft on Thursday
 >   - Peer feedback by Saturday
 >   - Presentations next Tuesday and Thursday
->   - Final report due on December 12
+>   - Final report due on May 1
 > - May want to look at the Advanced R Rmd file (Week 15 on the schedule)
 > - No class on Thursday - work on final project
 

@@ -1,16 +1,15 @@
----
 title: "Week 15: Class Presentations and Final Projects"
-date: "2025-12-08"
----
+date: "2026-04-27"
 
 ### Tuesday
 
 **Assignment Due:**
 
-* Saturday: Feedback on final project to peers
-* Tuesday / Thursday: Final Project Presentation
-* Friday: [Final Project](/assignments/final_project/Final-project.qmd) on Brightspace
-* Friday: [Final Self Assessment Reflection](/assignments/Final-Self-Assessment-Reflection.qmd) on Brightspace
+* [R Lab 8 - Calculating network statistics](/assignments/r_lab_8_%E2%80%93_network_stats.qmd) (due Apr 20)
+* Saturday: Feedback on final project to peers (Apr 25)
+* Tuesday / Thursday: Final Project Presentation (Apr 28 / Apr 30)
+* Friday: [Final Project](/assignments/final_project/Final-project.qmd) on Brightspace (May 1)
+* Friday: [Final Self Assessment Reflection](/assignments/Final-Self-Assessment-Reflection.qmd) on Brightspace (May 1)
 
 **Class Schedule:**
 
