@@ -1,0 +1,9 @@
+---
+title: "Test"
+format: html
+---
+
+```{python}
+import sys
+print(sys.executable)
+```

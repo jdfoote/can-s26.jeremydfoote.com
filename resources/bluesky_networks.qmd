@@ -1,0 +1,130 @@
+---
+title: "Ego Network of Bluesky Account"
+---
+
+We are going to use Bluesky to create an ego network of your account. We will get all of the followers and following of your account, and then we will get the followers and following of those accounts. This will create a network of your account and the accounts that are connected to it.
+
+We will then visualize the network using `ggraph`.
+
+```{python}
+
+from atproto import Client
+import config
+import json
+import time
+
+def get_follows_and_followers(client, handle):
+    """
+    Get the followers and following of a user.
+    """
+    followers = get_all_followers(client, handle)
+    following = get_all_follows(client, handle)
+    follow_graph  = [(handle, x['handle']) for x in following]
+    followers_graph = [(x['handle'], handle) for x in followers]
+    # Combine the two graphs
+    combined_graph = follow_graph + followers_graph
+    return combined_graph
+
+def get_all_followers(client, handle):
+    """
+    Get all followers of a user.
+    """
+    followers = []
+    next_cursor = None
+    while True:
+        response = client.get_followers(handle, limit=100, cursor=next_cursor)
+        followers.extend(response.followers)
+        if not response.cursor:
+            break
+        next_cursor = response.cursor
+    return followers
+
+def get_all_follows(client, handle):
+    """
+    Get all following of a user.
+    """
+    following = []
+    next_cursor = None
+    while True:
+        response = client.get_follows(handle, limit=100, cursor=next_cursor)
+        following.extend(response.follows)
+        if not response.cursor:
+            break
+        next_cursor = response.cursor
+    return following
+
+def make_network_from_following(following_dict):
+    following_graph = []
+    for user, following in following_dict.items():
+        for follow in following:
+            if follow in following_dict:
+                following_graph.append((user, follow))
+    return following_graph
+
+
+def main(username) -> None:
+    # Create a client and login
+    at_client = Client()
+    at_client.login(config.username, config.password)
+    # Get the followers and following of the username
+    # Get all of the accounts the user follows
+    following = get_all_follows(at_client, user_to_analyze)
+    # For each of those accounts, get their followers
+    following_dict = {}
+    for user in following:
+        curr_user_following = get_all_follows(at_client, user['handle'])
+        following_dict[user['handle']] = set([x['handle'] for x in curr_user_following])
+        # Sleep for a second to be a good citizen
+        time.sleep(1)
+    # Create a graph from the following dictionary
+    following_graph = make_network_from_following(following_dict)
+    with open('following_graph.csv', 'w') as f:
+        f.write('from,to\n')
+        for user, following in following_graph:
+            f.write(f'{user},{following}\n')
+
+```
+
+```{python}
+user = config.username
+#main(user)
+```
+
+Now, let's load the graph and do some quick visualizations in `ggraph`.
+
+
+```{r}
+library(ggraph)
+library(tidygraph)
+library(tidyverse)
+library(igraph)
+library(here)
+
+
+# Load the graph
+edges = read.csv('./resources/following_graph.csv')
+G = graph_from_data_frame(edges, directed = TRUE) |> as_tbl_graph()
+
+```
+
+```{r}
+nodes_to_label = G |> 
+    activate(nodes) |> 
+    mutate(bc = centrality_betweenness()) |> 
+    as_tibble() |> 
+    arrange(desc(bc)) |>
+    head(5) |> 
+    pull(name)
+
+# Plot the graph
+G |>
+mutate(group = as.factor(group_label_prop())) |>
+activate(edges) |>
+ggraph('kk') +
+    geom_edge_link(alpha = .2) +
+    geom_node_point(aes(color = group)) +
+    geom_node_label(data = ~ filter(.x, name %in% nodes_to_label), aes(label=name), repel = TRUE) +
+    theme_graph() +
+    labs(title = "Bluesky Ego Network") +
+    scale_color_viridis(discrete = TRUE, end = 0.8)
+```

@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.552">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dr.&nbsp;Foote’s Example">
+
+<title>Communication and Social Networks - Mutating and filtering</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../resources/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../resources/custom_css.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Communication and Social Networks</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../syllabus/syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../schedule.html"> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../assignments/assignments.html"> 
+<span class="menu-text">Assignments</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#getting-to-the-data" id="toc-getting-to-the-data" class="nav-link active" data-scroll-target="#getting-to-the-data">Getting to the data</a>
+  <ul class="collapse">
+  <li><a href="#activating-a-table" id="toc-activating-a-table" class="nav-link" data-scroll-target="#activating-a-table">Activating a table</a></li>
+  </ul></li>
+  <li><a href="#mutate" id="toc-mutate" class="nav-link" data-scroll-target="#mutate">Mutate</a></li>
+  <li><a href="#filtering" id="toc-filtering" class="nav-link" data-scroll-target="#filtering">Filtering</a></li>
+  <li><a href="#chaining-filtering-and-mutating" id="toc-chaining-filtering-and-mutating" class="nav-link" data-scroll-target="#chaining-filtering-and-mutating">Chaining Filtering and Mutating</a></li>
+  <li><a href="#excercises" id="toc-excercises" class="nav-link" data-scroll-target="#excercises">Excercises</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/jdfoote/can-s26.jeremydfoote.com/edit/main/assignments/r_lab_examples/lab_3_mutating_and_filtering.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jdfoote/can-s26.jeremydfoote.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lab_3_mutating_and_filtering.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header">
+<h1 class="title display-7">Mutating and filtering</h1>
+
+</header>
+
+
+<p>We start with a “setup” block of code, that loads our libraries and initializes our settings. This block should work for basically all of our assignments this semester, so you can just copy and paste it.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> T)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_knit<span class="sc">$</span><span class="fu">set</span>(<span class="at">root.dir =</span> <span class="st">'./'</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(igraph)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidygraph)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggraph)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">set_graph_style</span>(<span class="at">family=</span><span class="st">'sans'</span>) <span class="co"># This sets the default style to the graph style</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>R has a lot of great tools for working with tables (also called dataframes or tibbles). One really powerful and relatively intuitive set of tools is called the “tidyverse”. Tools in the tidyverse make assumptions about what data will look like—rows represent observations and columns represent variables that describe that observation.</p>
+<p>The <a href="https://tidygraph.data-imaginist.com/index.html">tidygraph</a> package extends that paradigm to networks, by representing networks as two tables: 1) a table of nodes and node attributes and 2) a table of edges and edge attributes.</p>
+<p>This lets you work with networks using many of the same tools that have been developed for working on other types of data.</p>
+<p>Just to make things simple, we’ll use the Zachary Karate club data for most of this tutorial. Let’s load it, and save it as <code>G</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>G <span class="ot">&lt;-</span> <span class="fu">create_notable</span>(<span class="st">'Zachary'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If we look at <code>G</code> we can see that it’s already a <code>tbl_graph</code> object. It has 34 nodes and 78 edges.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>G</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tbl_graph: 34 nodes and 78 edges
+#
+# An undirected simple graph with 1 component
+#
+# Node Data: 34 × 0 (active)
+#
+# Edge Data: 78 × 2
+   from    to
+  &lt;int&gt; &lt;int&gt;
+1     1     2
+2     1     3
+3     1     4
+# ℹ 75 more rows</code></pre>
+</div>
+</div>
+<section id="getting-to-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="getting-to-the-data">Getting to the data</h2>
+<section id="activating-a-table" class="level3">
+<h3 class="anchored" data-anchor-id="activating-a-table">Activating a table</h3>
+<p>Because a network object is really composed of two tables, we have to let R know which table we want to manipulate. This is done using <code>activate(nodes)</code> or <code>activate(edges)</code>. You will see lots of examples of this later in this tutorial.</p>
+</section>
+</section>
+<section id="mutate" class="level2">
+<h2 class="anchored" data-anchor-id="mutate">Mutate</h2>
+<p><code>mutate</code> is a function that creates a new column in a spreadsheet/dataframe (in our case, either the spreadsheet for the nodes or the one for the edges).</p>
+<p>Often, we will want to calculate some network statistic about the nodes or edges. However, you can also create other kinds of columns. For example, you could use <code>mutate</code> to give names to each of the nodes. The code below creates a small network and adds names to it. (The <code>c</code> is how we create a list of things in R)</p>
+<p>(Note that the code throughout this tutorial uses “<a href="https://r4ds.had.co.nz/pipes.html?q=pipe#pipes">pipes</a>”. Pipes (<code>|&gt;</code>) let you express a sequence of operations, by taking the output of the previous operation and using it as the input of the next operation.)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">play_gnp</span>(<span class="dv">5</span>, .<span class="dv">5</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">activate</span>(nodes) <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">names =</span> <span class="fu">c</span>(<span class="st">'Alfred'</span>,<span class="st">'Bonnie'</span>, <span class="st">'Clyde'</span>, <span class="st">'Doug'</span>,<span class="st">'Enola'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tbl_graph: 5 nodes and 10 edges
+#
+# A directed simple graph with 1 component
+#
+# Node Data: 5 × 1 (active)
+  names 
+  &lt;chr&gt; 
+1 Alfred
+2 Bonnie
+3 Clyde 
+4 Doug  
+5 Enola 
+#
+# Edge Data: 10 × 2
+   from    to
+  &lt;int&gt; &lt;int&gt;
+1     1     5
+2     4     1
+3     5     1
+# ℹ 7 more rows</code></pre>
+</div>
+</div>
+<p>The example below also uses mutate, but this time it calculates the degree of each node in the network and saves it in a new column called <code>degree</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>G <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">activate</span>(nodes) <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">degree =</span> <span class="fu">centrality_degree</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tbl_graph: 34 nodes and 78 edges
+#
+# An undirected simple graph with 1 component
+#
+# Node Data: 34 × 1 (active)
+   degree
+    &lt;dbl&gt;
+ 1     16
+ 2      9
+ 3     10
+ 4      6
+ 5      3
+ 6      4
+ 7      4
+ 8      4
+ 9      5
+10      2
+# ℹ 24 more rows
+#
+# Edge Data: 78 × 2
+   from    to
+  &lt;int&gt; &lt;int&gt;
+1     1     2
+2     1     3
+3     1     4
+# ℹ 75 more rows</code></pre>
+</div>
+</div>
+<p>However, note that if we look at <code>G</code> again, the <code>degree</code> column that we created no longer appears.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>G</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tbl_graph: 34 nodes and 78 edges
+#
+# An undirected simple graph with 1 component
+#
+# Node Data: 34 × 0 (active)
+#
+# Edge Data: 78 × 2
+   from    to
+  &lt;int&gt; &lt;int&gt;
+1     1     2
+2     1     3
+3     1     4
+# ℹ 75 more rows</code></pre>
+</div>
+</div>
+<p>This is because we didn’t save it; by default mutate will just produce a temporary version of the new column. But don’t worry—saving it is super easy; we can just re-save it as G like this.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>G <span class="ot">&lt;-</span> G <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">activate</span>(nodes) <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">degree =</span> <span class="fu">centrality_degree</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The <code>&lt;-</code> means take whatever is on the right side, and save it to the variable name on the left side. So, this takes all of the output of the <code>mutate</code> operation and saves it. Now, when we look at <code>G</code>, we’ll see the <code>degree</code> column.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>G</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tbl_graph: 34 nodes and 78 edges
+#
+# An undirected simple graph with 1 component
+#
+# Node Data: 34 × 1 (active)
+   degree
+    &lt;dbl&gt;
+ 1     16
+ 2      9
+ 3     10
+ 4      6
+ 5      3
+ 6      4
+ 7      4
+ 8      4
+ 9      5
+10      2
+# ℹ 24 more rows
+#
+# Edge Data: 78 × 2
+   from    to
+  &lt;int&gt; &lt;int&gt;
+1     1     2
+2     1     3
+3     1     4
+# ℹ 75 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="filtering" class="level2">
+<h2 class="anchored" data-anchor-id="filtering">Filtering</h2>
+<p>The one other thing we’re going to learn about today is filtering. Sometimes we may want to know about some subset of the nodes or edges in a network.</p>
+<p>Usually, we would do this based on some attribute of the nodes—for example, looking just at the network of the older (or younger) members of the group.</p>
+<p>Let’s load in a richer network from the <code>networkdata</code> library. (See R Lab 2 for instructions on how to install it if this code doesn’t work.)</p>
+<p>This code loads the <code>networkdata</code> library and loads the <code>ht_advice</code> network. It then changes it from an <code>igraph</code> network to a <code>tbl_graph</code> network object.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(networkdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'networkdata'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:dplyr':
+
+    starwars</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>ht_advice <span class="ot">&lt;-</span> ht_advice <span class="sc">|&gt;</span> <span class="fu">as_tbl_graph</span>()</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>ht_advice</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tbl_graph: 21 nodes and 190 edges
+#
+# A directed simple graph with 1 component
+#
+# Node Data: 21 × 4 (active)
+     age tenure level  dept
+   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1    33      9     3     4
+ 2    42     20     2     4
+ 3    40     13     3     2
+ 4    33      8     3     4
+ 5    32      3     3     2
+ 6    59     28     3     1
+ 7    55     30     1     0
+ 8    34     11     3     1
+ 9    62      5     3     2
+10    37      9     3     3
+# ℹ 11 more rows
+#
+# Edge Data: 190 × 2
+   from    to
+  &lt;int&gt; &lt;int&gt;
+1     1     2
+2     1     4
+3     1     8
+# ℹ 187 more rows</code></pre>
+</div>
+</div>
+<p>We can see that there are 21 nodes with four attributes: <code>age</code>, <code>tenure</code>, <code>level</code>, and <code>dept</code>. These nodes have 190 edges. Let’s plot the network.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(ht_advice)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab_3_mutating_and_filtering_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Now we’re going to filter the graph. Maybe we just want to see the network from the Sales department. Let’s pretend like that’s department two, and filter to just those nodes.</p>
+<p>Remember, we first <code>activate</code> the <code>nodes</code>. Then, we use <code>filter</code> to write a condition or set of conditions that will evaluate to True for each of the nodes that we want to keep. Usually, this will involve one node attribute (like <code>dept</code>) and a comparison, like <code>&lt;</code>, <code>&gt;</code>, or <code>==</code>. Note that when we are testing <em>if</em> things are equal, we use two equal signs in R. This is because one equals sign can be used to assign something to a variable.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>ht_advice <span class="sc">|&gt;</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">activate</span>(nodes) <span class="sc">|&gt;</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dept <span class="sc">==</span> <span class="dv">2</span>) <span class="sc">|&gt;</span> <span class="co"># Filter to just nodes in dept 2</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>() <span class="sc">|&gt;</span> <span class="co"># We can throw in print() and it will print the output of the last step. In this case, the filtered graph object.</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tbl_graph: 8 nodes and 25 edges
+#
+# A directed simple graph with 1 component
+#
+# Node Data: 8 × 4 (active)
+    age tenure level  dept
+  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1    40     13     3     2
+2    32      3     3     2
+3    62      5     3     2
+4    48      0     3     2
+5    43     10     2     2
+6    40      8     3     2
+7    32      5     3     2
+8    38     12     3     2
+#
+# Edge Data: 25 × 2
+   from    to
+  &lt;int&gt; &lt;int&gt;
+1     1     3
+2     1     5
+3     1     8
+# ℹ 22 more rows</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab_3_mutating_and_filtering_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="chaining-filtering-and-mutating" class="level2">
+<h2 class="anchored" data-anchor-id="chaining-filtering-and-mutating">Chaining Filtering and Mutating</h2>
+<p>Finally, we can use <code>mutate</code> and <code>filter</code> together in powerful ways.</p>
+<p>For example, we may want to get the betweenness centrality of just the Sales department.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>ht_advice <span class="sc">|&gt;</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">activate</span>(nodes) <span class="sc">|&gt;</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dept <span class="sc">==</span> <span class="dv">2</span>) <span class="sc">|&gt;</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">betweenness =</span> <span class="fu">centrality_betweenness</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tbl_graph: 8 nodes and 25 edges
+#
+# A directed simple graph with 1 component
+#
+# Node Data: 8 × 5 (active)
+    age tenure level  dept betweenness
+  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;
+1    40     13     3     2         0.5
+2    32      3     3     2         4.5
+3    62      5     3     2         0  
+4    48      0     3     2         1  
+5    43     10     2     2         0  
+6    40      8     3     2         9  
+7    32      5     3     2         3  
+8    38     12     3     2         5  
+#
+# Edge Data: 25 × 2
+   from    to
+  &lt;int&gt; &lt;int&gt;
+1     1     3
+2     1     5
+3     1     8
+# ℹ 22 more rows</code></pre>
+</div>
+</div>
+<p>Remember that the order matters - if we ran <code>mutate</code> before <code>filter</code> then it would calculate the betweenness centrality <em>before</em> filtering.</p>
+</section>
+<section id="excercises" class="level2">
+<h2 class="anchored" data-anchor-id="excercises">Excercises</h2>
+<ol type="1">
+<li>Copy the code from lines 60-65 and modify it below to calculate the betweenness centrality instead of the degree of <code>G</code>. Name the column <code>betweenness</code> (Hint: use the <code>centrality_betweenness()</code> function. (<a href="https://tidygraph.data-imaginist.com/reference/centrality.html">Here is the list of all centrality functions</a>.)</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tbl_graph: 34 nodes and 78 edges
+#
+# An undirected simple graph with 1 component
+#
+# Node Data: 34 × 2 (active)
+   degree betweenness
+    &lt;dbl&gt;       &lt;dbl&gt;
+ 1     16     231.   
+ 2      9      28.5  
+ 3     10      75.9  
+ 4      6       6.29 
+ 5      3       0.333
+ 6      4      15.8  
+ 7      4      15.8  
+ 8      4       0    
+ 9      5      29.5  
+10      2       0.448
+# ℹ 24 more rows
+#
+# Edge Data: 78 × 2
+   from    to
+  &lt;int&gt; &lt;int&gt;
+1     1     2
+2     1     3
+3     1     4
+# ℹ 75 more rows</code></pre>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Now, modify your code above to save the <code>betweenness</code> column to <code>G</code>. When you’re done, the nodes spreadsheet of <code>G</code> should have two new columns - <code>degree</code> and <code>betweenness</code>. Display G (by just typing <code>G</code> at the end of the code block) to make sure it worked.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>G</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tbl_graph: 34 nodes and 78 edges
+#
+# An undirected simple graph with 1 component
+#
+# Node Data: 34 × 2 (active)
+   degree betweenness
+    &lt;dbl&gt;       &lt;dbl&gt;
+ 1     16     231.   
+ 2      9      28.5  
+ 3     10      75.9  
+ 4      6       6.29 
+ 5      3       0.333
+ 6      4      15.8  
+ 7      4      15.8  
+ 8      4       0    
+ 9      5      29.5  
+10      2       0.448
+# ℹ 24 more rows
+#
+# Edge Data: 78 × 2
+   from    to
+  &lt;int&gt; &lt;int&gt;
+1     1     2
+2     1     3
+3     1     4
+# ℹ 75 more rows</code></pre>
+</div>
+</div>
+<ol start="3" type="1">
+<li>It’s more common that we mutate the nodes, but sometimes we want to mutate the edges. For example, <code>centrality_edge_betweenness()</code> is one measure of how important each edge in a network is. Use <code>mutate</code> to calculate the edge betweenness of each edge in <code>G</code>.</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tbl_graph: 34 nodes and 78 edges
+#
+# An undirected simple graph with 1 component
+#
+# Edge Data: 78 × 3 (active)
+    from    to edge_betweenness
+   &lt;int&gt; &lt;int&gt;            &lt;dbl&gt;
+ 1     1     2             14.2
+ 2     1     3             43.6
+ 3     1     4             11.5
+ 4     1     5             29.3
+ 5     1     6             43.8
+ 6     1     7             43.8
+ 7     1     8             12.8
+ 8     1     9             41.6
+ 9     1    11             29.3
+10     1    12             33  
+# ℹ 68 more rows
+#
+# Node Data: 34 × 2
+  degree betweenness
+   &lt;dbl&gt;       &lt;dbl&gt;
+1     16       231. 
+2      9        28.5
+3     10        75.9
+# ℹ 31 more rows</code></pre>
+</div>
+</div>
+<ol start="4" type="1">
+<li>Filter the <code>ht_advice</code> network to just the people who are older than 35. How many nodes are there? How many edges? (Hint: you can use <code>print</code> like I do in the example above to print information about the graph before you plot it)</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab_3_mutating_and_filtering_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="5" type="1">
+<li>Filter the <code>ht_advice</code> network to only those nodes whose <code>tenure</code> is less than the median value for <code>tenure</code>. Plot the graph.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab_3_mutating_and_filtering_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="6" type="1">
+<li>Sometimes we want to filter before calculating statistics, and sometimes we want to calculate statistics first. Calculate the degree centrality for <code>ht_advice</code>, save it in a column called <code>degree</code>, and then filter to just the nodes with <code>degree</code> of at least 2, and plot the network.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab_3_mutating_and_filtering_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="7" type="1">
+<li>Let’s go crazy. Take the <code>ht_advice</code> network, filter to just the nodes with <code>dept</code> equal to 2, and then calculate the degree centrality. Then, filter to just the nodes with a degree centrality of at least 3. Finally, plot the network.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab_3_mutating_and_filtering_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/can-s26\.jeremydfoote\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jdfoote/can-s26.jeremydfoote.com/edit/main/assignments/r_lab_examples/lab_3_mutating_and_filtering.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jdfoote/can-s26.jeremydfoote.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
