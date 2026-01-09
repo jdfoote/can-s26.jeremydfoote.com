@@ -9,7 +9,6 @@ date: "2026-03-09"
 
 * [Final Project Idea](/assignments/final_project/project-idea.qmd)
 * Troubled Lands Reflection
-* Six Degrees of Wikipedia Assignment (due Mar 12, 11:59 PM)
 * [Reading Review](/syllabus/syllabus.qmd#reading-review-assignments)
     * [Discussion Questions](#discussion-questions)
 

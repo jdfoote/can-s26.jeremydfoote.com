@@ -219,7 +219,7 @@ The last week of class, we will have presentations. You will have 5 minutes to p
 ## Timeline
 
 - March 9: [Final Project Idea](./project-idea.qmd)
-- April 23: [Rough Draft](./rough-draft.qmd)
-- April 25: [Peer Feedback](./peer-feedback.qmd)
-- April 28 / 30: Presentations
-- May 1: Final Project Due
+- April 6: [Rough Draft](./rough-draft.qmd)
+- April 8: [Peer Feedback](./peer-feedback.qmd)
+- April 20 / 22: Presentations
+- April 24: Final Project Due

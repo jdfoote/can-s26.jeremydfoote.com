@@ -1,13 +1,16 @@
+---
 title: "Week 14: Networks and Equality"
-date: "2026-04-20"
+date: "2026-04-13"
+---
 
 
 ### Tuesday
 
-**Assignments Due:**
+**Assignment Due:**
 
-* [Rough draft of Final Project](/assignments/final_project/rough-draft.qmd) on Brightspace and sent to your "peers"
-* Saturday: Feedback sent back to your "peers"
+* [R Lab 8 - Calculating network statistics](/assignments/r_lab_8_%E2%80%93_network_stats.qmd)
+* [Reading Review](/syllabus/syllabus.qmd#reading-review-assignments)
+    * [Discussion Questions](#discussion-questions)
 
 **Readings:**
 
