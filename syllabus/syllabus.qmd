@@ -79,7 +79,7 @@ The Thursday meetings will be more like a lab. Some of these sessions will inclu
 
 Your first place to look for help should be each other. By asking and answering questions on Discord, you will not only help to build a repository of shared information but also reinforce our learning community.
 
-I will also hold office hours on Tuesdays, from 1-3. If you come with a programming question, I will expect that you have already tried to solve it yourself in multiple ways and that you have discussed it with a classmate. This policy lets me have time to help more students, but it's also a useful strategy. Often [just trying to explain your code](https://en.wikipedia.org/wiki/Rubber_duck_debugging) can help you to recognize where you've gone wrong.
+I will also hold office hours on Tuesdays and Thursdays, from 10-11. If you come with a programming question, I will expect that you have already tried to solve it yourself in multiple ways and that you have discussed it with a classmate. This policy lets me have time to help more students, but it's also a useful strategy. Often [just trying to explain your code](https://en.wikipedia.org/wiki/Rubber_duck_debugging) can help you to recognize where you've gone wrong.
 
 I will also check Discord at least once a day. I encourage you to post questions there, and to use it as a space where we can help and instruct each other. In general, you should contact me there. I am also available by email. You can reach me at [jdfoote@purdue.edu](mailto:jdfoote@purdue.edu). I try hard to maintain a boundary between work and home and I typically respond only on weekdays during business hours.
 
