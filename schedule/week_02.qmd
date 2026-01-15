@@ -48,8 +48,3 @@ date: "2026-01-19"
 
 * Go through [Parable of the Polygons](https://ncase.me/polygons/) by Nicky Case
 * Start work on [R Lab 1](/assignments/r_lab_1_-_installation.qmd)
-
-
-### Discussion Questions
-
-<iframe src="https://pollev-embeds.com/discourses/bK4JSuQr5ltH0nE4eEw7r/respond" width="900px" height="600px"></iframe>

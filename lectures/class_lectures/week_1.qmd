@@ -9,6 +9,8 @@ format:
     transition: convex
     reveal_plugins: ['notes']
     incremental: true
+    width: 1200
+    height: 800
 ---
 
 ```{r setup, include=FALSE}
@@ -45,6 +47,10 @@ Why did the nearsighted man fall in the well?
 - Year
 - Major
 - Closest connection to a famous person 
+
+## Small World Activity
+- Find someone in the room you don't know
+- Figure out someone you both know
 
 ## What is Communication and Social Networks?
 
@@ -131,6 +137,7 @@ Why did the nearsighted man fall in the well?
  - I will work hard to make our classes valuable
  - Do the same; be prepared, open, and engaged
  - Class discussions are a fundamental part of the class and I expect you to be at every class
+ - No laptops or phones unless we are doing programming or other activities that require them
 
 ## Assignments
 
@@ -141,8 +148,8 @@ Why did the nearsighted man fall in the well?
    - 3-2-1 on Brightspace
      - 3 things you learned / connections made
      - 2 questions / things that are still confusing
-      - 1 discussion question for class
-	- Discussion Questions due Monday at noon
+     - 1 discussion question, posted on Discord
+	- 3-2-1 due Mondays at noon
 
 ## Readings
  - Academic papers
@@ -223,7 +230,7 @@ Options:
   - You write your assignments
   - Ask AI for help with understanding concepts or generating ideas, but not for writing your assignments.
   - You can use AI to understand topics and readings.
-- Thoughts
+- Thoughts?
 
 ## Please be vocal
 - I will solicit feedback as part of reflections
@@ -237,6 +244,9 @@ Options:
  - Bring your computer, if possible!
  - Make sure you are signed up on Discord
 
+:::{.notes}
+Test Network Game
+:::
 
 ## Questions?
 

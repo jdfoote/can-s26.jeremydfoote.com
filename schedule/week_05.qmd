@@ -8,7 +8,6 @@ date: "2026-02-09"
 **Assignment Due:**
 
 * [Reading Review Assignments](/syllabus/syllabus.qmd#reading-review-assignments)
-  * Post and vote on [Discussion Questions](#discussion-questions)
 * Turn in your [Self Assessment Reflection](/assignments/Self-Assessment-Reflection.qmd) on Brightspace
 
 **Readings:**
@@ -35,9 +34,3 @@ date: "2026-02-09"
 
 * [Ego Network Activity](/assignments/ego_networks_activity.qmd)
 * Finish [R Lab 3 - Mutating and filtering](/assignments/r_lab_3_%E2%80%93_mutating_and_filtering.qmd) and start on [R Lab 4 - Intro to ggraph](/assignments/r_lab_4_%E2%80%93_intro_to_ggraph.qmd)
-
-
-
-### Discussion Questions
-
-<iframe src="https://pollev-embeds.com/discourses/KP6o8h3j81AIXoXgbssDe/respond" width="900px" height="600px"></iframe>

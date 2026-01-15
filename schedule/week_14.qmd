@@ -10,7 +10,6 @@ date: "2026-04-13"
 
 * [R Lab 8 - Calculating network statistics](/assignments/r_lab_8_%E2%80%93_network_stats.qmd)
 * [Reading Review](/syllabus/syllabus.qmd#reading-review-assignments)
-    * [Discussion Questions](#discussion-questions)
 
 **Readings:**
 
@@ -37,7 +36,3 @@ date: "2026-04-13"
 **Class Schedule:**
 
 * No class - work on Final Project
-
-### Discussion Questions
-
-<iframe src="https://pollev-embeds.com/discourses/kWUGIjNfOXzbbCskco0Sx/respond" width="900px" height="600px"></iframe>

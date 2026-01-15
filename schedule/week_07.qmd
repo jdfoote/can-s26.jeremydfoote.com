@@ -9,7 +9,6 @@ date: "2026-02-23"
 
 * [R Lab 4 - Intro to ggraph](/assignments/r_lab_4_%E2%80%93_intro_to_ggraph.qmd)
 * [Reading Review Assignments](/syllabus/syllabus.qmd#reading-review-assignments)
-  * [Discussion Questions](#discussion-questions)
 
 **Readings:** 
 
@@ -40,7 +39,3 @@ date: "2026-02-23"
 **Class Schedule:**
 
 * Who Dunnit Game
-
-### Discussion Questions
-
-<iframe src="https://pollev-embeds.com/discourses/roj4ODKmXZZgP8LdBKIzF/respond" width="900px" height="600px"></iframe>

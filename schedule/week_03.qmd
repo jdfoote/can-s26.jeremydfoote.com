@@ -57,7 +57,3 @@ date: "2026-01-26"
 **Class Schedule:**
 
 * [R Lab 2 - Creating Networks](/assignments/r_lab_2_%E2%80%93_creating_networks.qmd)
-
-### Discussion Questions
-
-<iframe src="https://pollev-embeds.com/discourses/sa3hbQlw4Mi1BAI1QPG9r/respond" width="900px" height="600px"></iframe>

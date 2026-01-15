@@ -10,8 +10,7 @@ date: "2026-03-02"
 **Assignment Due (Wednesday):**
 
 * [R Lab 5 - Aesthetics in ggraph](/assignments/r_lab_5_%E2%80%93_aesthetics_in_ggraph.qmd)
-* [Reading Review Assignments](/syllabus/syllabus.qmd#reading-review-assignments) 
-  * [Discussion Questions](#discussion-questions)
+* [Reading Review Assignments](/syllabus/syllabus.qmd#reading-review-assignments)
 
 **Readings:** 
 
@@ -27,11 +26,6 @@ date: "2026-03-02"
 * Slides
 
 <iframe class='slide-deck' src="/lectures/content_lectures/small_worlds.html"></iframe>
-
-### Discussion Questions
-
-<iframe src="https://pollev-embeds.com/discourses/lynmGy0N0qneA2ZLNYZnH/respond" width="900px" height="600px"></iframe>
-
 
 ### Thursday
 

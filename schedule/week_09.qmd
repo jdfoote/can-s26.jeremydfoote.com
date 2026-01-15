@@ -10,7 +10,6 @@ date: "2026-03-09"
 * [Final Project Idea](/assignments/final_project/project-idea.qmd)
 * Troubled Lands Reflection
 * [Reading Review](/syllabus/syllabus.qmd#reading-review-assignments)
-    * [Discussion Questions](#discussion-questions)
 
 **Readings:** 
 
@@ -37,7 +36,3 @@ date: "2026-03-09"
 **Class Schedule:**
 
 * [Six Degrees of Wikipedia Activity](/assignments/Six-Degrees-of-Wikipedia-Activity.qmd)
-
-### Discussion Questions
-
-<iframe src="https://pollev-embeds.com/discourses/efQSogKsNPDm9exEwkv1l/respond" width="900px" height="600px"></iframe>

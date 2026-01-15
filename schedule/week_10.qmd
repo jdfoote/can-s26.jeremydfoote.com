@@ -11,7 +11,6 @@ date: "2026-03-16"
 * [R Lab 6 - Visualizing Power](/assignments/r_lab_6_%E2%80%93_visualizing_power.qmd)
 * [Social Search Assignment](/assignments/Social-Search-Assignment.qmd)
 * [Reading Review](/syllabus/syllabus.qmd#reading-review-assignments)
-    * [Discussion Questions](#discussion-questions)
 
 **Readings:** 
 
@@ -37,8 +36,3 @@ date: "2026-03-16"
 **Class Schedule:**
 
 * Do [The Wisdom or Madness of Crowds Simulation](http://ncase.me/crowds/)
-
-
-### Discussion Questions
-
-<iframe src="https://pollev-embeds.com/discourses/0zM4Y8ZUasILt4c4aOU9X/respond" width="900px" height="600px"></iframe>

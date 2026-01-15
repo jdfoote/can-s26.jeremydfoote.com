@@ -8,7 +8,6 @@ date: "2026-04-06"
 **Assignment Due:**
 
 * [Reading Review](/syllabus/syllabus.qmd#reading-review-assignments)
-    * [Discussion Questions](#discussion-questions)
 
 **Readings:**
 
@@ -32,7 +31,3 @@ date: "2026-04-06"
 
 * In class exam!
     * [Study Guide](https://docs.google.com/document/d/1L4-7lmGYxQ6t1Qerid8Zkhh8vIacK8kUZ-EhWIjLi-Q/edit?tab=t.0)
-
-### Discussion Questions
-
-<iframe src="https://pollev-embeds.com/discourses/e5gZH9oLKLIlkWeCP5kiQ/respond" width="800px" height="600px"></iframe>

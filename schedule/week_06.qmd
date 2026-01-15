@@ -9,7 +9,6 @@ date: "2026-02-16"
 
 * [R Lab 3 - Mutating and filtering](/assignments/r_lab_3_%E2%80%93_mutating_and_filtering.qmd)
 * [Reading Review Assignments](/syllabus/syllabus.qmd#reading-review-assignments)
-    * [Discussion Questions](#discussion-questions)
 * [AI-assisted conversation assignment](/assignments/ai_conversation.qmd)
 
 **Readings:** 
@@ -34,7 +33,3 @@ date: "2026-02-16"
 **Class Schedule:**
 
 * [R Lab 4 - Intro to ggraph](/assignments/r_lab_4_%E2%80%93_intro_to_ggraph.qmd)
-
-### Discussion Questions
-
-<iframe src="https://pollev-embeds.com/discourses/Hq0pXTw4Jd3XeIFYiBjpb/respond" width="900px" height="600px"></iframe>

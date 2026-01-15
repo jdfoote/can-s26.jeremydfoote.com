@@ -35,8 +35,3 @@ date: "2026-02-02"
 
 * If needed, finish R Labs 1/2 
 * Start [R Lab 3 - Mutating and filtering](/assignments/r_lab_3_%E2%80%93_mutating_and_filtering.qmd)
-
-
-### Discussion Questions
-
-<iframe src="https://pollev-embeds.com/discourses/AkMvK89Gda3LtwriNTeUO/respond" width="900px" height="600px"></iframe>
