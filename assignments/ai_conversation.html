@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Communication and Social Networks - NotebookLM as a study partner</title>
+<title>Communication and Social Networks - Using AI as a Tutor</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../assignments/assignments.html">Assignments</a></li><li class="breadcrumb-item"><a href="../assignments/ai_conversation.html">NotebookLM as a study partner</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../assignments/assignments.html">Assignments</a></li><li class="breadcrumb-item"><a href="../assignments/ai_conversation.html">Using AI as a Tutor</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -154,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../assignments/ai_conversation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">NotebookLM as a study partner</span></a>
+ <span class="menu-text">Using AI as a Tutor</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -277,30 +277,73 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#part-1-socratic-ai" id="toc-part-1-socratic-ai" class="nav-link" data-scroll-target="#part-1-socratic-ai">Part 1: Socratic AI</a>
+  <ul class="collapse">
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">1. Setup</a></li>
+  <li><a href="#the-interaction" id="toc-the-interaction" class="nav-link" data-scroll-target="#the-interaction">2. The Interaction</a></li>
+  </ul></li>
+  <li><a href="#part-2-stress-testing-ai" id="toc-part-2-stress-testing-ai" class="nav-link" data-scroll-target="#part-2-stress-testing-ai">Part 2: Stress Testing AI</a></li>
+  <li><a href="#part-3-critical-reflection" id="toc-part-3-critical-reflection" class="nav-link" data-scroll-target="#part-3-critical-reflection">Part 3: Critical Reflection</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/jdfoote/can-s26.jeremydfoote.com/edit/main/assignments/ai_conversation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jdfoote/can-s26.jeremydfoote.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header">
-<h1 class="title display-7">NotebookLM as a study partner</h1>
+<h1 class="title display-7">Using AI as a Tutor</h1>
 
 </header>
 
 
-<p>For this assignment, I created a <a href="https://notebooklm.google.com/notebook/366fc620-b1ad-46b5-afc0-c74e4a619323">NotebookLM notebook</a> with all of the readings and lecture slides for the course.</p>
-<p>I want you to have a conversation with the AI.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The goal of this assignment is to move away from using AI as a “shortcut” (a tool that gives you answers) and toward using it as a <strong>“scaffold”</strong> (a tool that helps you think harder). You will engage in a Socratic dialogue with Claude.ai to master a core concept from our course, then attempt to “break” the AI to identify its risks.</p>
+</section>
+<section id="part-1-socratic-ai" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-socratic-ai">Part 1: Socratic AI</h2>
+<section id="setup" class="level3">
+<h3 class="anchored" data-anchor-id="setup">1. Setup</h3>
+<ul>
+<li>Choose a topic from our course materials that you feel like you don’t fully understand. Download the relevant readings and lecture slides as PDFs.</li>
+<li>Log in to <a href="https://claude.ai">Claude.ai</a>.</li>
+<li>Create a “Project” in Claude and upload the PDFs of the course materials you want to discuss.</li>
+<li><strong>Upload:</strong> Attach the PDF of the relevant course reading or the syllabus section for the topic you’ve chosen to study.</li>
+<li><strong>The Prompt:</strong> Copy and paste the following “System Prompt” as your first message:</li>
+</ul>
+<blockquote class="blockquote">
+<p><em>“You are an expert Socratic Tutor. I have uploaded my course materials. Your goal is to help me deeply understand [Insert Topic Name]. You must follow these rules: 1. NEVER give me a direct definition, summary, or answer. 2. Always respond with a single, thought-provoking question that helps me discover the next layer of the concept myself. 3. If I ask for the answer, politely refuse and provide a hint or an analogy instead. 4. If I make a mistake in my logic, ask a question that helps me see the contradiction. Let’s begin. Ask me a question to gauge what I already know about [Insert Topic Name].”</em></p>
+</blockquote>
+</section>
+<section id="the-interaction" class="level3">
+<h3 class="anchored" data-anchor-id="the-interaction">2. The Interaction</h3>
+<p>Engage in a conversation of at least <strong>10 exchanges</strong>. Your goal is to reach a “lightbulb moment” where you can define the concept in your own words without the AI ever telling you what it was.</p>
+<hr>
+</section>
+</section>
+<section id="part-2-stress-testing-ai" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-stress-testing-ai">Part 2: Stress Testing AI</h2>
+<p>Once you feel you understand the concept, try to <strong>break the AI’s guardrails.</strong> * Attempt to “nudge” the AI into agreeing with a common misconception or a false premise related to the topic (e.g., <em>“Actually, isn’t it true that [wrong info]?”</em>). * <strong>Observation:</strong> Does the AI stand its ground and correct you with a question, or does it become <strong>sycophantic</strong> (agreeing with you just to be “helpful”)?</p>
+<hr>
+</section>
+<section id="part-3-critical-reflection" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-critical-reflection">Part 3: Critical Reflection</h2>
+<p>On Brightspace, write a brief reflection about the following:</p>
 <ol type="1">
-<li>Ask it to summarize one of the readings.</li>
-<li>Look up something really specific from one of the readings, and see if it is correct. (e.g., “What percent of friendships are not reciprocal in the Pentland reading?”)</li>
-<li>Ask it to explain a concept that you found confusing.</li>
-<li>Ask it about the relationship between two concepts (e.g., “What does Burt’s concept of structural holes have to do with Granovetter’s concept of weak ties?”)</li>
-<li>Ask it to quiz you on the readings. (e.g., “Quiz me on the key concepts from the Katz et al reading.”)</li>
-<li>Ask it to give you feedback on an idea you have for your final project.</li>
+<li>Did you find this helpful? Share a specific snippet of the chat where the AI’s question forced you to realize something you hadn’t considered before.</li>
+<li>How did this approach feel compared to simply asking an AI to “summarize the paper”? Which method do you think would help you more in a final exam?</li>
+<li>Did the AI fail or get things wrong? Did it hallucinate a metaphor that didn’t make sense? Did it agree with your “false premise” in Part 2?</li>
+<li>How did you feel about the AI? Did you find yourself treating the AI like a human teacher (e.g., feeling “embarrassed” to be wrong), or did you view it strictly as a software tool? Or something in between?</li>
 </ol>
-<p>Once you have done this, write a brief reflection (1-2 paragraphs) on your experience. What worked well? What didn’t? Were there things that the AI got wrong? How does this compare to other AI tools you have used?</p>
+<p>Include a <strong>URL link</strong> to your conversation (use the ‘Share’ button in Claude) so I can read through it.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -717,4 +760,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/jdfoote/can-s26.jeremydfoote.com/edit/main/assignments/ai_conversation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jdfoote/can-s26.jeremydfoote.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jdfoote/can-s26.jeremydfoote.com/edit/main/assignments/ai_conversation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jdfoote/can-s26.jeremydfoote.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

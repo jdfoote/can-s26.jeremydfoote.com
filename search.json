@@ -67,7 +67,7 @@
     "href": "syllabus/syllabus.html#reading-review-assignments",
     "title": "Syllabus",
     "section": "Reading Review Assignments",
-    "text": "Reading Review Assignments\nIn a flipped class like this, it’s really important that folks come prepared to discuss, work through misunderstandings, etc. In order to provide some accountability and space for reflection, each week you will have a review/reflection assignment about the readings and video.\nI’m calling this a “3-2-1 Assignment”. I’d like you to:\n\nWrite down three concepts that you learned or connections that you made from this week’s reading and lecture.\nWrite down two questions you have or things that you don’t quite understand.\nShare one question that you think would make for a good discussion question.\n\nYou should submit your assignment on Brightspace.\n\nDiscussion Questions\nOn the bottom of each week’s schedule is an embedded poll, where you should submit your discussion question. You should also vote on at least a few other questions that you think would be interesting to discuss. We will talk about the top few in class.\nQuestions should engage with the readings and either connect to other concepts or to the “real world”. Here are some good example questions:\n\nThe readings this week talked a lot about how network ties get created. I made a list of my closest friends and I realized that most of them only became friends after we happened to be in the same groups over and over again. What role does repetition have in forming ties?\nI was confused by the reading on social capital. What’s the difference between social capital and power? And if they are the same, then why not just call it “network power”?\nImagine you were asked to analyze the network of a big company to help them to identify people who deserve a raise. What measures would you use to identify them? What would you not use?"
+    "text": "Reading Review Assignments\nIn a flipped class like this, it’s really important that folks come prepared to discuss, work through misunderstandings, etc. In order to provide some accountability and space for reflection, each week you will have a review/reflection assignment about the readings and video.\nI’m calling this a “3-2-1 Assignment”. I’d like you to:\n\nWrite down three concepts that you learned or connections that you made from this week’s reading and lecture.\nWrite down two questions you have or things that you don’t quite understand.\nShare one question that you think would make for a good discussion question.\n\nYou should submit your assignment on Brightspace.\n\nDiscussion Question\nPut your discussion question in the “1” portion of your 3-2-1 assignment, but also post it on Discord in the #discussions channel.\nQuestions should engage with the readings and either connect to other concepts or to the “real world”. Here are some good example questions:\n\nThe readings this week talked a lot about how network ties get created. I made a list of my closest friends and I realized that most of them only became friends after we happened to be in the same groups over and over again. What role does repetition have in forming ties?\nI was confused by the reading on social capital. What’s the difference between social capital and power? And if they are the same, then why not just call it “network power”?\nImagine you were asked to analyze the network of a big company to help them to identify people who deserve a raise. What measures would you use to identify them? What would you not use?"
   },
   {
     "objectID": "syllabus/syllabus.html#homeworklabs",
@@ -249,7 +249,7 @@
     "href": "schedule/week_03.html",
     "title": "Week 3: How are communication networks formed?",
     "section": "",
-    "text": "Tuesday\nAssignment Due (on Monday):\n\nReading Review\n\nReadings:\n\nFeld, S. L. (1981). The focused organization of social ties. American Journal of Sociology, 86(5), 1015–1035.\nMcPherson, M., Smith-Lovin, L., & Cook, J. M. (2001). Birds of a Feather: Homophily in Social Networks. Annual Review of Sociology, 27, 415–444.\n[Optional] Monge, P. R., & Contractor, N. S. (2003). Theories of communication networks. Oxford, UK: Oxford University Press. (pp. 298–314) - On Brightspace under Content &gt; Readings\n\nNote: This week involves reading two academic articles. Read this to understand my expectations and some tips for reading and understanding these articles. This video goes over how you can use Claude.ai to understand papers better.\nLecture Video:\n\nTie Formation [14:55]\n\n\n\nSlides\n\n\n\nConcepts:\n\nExposure, formation, maintenance, decay\nHomophily\nReciprocity\nTriadic closure\n\n\n\n\nThursday\nSupplementary R lectures (watch before class):\n\nWhy R + Programming principles lecture [12:53]\n\n\nClass Schedule:\n\nR Lab 2 - Creating Networks",
+    "text": "Tuesday\nAssignment Due (on Monday):\n\nReading Review\n\nReadings:\n\nFeld, S. L. (1981). The focused organization of social ties. American Journal of Sociology, 86(5), 1015–1035.\nMcPherson, M., Smith-Lovin, L., & Cook, J. M. (2001). Birds of a Feather: Homophily in Social Networks. Annual Review of Sociology, 27, 415–444.\nMonge, P. R., & Contractor, N. S. (2003). Theories of communication networks. Oxford, UK: Oxford University Press. (pp. 298–314) - On Brightspace under Content &gt; Readings\n\nNote: This week involves reading two academic articles. Read this to understand my expectations and some tips for reading and understanding these articles. This video goes over how you can use Claude.ai to understand papers better.\nLecture Video:\n\nTie Formation [14:55]\n\n\n\nSlides\n\n\n\nConcepts:\n\nExposure, formation, maintenance, decay\nHomophily\nReciprocity\nTriadic closure\n\n\n\n\nThursday\nSupplementary R lectures (watch before class):\n\nWhy R + Programming principles lecture [12:53]\n\n\nClass Schedule:\n\nR Lab 2 - Creating Networks",
     "crumbs": [
       "Schedule",
       "Course content",
@@ -826,7 +826,7 @@
     "href": "lectures/class_lectures/week_4.html#housekeeping",
     "title": "Week 4 - Small Group Networks",
     "section": "Housekeeping",
-    "text": "Housekeeping\n\nPractice asking a question on Discord\nWhich week are we on?"
+    "text": "Housekeeping\n\nPractice asking a question on Discord"
   },
   {
     "objectID": "lectures/class_lectures/week_4.html#housekeeping-1",
@@ -847,7 +847,7 @@
     "href": "lectures/class_lectures/week_4.html#what-concepts-are-confusing",
     "title": "Week 4 - Small Group Networks",
     "section": "What concepts are confusing?",
-    "text": "What concepts are confusing?\n\n-In R, what are the main differences between a tibble (from the tidyverse) and a standard data frame, and when should I use one over the other?"
+    "text": "What concepts are confusing?"
   },
   {
     "objectID": "lectures/class_lectures/week_4.html#review-questions",
@@ -875,14 +875,21 @@
     "href": "lectures/class_lectures/week_4.html#review-questions-2",
     "title": "Week 4 - Small Group Networks",
     "section": "Review Questions",
-    "text": "Review Questions\n\nWhat is hierarchy?\nWhat is a core-periphery structure?\nWhat is a structural hole?\nWhat is multiplexity?"
+    "text": "Review Questions\n\nWhat is network hierarchy? How does it differ from organizational hierarchy?\nWhat is a core-periphery structure?\nWhat is a structural hole?\nWhat is multiplexity?"
   },
   {
     "objectID": "lectures/class_lectures/week_4.html#discussion-questions",
     "href": "lectures/class_lectures/week_4.html#discussion-questions",
     "title": "Week 4 - Small Group Networks",
     "section": "Discussion Questions",
-    "text": "Discussion Questions\n\nHow can managers or researchers measure networks in real time to avoid relying only on static snapshots?\nDegree centrality vs. closeness centrality\nWhy are they called “informal networks” if it’s still people you work with?\nAre strong ties always better than weak ties for productivity?\nHow common is it for businesses to utilize network mapping?\nWhat are the downsides of relying on informal networks to make decisions?"
+    "text": "Discussion Questions\n\nHow can there be too much information in a network?\nIn a world where many interactions are remote, often through platforms like Microsoft Teams, Slack, and X, does physical distance still matter, and if not, what is the number 1 indicator of a tie forming in social networks?\nHow do organizations map informal networks without making people feel monitored or punished for being “too central” or “not connected enough”? What safeguards keep network analysis from turning into performance surveillance?"
+  },
+  {
+    "objectID": "lectures/class_lectures/week_4.html#discussion-questions-1",
+    "href": "lectures/class_lectures/week_4.html#discussion-questions-1",
+    "title": "Week 4 - Small Group Networks",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\n\nHow can managers or researchers measure networks in real time to avoid relying only on static snapshots?\nWhat are the downsides of relying on informal networks to make decisions?\nWhich direction does causality go?\nAre all relationships formed due to selfishness? It seems like every relationship is transactional in one way or another.\nHow useful are networks really?"
   },
   {
     "objectID": "lectures/class_lectures/week_4.html#thursday",
@@ -913,11 +920,11 @@
     "text": "3-2-1 Example"
   },
   {
-    "objectID": "lectures/class_lectures/week_2.html#schedule",
-    "href": "lectures/class_lectures/week_2.html#schedule",
+    "objectID": "lectures/class_lectures/week_2.html#the-plan",
+    "href": "lectures/class_lectures/week_2.html#the-plan",
     "title": "Week 2 - Network Data and Network Types",
-    "section": "Schedule",
-    "text": "Schedule\n\nHousekeeping / Announcements (5-10)\nDiscussion and review (35-45)\nConsolidation and Confusion (10-15)\n\nResponse to needs\nDiscuss at end of class"
+    "section": "The Plan",
+    "text": "The Plan\n\nHousekeeping / Announcements (5-10)\nDiscussion and review (35-45)\nConsolidation and Confusion (10-15)\n\nResponse to needs\nDiscuss at end of class"
   },
   {
     "objectID": "lectures/class_lectures/week_2.html#review",
@@ -959,14 +966,7 @@
     "href": "lectures/class_lectures/week_2.html#questions-from-3-2-1s",
     "title": "Week 2 - Network Data and Network Types",
     "section": "Questions from 3-2-1s",
-    "text": "Questions from 3-2-1s\n\nIs there only one way to graph social connections? So far as we have seen, there has only been one method to graph social network connections, using ties and nodes; are there other ways?\nIf you didn’t know whether a network was directed or not, could you know just by looking at the edge list?\nWhen would be the case to use a edge list compared to an adjacency list?"
-  },
-  {
-    "objectID": "lectures/class_lectures/week_2.html#questions-from-3-2-1s-1",
-    "href": "lectures/class_lectures/week_2.html#questions-from-3-2-1s-1",
-    "title": "Week 2 - Network Data and Network Types",
-    "section": "Questions from 3-2-1s",
-    "text": "Questions from 3-2-1s\n\nWhat does it mean for a network to be projected?\nHow do researchers deal with multiplex networks? Do they analyze each relation separately, or is there a way to combine them meaningfully?\nAdjacency lists vs. edge lists vs. matrices"
+    "text": "Questions from 3-2-1s\n\nBipartite networks and projections\n\nIs group affiliation really a relationship?\n\nHow can you find patterns in large networks?\nMultiplex networks\nHow do you set network boundaries?\nHow can we visualize how networks change over time?"
   },
   {
     "objectID": "lectures/class_lectures/week_2.html#discussion-questions",
@@ -2030,12 +2030,56 @@
   {
     "objectID": "assignments/ai_conversation.html",
     "href": "assignments/ai_conversation.html",
-    "title": "NotebookLM as a study partner",
+    "title": "Using AI as a Tutor",
     "section": "",
-    "text": "For this assignment, I created a NotebookLM notebook with all of the readings and lecture slides for the course.\nI want you to have a conversation with the AI.\n\nAsk it to summarize one of the readings.\nLook up something really specific from one of the readings, and see if it is correct. (e.g., “What percent of friendships are not reciprocal in the Pentland reading?”)\nAsk it to explain a concept that you found confusing.\nAsk it about the relationship between two concepts (e.g., “What does Burt’s concept of structural holes have to do with Granovetter’s concept of weak ties?”)\nAsk it to quiz you on the readings. (e.g., “Quiz me on the key concepts from the Katz et al reading.”)\nAsk it to give you feedback on an idea you have for your final project.\n\nOnce you have done this, write a brief reflection (1-2 paragraphs) on your experience. What worked well? What didn’t? Were there things that the AI got wrong? How does this compare to other AI tools you have used?",
+    "text": "The goal of this assignment is to move away from using AI as a “shortcut” (a tool that gives you answers) and toward using it as a “scaffold” (a tool that helps you think harder). You will engage in a Socratic dialogue with Claude.ai to master a core concept from our course, then attempt to “break” the AI to identify its risks.",
     "crumbs": [
       "Assignments",
-      "NotebookLM as a study partner"
+      "Using AI as a Tutor"
+    ]
+  },
+  {
+    "objectID": "assignments/ai_conversation.html#overview",
+    "href": "assignments/ai_conversation.html#overview",
+    "title": "Using AI as a Tutor",
+    "section": "",
+    "text": "The goal of this assignment is to move away from using AI as a “shortcut” (a tool that gives you answers) and toward using it as a “scaffold” (a tool that helps you think harder). You will engage in a Socratic dialogue with Claude.ai to master a core concept from our course, then attempt to “break” the AI to identify its risks.",
+    "crumbs": [
+      "Assignments",
+      "Using AI as a Tutor"
+    ]
+  },
+  {
+    "objectID": "assignments/ai_conversation.html#part-1-socratic-ai",
+    "href": "assignments/ai_conversation.html#part-1-socratic-ai",
+    "title": "Using AI as a Tutor",
+    "section": "Part 1: Socratic AI",
+    "text": "Part 1: Socratic AI\n\n1. Setup\n\nChoose a topic from our course materials that you feel like you don’t fully understand. Download the relevant readings and lecture slides as PDFs.\nLog in to Claude.ai.\nCreate a “Project” in Claude and upload the PDFs of the course materials you want to discuss.\nUpload: Attach the PDF of the relevant course reading or the syllabus section for the topic you’ve chosen to study.\nThe Prompt: Copy and paste the following “System Prompt” as your first message:\n\n\n“You are an expert Socratic Tutor. I have uploaded my course materials. Your goal is to help me deeply understand [Insert Topic Name]. You must follow these rules: 1. NEVER give me a direct definition, summary, or answer. 2. Always respond with a single, thought-provoking question that helps me discover the next layer of the concept myself. 3. If I ask for the answer, politely refuse and provide a hint or an analogy instead. 4. If I make a mistake in my logic, ask a question that helps me see the contradiction. Let’s begin. Ask me a question to gauge what I already know about [Insert Topic Name].”\n\n\n\n2. The Interaction\nEngage in a conversation of at least 10 exchanges. Your goal is to reach a “lightbulb moment” where you can define the concept in your own words without the AI ever telling you what it was.",
+    "crumbs": [
+      "Assignments",
+      "Using AI as a Tutor"
+    ]
+  },
+  {
+    "objectID": "assignments/ai_conversation.html#part-2-stress-testing-ai",
+    "href": "assignments/ai_conversation.html#part-2-stress-testing-ai",
+    "title": "Using AI as a Tutor",
+    "section": "Part 2: Stress Testing AI",
+    "text": "Part 2: Stress Testing AI\nOnce you feel you understand the concept, try to break the AI’s guardrails. * Attempt to “nudge” the AI into agreeing with a common misconception or a false premise related to the topic (e.g., “Actually, isn’t it true that [wrong info]?”). * Observation: Does the AI stand its ground and correct you with a question, or does it become sycophantic (agreeing with you just to be “helpful”)?",
+    "crumbs": [
+      "Assignments",
+      "Using AI as a Tutor"
+    ]
+  },
+  {
+    "objectID": "assignments/ai_conversation.html#part-3-critical-reflection",
+    "href": "assignments/ai_conversation.html#part-3-critical-reflection",
+    "title": "Using AI as a Tutor",
+    "section": "Part 3: Critical Reflection",
+    "text": "Part 3: Critical Reflection\nOn Brightspace, write a brief reflection about the following:\n\nDid you find this helpful? Share a specific snippet of the chat where the AI’s question forced you to realize something you hadn’t considered before.\nHow did this approach feel compared to simply asking an AI to “summarize the paper”? Which method do you think would help you more in a final exam?\nDid the AI fail or get things wrong? Did it hallucinate a metaphor that didn’t make sense? Did it agree with your “false premise” in Part 2?\nHow did you feel about the AI? Did you find yourself treating the AI like a human teacher (e.g., feeling “embarrassed” to be wrong), or did you view it strictly as a software tool? Or something in between?\n\nInclude a URL link to your conversation (use the ‘Share’ button in Claude) so I can read through it.",
+    "crumbs": [
+      "Assignments",
+      "Using AI as a Tutor"
     ]
   },
   {
@@ -2840,14 +2884,7 @@
     "href": "lectures/class_lectures/week_3.html#flash-presentations",
     "title": "Week 3 - Edge Formation",
     "section": "Flash presentations",
-    "text": "Flash presentations\n\n4 minutes of prep\n1-2 minutes of presentation\nTell us about one edge formation process"
-  },
-  {
-    "objectID": "lectures/class_lectures/week_3.html#edge-formation-review",
-    "href": "lectures/class_lectures/week_3.html#edge-formation-review",
-    "title": "Week 3 - Edge Formation",
-    "section": "Edge formation review",
-    "text": "Edge formation review\n\nWhat is an edge?\nWhat is one reason an edge might form?\nWhat is homophily?\nWhat is reciprocity?\nWhat is an transitivity?\nWhat is balance theory?"
+    "text": "Flash presentations\n\n8 minutes of prep\n2-3 minutes of presentation\nTell us about one edge formation process\n\nSocial exchange theory\nFoci of activity\nHomophily\nReciprocity\nTransitivity\nBalance theory"
   },
   {
     "objectID": "lectures/class_lectures/week_3.html#exercise",
@@ -2864,8 +2901,8 @@
     "text": "Exercise\n\nNow draw the relationships between your friends\nWhat would our theories suggest about which new relationships are likely to form?\nWhat about which relationships are unlikely to form?"
   },
   {
-    "objectID": "lectures/class_lectures/week_3.html#edge-formation-review-1",
-    "href": "lectures/class_lectures/week_3.html#edge-formation-review-1",
+    "objectID": "lectures/class_lectures/week_3.html#edge-formation-review",
+    "href": "lectures/class_lectures/week_3.html#edge-formation-review",
     "title": "Week 3 - Edge Formation",
     "section": "Edge formation review",
     "text": "Edge formation review\n\nWhat are some causes of homophily?\nWhat are foci of activity?\nHow do ties dissolve?\n\nWhat ties have you seen dissolve in your network? What type is most likely to dissolve?\n\nWhat is “tie maintenance” and what forms does it take?"
@@ -2875,7 +2912,7 @@
     "href": "lectures/class_lectures/week_3.html#discussion-questions",
     "title": "Week 3 - Edge Formation",
     "section": "Discussion Questions",
-    "text": "Discussion Questions\n\nHow do people know what position is powerful in this network?\nIsomorphism"
+    "text": "Discussion Questions\n\nWhen is homophily beneficial?\nWhat are strategies to increase diversity in networks?\nAre there exceptions to balance theory and transitivity?"
   },
   {
     "objectID": "lectures/class_lectures/week_3.html#homework-review",
@@ -2955,18 +2992,25 @@
     "text": "Review\n\nWhat are some reasons that you think friendship can be asymmetrical?\nIs there such thing as a “true” social network? How could we find it out?\nWhat are some ways that our perceptions of a network could influence our behaviors?\n\n\n\nDifferent perception of “friendship”\nDifferent cognitive activation (who comes to mind)\nAmbition / social status"
   },
   {
+    "objectID": "lectures/class_lectures/week_5.html#break-time",
+    "href": "lectures/class_lectures/week_5.html#break-time",
+    "title": "Week 5 - Ego Networks",
+    "section": "Break Time",
+    "text": "Break Time"
+  },
+  {
     "objectID": "lectures/class_lectures/week_5.html#review-2",
     "href": "lectures/class_lectures/week_5.html#review-2",
     "title": "Week 5 - Ego Networks",
     "section": "Review",
-    "text": "Review\n\nWhat is the “cognitive activation” of a network? What is mobilization?\nWhy might SES be related to which networks are activated in stress?"
+    "text": "Review\n\nWhat is the difference between a potential network, an activated network, and a mobilized network?\nWhy might SES be related to which networks are activated under job loss threat?\n\n\n\nEven wider network may not have resources\nDifferent types of work may require different types of networks\nHigher SES have greater time / money / energy to reach out to more distant connections\nDistant connections respond differently based on SES of asker"
   },
   {
     "objectID": "lectures/class_lectures/week_5.html#discussion-questions",
     "href": "lectures/class_lectures/week_5.html#discussion-questions",
     "title": "Week 5 - Ego Networks",
     "section": "Discussion Questions",
-    "text": "Discussion Questions\n\nPerceived vs. “actual” networks\nHow do we measure “actual” networks?\nTie strength, density, and herd mentality"
+    "text": "Discussion Questions\n\nWhat are the consequences of relying on self-reported network data when people may misunderstand who is actually part of their support network?\nWhy might personal network sizes differ based on race?\nIf dense and family-centered social networks are typically the foundation of most social networks, are social networks naturally structured to limit the spread of new ideas and social change?"
   },
   {
     "objectID": "lectures/class_lectures/week_5.html#summary",
