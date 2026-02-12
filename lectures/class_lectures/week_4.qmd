@@ -32,7 +32,6 @@ Luckily I was still up playing the drums.
 ## Housekeeping
 
 > - Practice asking a question on Discord
-> - Which week are we on?
 
 ## Housekeeping
 
@@ -48,7 +47,7 @@ Luckily I was still up playing the drums.
 
 ## What concepts are confusing?
 
-> -In R, what are the main differences between a tibble (from the tidyverse) and a standard data frame, and when should I use one over the other?
+
 
 ## Review Questions
 
@@ -68,20 +67,24 @@ Luckily I was still up playing the drums.
 
 ## Review Questions
 
-> - What is hierarchy?
+> - What is network hierarchy? How does it differ from organizational hierarchy?
 > - What is a core-periphery structure?
 > - What is a structural hole?
 > - What is multiplexity?
 
 ## Discussion Questions
 
-> - How can managers or researchers measure networks in real time to avoid relying only on static snapshots?
-> - Degree centrality vs. closeness centrality
-> - Why are they called "informal networks" if it's still people you work with?
-> - Are strong ties always better than weak ties for productivity?
-> - How common is it for businesses to utilize network mapping?
-> - What are the downsides of relying on informal networks to make decisions?
+> - How can there be too much information in a network?
+> - In a world where many interactions are remote, often through platforms like Microsoft Teams, Slack, and X, does physical distance still matter, and if not, what is the number 1 indicator of a tie forming in social networks? 
+> - How do organizations map informal networks without making people feel monitored or punished for being "too central" or "not connected enough"? What safeguards keep network analysis from turning into performance surveillance? 
 
+## Discussion Questions
+
+> - How can managers or researchers measure networks in real time to avoid relying only on static snapshots?
+> - What are the downsides of relying on informal networks to make decisions?
+> - Which direction does causality go?
+> - Are all relationships formed due to selfishness? It seems like every relationship is transactional in one way or another. 
+> - How useful are networks really? 
 
 ## Thursday
 

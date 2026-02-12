@@ -16,7 +16,7 @@ date: "2026-02-09"
 * Marsden, P. V. (1987). [Core Discussion Networks of Americans](https://www-jstor-org.ezproxy.lib.purdue.edu/stable/2095397). American Sociological Review, 52(1), 122–131. 
   * [Claude.ai summary](./pages/marsden-core-summary.qmd)
 * Pentland, A.S. (2016). [Research: You Have Fewer Friends than You Think](https://web.archive.org/web/20230604023300/https://hbr.org/2016/05/research-you-have-fewer-friends-than-you-think). (2016, May 12). Harvard Business Review. 
-* Smith, E. B., Menon, T., & Thompson, L. (2012). [Status Differences in the Cognitive Activation of Social Networks](https://pubsonline-informs-org.ezproxy.lib.purdue.edu/doi/full/10.1287/orsc.1100.0643). Organization Science, 23(1), 67–82. 
+* Smith, E. B., Menon, T., & Thompson, L. (2012). [Status Differences in the Cognitive Activation of Social Networks](https://www.jstor.org/stable/pdf/41429018.pdf). Organization Science, 23(1), 67–82. 
   * [Claude.ai summary](./pages/smith-status-summary.qmd)
 
 **Lecture Video:**

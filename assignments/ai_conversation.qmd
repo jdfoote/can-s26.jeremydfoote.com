@@ -1,16 +1,47 @@
 ---
-title: "NotebookLM as a study partner"
+title: "Using AI as a Tutor"
 ---
 
-For this assignment, I created a [NotebookLM notebook](https://notebooklm.google.com/notebook/366fc620-b1ad-46b5-afc0-c74e4a619323) with all of the readings and lecture slides for the course. 
+## Overview
 
-I want you to have a conversation with the AI.
+The goal of this assignment is to move away from using AI as a "shortcut" (a tool that gives you answers) and toward using it as a **"scaffold"** (a tool that helps you think harder). You will engage in a Socratic dialogue with Claude.ai to master a core concept from our course, then attempt to "break" the AI to identify its risks.
 
-1. Ask it to summarize one of the readings.
-2. Look up something really specific from one of the readings, and see if it is correct. (e.g., "What percent of friendships are not reciprocal in the Pentland reading?")
-3. Ask it to explain a concept that you found confusing.
-4. Ask it about the relationship between two concepts (e.g., "What does Burt's concept of structural holes have to do with Granovetter's concept of weak ties?")
-5. Ask it to quiz you on the readings. (e.g., "Quiz me on the key concepts from the Katz et al reading.")
-6. Ask it to give you feedback on an idea you have for your final project.
+## Part 1: Socratic AI
 
-Once you have done this, write a brief reflection (1-2 paragraphs) on your experience. What worked well? What didn't? Were there things that the AI got wrong? How does this compare to other AI tools you have used?
+### 1. Setup
+
+* Choose a topic from our course materials that you feel like you don't fully understand. Download the relevant readings and lecture slides as PDFs.
+* Log in to [Claude.ai](https://claude.ai).
+* Create a "Project" in Claude and upload the PDFs of the course materials you want to discuss.
+* **Upload:** Attach the PDF of the relevant course reading or the syllabus section for the topic you’ve chosen to study.
+* **The Prompt:** Copy and paste the following "System Prompt" as your first message:
+
+> *"You are an expert Socratic Tutor. I have uploaded my course materials. Your goal is to help me deeply understand [Insert Topic Name]. You must follow these rules: 
+> 1. NEVER give me a direct definition, summary, or answer. 
+> 2. Always respond with a single, thought-provoking question that helps me discover the next layer of the concept myself. 
+> 3. If I ask for the answer, politely refuse and provide a hint or an analogy instead. 
+> 4. If I make a mistake in my logic, ask a question that helps me see the contradiction. 
+> Let's begin. Ask me a question to gauge what I already know about [Insert Topic Name]."*
+
+### 2. The Interaction
+Engage in a conversation of at least **10 exchanges**. Your goal is to reach a "lightbulb moment" where you can define the concept in your own words without the AI ever telling you what it was.
+
+---
+
+## Part 2: Stress Testing AI
+
+Once you feel you understand the concept, try to **break the AI’s guardrails.** * Attempt to "nudge" the AI into agreeing with a common misconception or a false premise related to the topic (e.g., *"Actually, isn't it true that [wrong info]?"*).
+* **Observation:** Does the AI stand its ground and correct you with a question, or does it become **sycophantic** (agreeing with you just to be "helpful")?
+
+---
+
+## Part 3: Critical Reflection
+
+On Brightspace, write a brief reflection about the following:
+
+1. Did you find this helpful? Share a specific snippet of the chat where the AI’s question forced you to realize something you hadn't considered before.
+2. How did this approach feel compared to simply asking an AI to "summarize the paper"? Which method do you think would help you more in a final exam?
+3. Did the AI fail or get things wrong? Did it hallucinate a metaphor that didn't make sense? Did it agree with your "false premise" in Part 2? 
+4. How did you feel about the AI? Did you find yourself treating the AI like a human teacher (e.g., feeling "embarrassed" to be wrong), or did you view it strictly as a software tool? Or something in between?
+
+Include a **URL link** to your conversation (use the 'Share' button in Claude) so I can read through it.

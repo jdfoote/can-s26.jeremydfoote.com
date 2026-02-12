@@ -114,16 +114,26 @@ play_gnp(10, 0.15) |>
 - Ambition / social status
 </aside>
 
+## Break Time
+
 ## Review
 
-> - What is the "cognitive activation" of a network? What is mobilization?
-> - Why might SES be related to which networks are activated in stress?
+> - What is the difference between a potential network, an activated network, and a mobilized network?
+> - Why might SES be related to which networks are activated under job loss threat?
+
+<aside class='notes'>
+- Even wider network may not have resources
+- Different types of work may require different types of networks
+- Higher SES have greater time / money / energy to reach out to more distant connections
+- Distant connections respond differently based on SES of asker
+</aside>
 
 ## Discussion Questions
 
-> - Perceived vs. "actual" networks
-> - How do we measure "actual" networks?
-> - Tie strength, density, and herd mentality
+> - What are the consequences of relying on self-reported network data when people may misunderstand who is actually part of their support network?
+> - Why might personal network sizes differ based on race?
+> - If dense and family-centered social networks are typically the foundation of most social networks, are social networks naturally structured to limit the spread of new ideas and social change?
+
 
 ## Summary
 
@@ -140,8 +150,8 @@ play_gnp(10, 0.15) |>
 
 - Make an edgelist for each connection, with tie strength of:
 	- Total strangers: 0
-	- Especially close: 1
-	- In between: .5
+	- Especially close: 2
+	- In between: 1
 
 ## Write attributes of your connections to a node attribute file
 

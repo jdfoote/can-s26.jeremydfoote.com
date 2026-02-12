@@ -41,18 +41,26 @@ One astronaut says to another, "I can’t find any milk for my coffee"
 
 ## Flash presentations
 
-> - 4 minutes of prep
-> - 1-2 minutes of presentation
+> - 8 minutes of prep
+> - 2-3 minutes of presentation
 > - Tell us about one edge formation process
+>   - Social exchange theory
+>   - Foci of activity
+>   - Homophily
+>   - Reciprocity
+>   - Transitivity
+>   - Balance theory
 
+<!--
 ## Edge formation review
 
 > - What is an edge?
 > - What is one reason an edge might form?
 > - What is homophily?
 > - What is reciprocity?
-> - What is an transitivity?
+> - What is transitivity?
 > - What is balance theory?
+-->
 
 ## Exercise
 
@@ -78,8 +86,9 @@ One astronaut says to another, "I can’t find any milk for my coffee"
 
 ## Discussion Questions
 
-> - How do people know what position is powerful in this network? 
-> - Isomorphism
+> - When is homophily beneficial?
+> - What are strategies to increase diversity in networks?
+> - Are there exceptions to balance theory and transitivity?
 
 ## Homework review
 

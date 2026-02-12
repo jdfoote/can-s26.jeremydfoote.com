@@ -15,7 +15,7 @@ date: "2026-01-26"
 
 * Feld, S. L. (1981). [The focused organization of social ties](https://www.jstor.org/stable/2778746). American Journal of Sociology, 86(5), 1015–1035.
 * McPherson, M., Smith-Lovin, L., & Cook, J. M. (2001). [Birds of a Feather: Homophily in Social Networks](https://www-jstor-org.ezproxy.lib.purdue.edu/stable/2678628). Annual Review of Sociology, 27, 415–444.
-* [Optional] Monge, P. R., & Contractor, N. S. (2003). Theories of communication networks. Oxford, UK: Oxford University Press. (pp. 298–314) - On Brightspace under Content > Readings
+* Monge, P. R., & Contractor, N. S. (2003). Theories of communication networks. Oxford, UK: Oxford University Press. (pp. 298–314) - On Brightspace under Content > Readings
 
 *Note:* This week involves reading two academic articles. [Read this](/syllabus/syllabus.qmd#reading-academic-articles) to understand my expectations and some tips for reading and understanding these articles. [This video](https://www.youtube.com/watch?v=IX8eGg_7gF4) goes over how you can use Claude.ai to understand papers better.
 
