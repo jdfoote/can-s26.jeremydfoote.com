@@ -4,6 +4,8 @@ import os
 def generate_qmd(row):
     name, due_date, video_url, file_location = row
     
+    filename = file_location.split('/')[-1]
+
     qmd_content = f"""---
 title: "{name}"
 date: {due_date}
@@ -26,7 +28,7 @@ date: {due_date}
 
 ## Example Solution
 
-[View Example Solution]({file_location.replace('/r_labs/', '/r_lab_examples/').replace('.qmd', '.pdf')})
+[View Example Solution](/assignments/r_lab_examples/{filename.replace('.qmd', '.pdf')})
 
 """
     

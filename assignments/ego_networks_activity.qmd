@@ -1,6 +1,6 @@
 ---
 title: "Ego Networks Activity"
-date: 2025-09-25
+date: 2026-02-12
 ---
 
 
@@ -12,5 +12,5 @@ date: 2025-09-25
 
 ## Example Solution
 
-[View Example Solution](/assignments/ego_networks/ego_analysis.pdf)
+[View Example Solution](/assignments/r_lab_examples/ego_analysis.pdf)
 
