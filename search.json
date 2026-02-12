@@ -3031,7 +3031,7 @@
     "href": "lectures/class_lectures/week_5.html#making-connections",
     "title": "Week 5 - Ego Networks",
     "section": "Making Connections",
-    "text": "Making Connections\n\nMake an edgelist for each connection, with tie strength of:\n\nTotal strangers: 0\nEspecially close: 1\nIn between: .5"
+    "text": "Making Connections\n\nMake an edgelist for each connection, with tie strength of:\n\nTotal strangers: 0\nEspecially close: 2\nIn between: 1"
   },
   {
     "objectID": "lectures/class_lectures/week_5.html#write-attributes-of-your-connections-to-a-node-attribute-file",
