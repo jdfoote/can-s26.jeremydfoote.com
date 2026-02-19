@@ -756,14 +756,14 @@
     "href": "lectures/class_lectures/week_6.html#housekeeping",
     "title": "Week 6 - Centrality and Centralization",
     "section": "Housekeeping",
-    "text": "Housekeeping\n\nSelf Assessment Reflection Feedback coming soonish\nHomework questions on Discord\n\nHow to copy and paste code\n\nA lot like qmd files\n\n\n\n```r\n\nG |&gt;\n  activate(nodes) |&gt;\n  filter(age &gt; 25)\n```"
+    "text": "Housekeeping\n\nSelf Assessment Reflection Feedback is in\nPosting homework questions on Discord:\n\n\n\n```r\n\nG |&gt;\n  activate(nodes) |&gt;\n  filter(age &gt; 25)\n```"
   },
   {
     "objectID": "lectures/class_lectures/week_6.html#housekeeping-1",
     "href": "lectures/class_lectures/week_6.html#housekeeping-1",
     "title": "Week 6 - Centrality and Centralization",
     "section": "Housekeeping",
-    "text": "Housekeeping\n\nHow did the AI assignment go?\n\nWhat was it good at?\nWhat was it bad at?"
+    "text": "Housekeeping\n\nHow did the AI assignment go?\n\nWhat was it good at?\nWhat was it bad at?\n\nHow do you think AI will be incorporated into teaching in the future?"
   },
   {
     "objectID": "lectures/class_lectures/week_6.html#concept-review",
@@ -777,7 +777,7 @@
     "href": "lectures/class_lectures/week_6.html#flash-presentations",
     "title": "Week 6 - Centrality and Centralization",
     "section": "Flash presentations",
-    "text": "Flash presentations\n\nChoose one centrality measure\n4 minutes of prep\n1-2 minutes of presentation\nWhat is it? How is it calculated? What does it tell us about power/influence?"
+    "text": "Flash presentations\n\nChoose one centrality measure\n4 minutes of prep\n1-2 minutes of presentation\nWhat is it? How is it calculated? What does it tell us about power/influence?\nWhat are its limitations?"
   },
   {
     "objectID": "lectures/class_lectures/week_6.html#concept-review-1",
@@ -805,7 +805,14 @@
     "href": "lectures/class_lectures/week_6.html#discussion-questions",
     "title": "Week 6 - Centrality and Centralization",
     "section": "Discussion Questions",
-    "text": "Discussion Questions\n\nCould someone have high network centrality but low actual power/influence?\nDoes network position cause influence, or vice versa?\nBipartite graphs (Paul Revere)\nHow do these approaches scale to huge networks?\nHow are centrality measures impacted by missing data?"
+    "text": "Discussion Questions\n\nCould someone have high network / degree centrality but low actual power/influence?\n\nAre there situations where degree centrality is negatively associated with power/influence?\n\nAre follower counts less meaningful than they used to be, due to individualized algorithms?\nWhat aspects of power do network measures miss?\nDoes network position cause influence, or vice versa?\nBonacich point about being connected to non-influential people can make you more influential"
+  },
+  {
+    "objectID": "lectures/class_lectures/week_6.html#discussion-questions-1",
+    "href": "lectures/class_lectures/week_6.html#discussion-questions-1",
+    "title": "Week 6 - Centrality and Centralization",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\n\nHow do network structures reflect political systems?\nHow can we visualize centrality?\nHow do these approaches scale to huge networks?\nHow are centrality measures impacted by missing data?"
   },
   {
     "objectID": "lectures/class_lectures/week_6.html#r-review",
