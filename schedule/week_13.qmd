@@ -1,6 +1,6 @@
 ---
 title: "Week 13: Technology and networks"
-date: "2026-04-06"
+date: "2026-04-13"
 ---
 
 ### Tuesday
