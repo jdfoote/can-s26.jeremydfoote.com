@@ -28,10 +28,8 @@ I had to put my foot down.
 
 ## Housekeeping
 
-> - Self Assessment Reflection Feedback coming soonish
-> - Homework questions on Discord
->	- How to copy and paste code
-> - A lot like qmd files
+> - Self Assessment Reflection Feedback is in
+> - Posting homework questions on Discord:
 
 <div class='fragment'>
 <code><pre>
@@ -52,6 +50,7 @@ G |>
 > - How did the AI assignment go?
 >   - What was it good at?
 >   - What was it bad at?
+> - How do you think AI will be incorporated into teaching in the future?
 
 
 <!--
@@ -75,6 +74,7 @@ G |>
 > - 4 minutes of prep
 > - 1-2 minutes of presentation
 > - What is it? How is it calculated? What does it tell us about power/influence?
+> - What are its limitations?
 
 <!--
 ## Concept Review
@@ -126,9 +126,17 @@ G |>
 
 ## Discussion Questions
 
-> - Could someone have high network centrality but low actual power/influence?
+> - Could someone have high network / degree centrality but low actual power/influence?
+>   - Are there situations where degree centrality is negatively associated with power/influence?
+> - Are follower counts less meaningful than they used to be, due to individualized algorithms?
+> - What aspects of power do network measures miss?
 > - Does network position cause influence, or vice versa?
-> - Bipartite graphs (Paul Revere)
+> - Bonacich point about being connected to non-influential people can make you more influential
+
+## Discussion Questions
+
+> - How do network structures reflect political systems?
+> - How can we visualize centrality?
 > - How do these approaches scale to huge networks?
 > - How are centrality measures impacted by missing data?
 

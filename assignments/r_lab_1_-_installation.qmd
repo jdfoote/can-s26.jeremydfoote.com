@@ -1,6 +1,6 @@
 ---
 title: R Lab 1 - Setting up your environment
-date: "2025-02-03"
+date: "2026-02-03"
 ---
 
 This lab has three goals:

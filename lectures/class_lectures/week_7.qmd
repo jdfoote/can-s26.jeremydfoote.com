@@ -28,16 +28,13 @@ library(ggraph)
 ## Housekeeping
 
 > - Who Dunnit game on Thursday!
-> - Questions about final projects?
 
-<!--
 ## Final Project
 
 > - Group project: network-based intervention (e.g., spreading an idea on campus)
 > - (Group?) research project: analysis of network data
 > - Project idea due in 2 weeks
 
--->
 
 ## R Review
 
@@ -82,9 +79,19 @@ G |>
 
 ## Discussion Questions
 
-> - In a world dominated by digital communication and social media, are we gaining new weak ties that expand social capital or simply replacing genuine community with surface-level interaction? 
-> - To what extent can public policy realistically reverse declines in civic engagement without seeming forced or artificial?
-> - Logic of Bowling Alone
+> - How can we measure the strength of ties?
+> - When are strong ties better for finding information?
+> - Do the different types of capital have to be self-reinforcing?
+> - Should outcomes like career success be understood as purely individual achievement, structural advantage, a combination of both, or something else entirely?
+> - Do online communities fulfill the same roles as bowling leagues, etc? How are they better and worse?
+
+## Discussion Questions
+
+> - How does declining social capital weaken democracy?
+> - What does it mean that social capital does not function as a universal means of exchange?
+> - Have you ever had an interaction/relationship with somewhere where it was clear they were trying to be a "social climber", how did that interaction make you feel? What are some good examples and bad examples of how social climbing could happen?
+> - Are elite universities selling cultural capital or social capital?
+> - Is a community people who agree with each other or people who need each other?
 
 ## Summary
 

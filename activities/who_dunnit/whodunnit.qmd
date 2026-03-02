@@ -7,6 +7,8 @@ format:
     progress: true
     transition: convex
     reveal_plugins: ['notes']
+    width: 1200
+    height: 800
 ---
 
 
