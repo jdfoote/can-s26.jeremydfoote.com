@@ -213,7 +213,7 @@
     "href": "schedule/week_08.html",
     "title": "Week 8: Small worlds",
     "section": "",
-    "text": "Tuesday\nAssignment Due:\n\nR Lab 5 - Aesthetics in ggraph\nReading Review Assignments\n\nReadings:\n\nThe Science of Six Degrees of Separation [video][9:22]\nTravers, J. and Milgram, S. (1969). An experimental study of the small world problem. Sociometry, 32(4):425-443\n\nClaude.ai summary\n\n(Optional but short) Dodds, P. S., Muhamad, R., & Watts, D. J. (2003). An Experimental Study of Search in Global Social Networks. Science, 301(5634), 827.\n\nLecture Video:\n [18:45]\n\nSlides\n\n\n\n\n\nThursday\n\nTroubled Lands Activity",
+    "text": "Tuesday\nAssignment Due:\n\nR Lab 5 - Aesthetics in ggraph\nReading Review Assignments\n\nReadings:\n\nThe Science of Six Degrees of Separation [video][9:22]\nTravers, J. and Milgram, S. (1969). An experimental study of the small world problem. Sociometry, 32(4):425-443\n\nClaude.ai summary\n\n(Optional but short) Dodds, P. S., Muhamad, R., & Watts, D. J. (2003). An Experimental Study of Search in Global Social Networks. Science, 301(5634), 827.\n\nLecture Video:\n [18:45]\n\nSlides\n\n\n\n\n\nThursday\n\nSix Degrees of Wikipedia Activity",
     "crumbs": [
       "Schedule",
       "Course content",
@@ -3290,7 +3290,7 @@
     "href": "lectures/class_lectures/week_8.html#housekeeping",
     "title": "Weak Ties and Small Worlds",
     "section": "Housekeeping",
-    "text": "Housekeeping\n\nPut questions on the discussion board!\nFinal project idea due next week\nSocial Search assignment due March 16\n\nTry to find someone with driver’s license from HI\nNo group texts\nDiagram search network\nInstructions on website"
+    "text": "Housekeeping\n\nSorry for the schedule confusion!\nFinal project idea due next week\nSocial Search assignment due March 23\n\nTry to find someone with driver’s license from HI\nNo group texts\nDiagram search network\nInstructions on website"
   },
   {
     "objectID": "lectures/class_lectures/week_8.html#also-upcoming",
@@ -3318,14 +3318,28 @@
     "href": "lectures/class_lectures/week_8.html#review-questions-1",
     "title": "Weak Ties and Small Worlds",
     "section": "Review Questions",
-    "text": "Review Questions\n\nWhat was the Travers and Milgram experiment?\nHow can we have such high triadic closure but still have short path lengths? What was the key insight from Watts and Strogatz?\nWhat does this have to do with Granovetter (weak ties)?"
+    "text": "Review Questions\n\nWhat was the Travers and Milgram experiment?\nHow can we have such high triadic closure but still have short path lengths? What was the key insight from Watts and Strogatz?\nWhat does this have to do with Granovetter (weak ties)?\nWhat is similar to “random rewiring” in real life?"
   },
   {
-    "objectID": "lectures/class_lectures/week_8.html#questions-from-3-2-1s",
-    "href": "lectures/class_lectures/week_8.html#questions-from-3-2-1s",
+    "objectID": "lectures/class_lectures/week_8.html#break",
+    "href": "lectures/class_lectures/week_8.html#break",
     "title": "Weak Ties and Small Worlds",
-    "section": "Questions from 3-2-1s",
-    "text": "Questions from 3-2-1s\n\nWhat is a “groupy” network?\nHow do “rewirings” work?\nHow does gender relate to network distance?\nSocial media and small worlds\nHow do small-world dynamics and the strength of weak ties shape opportunities, inequality, and information flow in today’s hyperconnected society?"
+    "section": "Break!",
+    "text": "Break!"
+  },
+  {
+    "objectID": "lectures/class_lectures/week_8.html#discussion-questions",
+    "href": "lectures/class_lectures/week_8.html#discussion-questions",
+    "title": "Weak Ties and Small Worlds",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\n\nWhat are some of your best “small world” moments and what were the connections?\nIs the small world smaller now?\nTo what extent do psychological factors (motivation, uncertainty, etc.), shape social chains?\nHow does homophily affect the small world phenomenon?"
+  },
+  {
+    "objectID": "lectures/class_lectures/week_8.html#discussion-questions-1",
+    "href": "lectures/class_lectures/week_8.html#discussion-questions-1",
+    "title": "Weak Ties and Small Worlds",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\n\nIf the network shapes who you meet, who you marry, what jobs you get, what ideas you’re exposed to, how much of who you are was actually chosen vs. just a product of your position in a network?\nTravers and Milgram found evidence of “funneling” through certain individuals, while Dodds suggests hubs are less important. Is this difference due to scale (U.S. based vs global), technology, (mail vs. email), or changes in network structures over time?"
   },
   {
     "objectID": "lectures/class_lectures/week_8.html#r-co-working-time",
@@ -3807,7 +3821,7 @@
     "href": "schedule/week_09.html",
     "title": "Week 9: Scale-free networks and the friendship paradox",
     "section": "",
-    "text": "Tuesday\nAssignment Due:\n\nFinal Project Idea\nTroubled Lands Reflection\nReading Review\n\nReadings:\n\nFeld, Scott L. (1991), Why your friends have more friends than you do. American Journal of Sociology, 96 (6): 1464–1477. https://doi.org/10.1086%2F229693\nEarly Detection of an Outbreak using the Friendship Paradox\nNetworks are everywhere with Albert-László Barabási\n(Optional) Christakis, N. A., & Fowler, J. H. (2010). Social Network Sensors for Early Detection of Contagious Outbreaks. PLOS ONE, 5(9), e12948. https://doi.org/10.1371/journal.pone.0012948\n\nLecture Video:\n\nScale-free networks and the Friendship Paradox [18:21]\n\n\n\nSlides\n\n\n\n\n\nThursday\nClass Schedule:\n\nSix Degrees of Wikipedia Activity",
+    "text": "Tuesday\nAssignment Due:\n\nFinal Project Idea\nTroubled Lands Reflection\nReading Review\n\nReadings:\n\nFeld, Scott L. (1991), Why your friends have more friends than you do. American Journal of Sociology, 96 (6): 1464–1477. https://doi.org/10.1086%2F229693\nEarly Detection of an Outbreak using the Friendship Paradox\nNetworks are everywhere with Albert-László Barabási\n(Optional) Christakis, N. A., & Fowler, J. H. (2010). Social Network Sensors for Early Detection of Contagious Outbreaks. PLOS ONE, 5(9), e12948. https://doi.org/10.1371/journal.pone.0012948\n\nLecture Video:\n\nScale-free networks and the Friendship Paradox [18:21]\n\n\n\nSlides\n\n\n\n\n\nThursday\nClass Schedule:\n\nTroubled Lands Activity",
     "crumbs": [
       "Schedule",
       "Course content",
@@ -3819,7 +3833,7 @@
     "href": "schedule/week_10.html",
     "title": "Week 10: Social influence and diffusion",
     "section": "",
-    "text": "Tuesday\nAssignment Due:\n\nTurn in your Self Assessment Reflection on Brightspace\nR Lab 6 - Visualizing Power\nSocial Search Assignment\nReading Review\n\nReadings:\n\nChapter 4, “Special People”, in Watts, D. J. (2011). Everything is Obvious: Once you know the answer. New York, NY: Crown Business.\nDuncan Watts on Common Sense\n(Optional) Centola, D., & Macy, M. (2007). Complex Contagions and the Weakness of Long Ties. American Journal of Sociology, 113(3), 702–734.\n(Optional) Christakis, N. A., & Fowler, J. H. (2012). Social contagion theory: Examining dynamic social networks and human behavior. Statistics in Medicine, 32, 556–577.\n\nWeekly lecture:\n\nSocial Influence and Contagion [22:12]\n\n\n\nSlides\n\n\n\n\n\nThursday\nClass Schedule:\n\nDo The Wisdom or Madness of Crowds Simulation",
+    "text": "Tuesday\nClass Schedule:\n\nNo in person class today.\nDo The Wisdom or Madness of Crowds Simulation and write a reflection on Brightspace.\n\nAssignment Due:\n\nTurn in your Self Assessment Reflection on Brightspace\nR Lab 6 - Visualizing Power\nSocial Search Assignment\nReading Review\n\n\n\nThursday\nReadings:\n\nChapter 4, “Special People”, in Watts, D. J. (2011). Everything is Obvious: Once you know the answer. New York, NY: Crown Business.\nDuncan Watts on Common Sense\n(Optional) Centola, D., & Macy, M. (2007). Complex Contagions and the Weakness of Long Ties. American Journal of Sociology, 113(3), 702–734.\n(Optional) Christakis, N. A., & Fowler, J. H. (2012). Social contagion theory: Examining dynamic social networks and human behavior. Statistics in Medicine, 32, 556–577.\n\nWeekly lecture:\n\nSocial Influence and Contagion [22:12]\n\n\n\nSlides",
     "crumbs": [
       "Schedule",
       "Course content",
