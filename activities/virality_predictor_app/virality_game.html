@@ -570,7 +570,7 @@
     <div class="final-score-big"><em id="final-num">0</em> / <span id="final-denom">5</span></div>
     <div id="final-msg" style="color:var(--muted);font-size:15px;margin-top:4px;"></div>
     <div class="watts-insight">
-      <strong>Duncan Watts (2007)</strong> found that viral hits are nearly impossible to predict in advance — even controlling for content quality and author influence. Small random early advantages cascade into huge gaps. High follower count is a weak signal at best. If you guessed right, you may have been lucky.
+      <strong>Duncan Watts (2007)</strong> found that viral hits are nearly impossible to predict in advance — even controlling for content quality and author influence. Small random early advantages cascade into huge gaps. Follower count helps, but it's a weak signal. Much of virality is just luck — which post happened to get an early boost from the right person at the right time. That's why this game is so hard! 
     </div>
     <div class="btn-row" style="margin-top:28px;">
       <button class="btn btn-primary" onclick="init()">Play Again</button>
@@ -818,12 +818,12 @@ function makeGuess(idx) {
     document.getElementById('result-icon').textContent = '✅';
     document.getElementById('result-heading').textContent = 'Nice guess!';
     document.getElementById('result-detail').innerHTML =
-      `That post got <strong>${fmt(winPost.likeCount)} likes</strong>. The author had ${fmt(winPost.author.followersCount)} followers. Was follower count a useful clue?`;
+      `That post got <strong>${fmt(winPost.likeCount)} likes</strong>.`;
   } else {
     document.getElementById('result-icon').textContent = '❌';
     document.getElementById('result-heading').textContent = 'Not quite!';
     document.getElementById('result-detail').innerHTML =
-      `You picked a post with <strong>${fmt(guessPost.likeCount)} likes</strong>, but the winner had <strong>${fmt(winPost.likeCount)} likes</strong>. The winner's author had ${fmt(winPost.author.followersCount)} followers — did that signal anything?`;
+      `You picked a post with <strong>${fmt(guessPost.likeCount)} likes</strong>, but the winner had <strong>${fmt(winPost.likeCount)} likes</strong>.`;
   }
 
   document.getElementById('score-val').textContent = score;
@@ -855,8 +855,7 @@ function showFinal() {
   const pct = score / ROUNDS;
   let msg = '';
   if (pct >= 0.8) msg = 'Impressive — or were you just lucky? Watts would say: probably a bit of both.';
-  else if (pct >= 0.6) msg = 'Decent score. Hard to tell skill from chance, isn\'t it?';
-  else if (pct >= 0.4) msg = 'Tough game. That\'s the whole point — virality resists prediction.';
+  else if (pct >= 0.4) msg = 'Decent score. Hard to tell skill from chance, isn\'t it?';
   else msg = 'Hard to predict, right? Welcome to Watts\' world.';
   document.getElementById('final-msg').textContent = msg;
 }
