@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Communication and Social Networks - In-class Lecture Slides</title>
+<title>Communication and Social Networks - Virality Predictor</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./resources/favicon.ico" rel="icon">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../resources/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,77 +67,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="resources/custom_css.css">
+<link rel="stylesheet" href="../../resources/custom_css.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Communication and Social Networks</span>
     </a>
   </div>
@@ -150,15 +90,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus/syllabus.html"> 
+    <a class="nav-link" href="../../syllabus/syllabus.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./schedule.html"> 
+    <a class="nav-link" href="../../schedule.html"> 
 <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./assignments/assignments.html"> 
+    <a class="nav-link" href="../../assignments/assignments.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
 </ul>
@@ -172,15 +112,13 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">In-class Lecture Slides</h1>
+<h1 class="title">Virality Predictor</h1>
 </div>
 
 
@@ -197,214 +135,15 @@ window.Quarto = {
 </header>
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
+<p>This activity uses real Bluesky posts to test how well we can predict which content will take off.</p>
+<div style="margin: 1.5rem 0; border: 1px solid #d0d7de; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+<p><iframe src="virality_game.html" title="Virality Predictor" style="width: 100%; min-height: 980px; border: 0; background: transparent;" loading="lazy"> </iframe></p>
 </div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Date
-</th>
-<th>
-Title
-</th>
-<th>
-Author
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-listing-file-modified-sort="1768927982688" data-listing-reading-time-sort="2" data-listing-word-count-sort="256" data-listing-title-sort="Week 2 - Network Data and Network Types" data-listing-filename-sort="week_2.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_2.html" class="title listing-title">Week 2 - Network Data and Network Types</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="1" data-listing-file-modified-sort="1769534117397" data-listing-reading-time-sort="2" data-listing-word-count-sort="345" data-listing-title-sort="Week 3 - Edge Formation" data-listing-filename-sort="week_3.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_3.html" class="title listing-title">Week 3 - Edge Formation</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="2" data-listing-file-modified-sort="1770310679105" data-listing-reading-time-sort="2" data-listing-word-count-sort="355" data-listing-title-sort="Week 4 - Small Group Networks" data-listing-filename-sort="week_4.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_4.html" class="title listing-title">Week 4 - Small Group Networks</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="3" data-listing-file-modified-sort="1767933807174" data-listing-reading-time-sort="3" data-listing-word-count-sort="526" data-listing-title-sort="Week 11 - Communities in Networks" data-listing-filename-sort="week_11.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_11.html" class="title listing-title">Week 11 - Communities in Networks</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="4" data-listing-file-modified-sort="1770916846513" data-listing-reading-time-sort="4" data-listing-word-count-sort="671" data-listing-title-sort="Week 5 - Ego Networks" data-listing-filename-sort="week_5.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_5.html" class="title listing-title">Week 5 - Ego Networks</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="5" data-listing-file-modified-sort="1771521356151" data-listing-reading-time-sort="3" data-listing-word-count-sort="429" data-listing-title-sort="Week 6 - Centrality and Centralization" data-listing-filename-sort="week_6.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_6.html" class="title listing-title">Week 6 - Centrality and Centralization</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="6" data-listing-file-modified-sort="1771956300884" data-listing-reading-time-sort="3" data-listing-word-count-sort="415" data-listing-title-sort="Capital and Social Capital" data-listing-filename-sort="week_7.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_7.html" class="title listing-title">Capital and Social Capital</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="7" data-listing-file-modified-sort="1774466089058" data-listing-reading-time-sort="4" data-listing-word-count-sort="656" data-listing-title-sort="Diffusion and Contagion" data-listing-filename-sort="week_10.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_10.html" class="title listing-title">Diffusion and Contagion</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="8" data-listing-file-modified-sort="1767737543289" data-listing-reading-time-sort="4" data-listing-word-count-sort="631" data-listing-title-sort="Network Visualization and Wrap Up" data-listing-filename-sort="week_16.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_16.html" class="title listing-title">Network Visualization and Wrap Up</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="9" data-listing-file-modified-sort="1767933807174" data-listing-reading-time-sort="1" data-listing-word-count-sort="101" data-listing-title-sort="Networks and Inequality" data-listing-filename-sort="week_15.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_15.html" class="title listing-title">Networks and Inequality</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="10" data-listing-file-modified-sort="1772557024517" data-listing-reading-time-sort="3" data-listing-word-count-sort="592" data-listing-title-sort="Weak Ties and Small Worlds" data-listing-filename-sort="week_8.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_8.html" class="title listing-title">Weak Ties and Small Worlds</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="11" data-listing-file-modified-sort="1767737543288" data-listing-reading-time-sort="6" data-listing-word-count-sort="1164" data-listing-title-sort="Week 12 - Collective Behavior" data-listing-filename-sort="week_12.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_12.html" class="title listing-title">Week 12 - Collective Behavior</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="12" data-listing-file-modified-sort="1767933807174" data-listing-reading-time-sort="2" data-listing-word-count-sort="349" data-listing-title-sort="Week 13 - Networks and Technology" data-listing-filename-sort="week_13.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_13.html" class="title listing-title">Week 13 - Networks and Technology</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="13" data-listing-file-modified-sort="1767933807174" data-listing-reading-time-sort="2" data-listing-word-count-sort="284" data-listing-title-sort="Week 14 - Networks and Inequality" data-listing-filename-sort="week_14.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_14.html" class="title listing-title">Week 14 - Networks and Inequality</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="14" data-listing-file-modified-sort="1773690577093" data-listing-reading-time-sort="4" data-listing-word-count-sort="672" data-listing-title-sort="Week 9: Scale-Free Networks and the Friendship Paradox" data-listing-filename-sort="week_9.qmd">
-<td>
-<span class="listing-date">&nbsp;</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_9.html" class="title listing-title">Week 9: Scale-Free Networks and the Friendship Paradox</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="15" data-listing-date-sort="978325200000" data-listing-file-modified-sort="1768323304734" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="857" data-listing-title-sort="Welcome to COM 411: Communication and Social Networks!" data-listing-filename-sort="week_1.qmd">
-<td>
-<span class="listing-date">Jan 1, 2001</span>
-</td>
-<td>
-<a href="./lectures/class_lectures/week_1.html" class="title listing-title">Welcome to COM 411: Communication and Social Networks!</a>
-</td>
-<td>
-<span class="listing-author">&nbsp;</span>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+<p>If the embedded version does not load, open the standalone game here: <a href="virality_game.html">Virality Predictor</a>.</p>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -819,4 +558,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/jdfoote/can-s26.jeremydfoote.com/edit/main/class_lectures.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jdfoote/can-s26.jeremydfoote.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/jdfoote/can-s26.jeremydfoote.com/edit/main/activities/virality_predictor_app/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jdfoote/can-s26.jeremydfoote.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

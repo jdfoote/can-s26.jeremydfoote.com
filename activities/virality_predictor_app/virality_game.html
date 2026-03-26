@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viral? Guess Which Post Won</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0f13;
+    --surface: #16181f;
+    --surface2: #1e2029;
+    --border: #2a2d3a;
+    --text: #e8eaf0;
+    --muted: #6b7280;
+    --accent: #5b9cf6;
+    --accent2: #f97316;
+    --green: #22c55e;
+    --red: #ef4444;
+    --yellow: #eab308;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(91,156,246,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(91,156,246,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(36px, 6vw, 60px);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--text);
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .subtitle {
+    margin-top: 14px;
+    color: var(--muted);
+    font-size: 15px;
+    font-weight: 300;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .round-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 36px;
+  }
+
+  .round-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    transition: background 0.3s;
+  }
+
+  .round-dot.active { background: var(--accent); }
+  .round-dot.done { background: var(--green); }
+
+  .round-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    margin-left: 8px;
+  }
+
+  #loading {
+    text-align: center;
+    padding: 80px 0;
+  }
+
+  .spinner {
+    width: 36px;
+    height: 36px;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 20px;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .loading-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  #error-state {
+    text-align: center;
+    padding: 60px 0;
+    display: none;
+  }
+
+  .error-box {
+    background: rgba(239,68,68,0.08);
+    border: 1px solid rgba(239,68,68,0.2);
+    border-radius: 12px;
+    padding: 24px 32px;
+    display: inline-block;
+    max-width: 500px;
+  }
+
+  .error-box p { color: var(--red); font-size: 14px; line-height: 1.6; }
+  .error-box .error-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; margin-bottom: 8px; opacity: 0.7; }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 640px) {
+    .posts-grid { grid-template-columns: 1fr; }
+  }
+
+  .post-card {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+    animation: fadeUp 0.4s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .post-card:nth-child(1) { animation-delay: 0.05s; }
+  .post-card:nth-child(2) { animation-delay: 0.12s; }
+  .post-card:nth-child(3) { animation-delay: 0.19s; }
+  .post-card:nth-child(4) { animation-delay: 0.26s; }
+
+  .post-card:hover:not(.revealed) {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(91,156,246,0.12);
+  }
+
+  .post-card.selected {
+    border-color: var(--accent);
+    background: #16243a;
+  }
+
+  .post-card.winner {
+    border-color: var(--green);
+    background: #0f2318;
+  }
+
+  .post-card.loser {
+    border-color: var(--border);
+    opacity: 0.55;
+  }
+
+  .post-card.correct-guess {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(34,197,94,0.15);
+  }
+
+  .post-card.wrong-guess {
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(239,68,68,0.1);
+  }
+
+  .post-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+
+  .post-card.winner::after {
+    background: radial-gradient(ellipse at top, rgba(34,197,94,0.06), transparent 70%);
+    opacity: 1;
+  }
+
+  .author-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--surface2);
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1.5px solid var(--border);
+  }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: var(--muted);
+    background: var(--surface2);
+  }
+
+  .author-info { flex: 1; min-width: 0; }
+
+  .author-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .author-handle {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .follower-badge {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .follower-badge span {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .post-text {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #c8ccd8;
+    margin-bottom: 16px;
+    word-break: break-word;
+  }
+
+  .post-meta {
+    display: flex;
+    gap: 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .post-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .post-meta-item svg {
+    opacity: 0.5;
+  }
+
+  .revealed-stat {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    display: none;
+  }
+
+  .revealed-stat.show { display: block; }
+
+  .stat-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .stat-number {
+    font-family: 'Instrument Serif', serif;
+    font-size: 28px;
+    color: var(--text);
+    line-height: 1;
+  }
+
+  .stat-number.highlight { color: var(--green); }
+
+  .winner-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(34,197,94,0.12);
+    border: 1px solid rgba(34,197,94,0.25);
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--green);
+    letter-spacing: 0.06em;
+    margin-top: 8px;
+  }
+
+  .instruction {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 24px;
+    font-style: italic;
+    font-family: 'Instrument Serif', serif;
+    font-size: 18px;
+  }
+
+  #result-panel {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+    text-align: center;
+    display: none;
+    animation: fadeUp 0.3s ease both;
+    margin-bottom: 24px;
+  }
+
+  #result-panel.show { display: block; }
+
+  .result-icon {
+    font-size: 40px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .result-heading {
+    font-family: 'Instrument Serif', serif;
+    font-size: 26px;
+    margin-bottom: 6px;
+  }
+
+  .result-detail {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+
+  .score-display {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .score-display span {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .btn-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    outline: none;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #0a0f1e;
+  }
+
+  .btn-primary:hover { background: #7ab3f8; transform: translateY(-1px); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1.5px solid var(--border);
+  }
+
+  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+  #final-panel {
+    display: none;
+    text-align: center;
+    padding: 40px 0;
+    animation: fadeUp 0.4s ease both;
+  }
+
+  #final-panel.show { display: block; }
+
+  .final-score-big {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(60px, 12vw, 100px);
+    line-height: 1;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .final-score-big em { font-style: italic; color: var(--accent2); }
+
+  .final-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  .watts-insight {
+    max-width: 540px;
+    margin: 24px auto 0;
+    padding: 20px 24px;
+    background: var(--surface);
+    border-left: 3px solid var(--accent2);
+    border-radius: 0 12px 12px 0;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #b0b8cc;
+  }
+
+  .watts-insight strong { color: var(--text); font-weight: 600; }
+
+  .watts-label {
+    position: fixed;
+    bottom: 20px;
+    right: 24px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--border);
+    letter-spacing: 0.1em;
+    z-index: 10;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="eyebrow">Watts' Virality Puzzle</div>
+    <h1>Which post<br><em>went viral?</em></h1>
+    <p class="subtitle">Each round shows you real Bluesky posts from the same day and topic. Guess which one got the most likes.</p>
+  </header>
+
+  <div class="round-bar" id="round-bar"></div>
+
+  <div id="loading">
+    <div class="spinner"></div>
+    <div class="loading-text">Fetching real posts from Bluesky...</div>
+  </div>
+
+  <div id="error-state">
+    <div class="error-box">
+      <div class="error-label">Connection Error</div>
+      <p id="error-msg">Could not load Bluesky posts. Please check your internet connection and try again.</p>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="init()">Try Again</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="game-area" style="display:none">
+    <div class="instruction" id="instruction">Pick the post with the most likes ↓</div>
+    <div class="score-display" id="score-display">Score: <span id="score-val">0</span> / <span id="round-of">0</span></div>
+    <div class="posts-grid" id="posts-grid"></div>
+    <div id="result-panel">
+      <span class="result-icon" id="result-icon"></span>
+      <div class="result-heading" id="result-heading"></div>
+      <div class="result-detail" id="result-detail"></div>
+      <div class="btn-row">
+        <button class="btn btn-primary" id="next-btn" onclick="nextRound()">Next Round →</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="final-panel">
+    <div class="final-label">Final Score</div>
+    <div class="final-score-big"><em id="final-num">0</em> / <span id="final-denom">5</span></div>
+    <div id="final-msg" style="color:var(--muted);font-size:15px;margin-top:4px;"></div>
+    <div class="watts-insight">
+      <strong>Duncan Watts (2007)</strong> found that viral hits are nearly impossible to predict in advance — even controlling for content quality and author influence. Small random early advantages cascade into huge gaps. High follower count is a weak signal at best. If you guessed right, you may have been lucky.
+    </div>
+    <div class="btn-row" style="margin-top:28px;">
+      <button class="btn btn-primary" onclick="init()">Play Again</button>
+    </div>
+  </div>
+</div>
+
+<div class="watts-label">BASED ON WATTS ET AL. 2007</div>
+
+<script>
+const ROUNDS = 5;
+const POSTS_PER_ROUND = 4;
+
+function getBskyProxy() {
+  const isLocalHost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  if (!isLocalHost) {
+    return 'https://bsky-virality-proxy.bsky-virality.workers.dev/api/bsky';
+  }
+  if (window.location.port === '5000') {
+    return '/api/bsky';
+  }
+  return 'http://localhost:5000/api/bsky';
+}
+
+const BSKY_PROXY = getBskyProxy();
+
+const SEARCH_TERMS = ['networks', 'social networks', 'network science', 'communication', 'communication networks', 'cascade', 'diffusion'];
+
+let rounds = [];
+let currentRound = 0;
+let score = 0;
+let guessed = false;
+
+function fmt(n) {
+  if (n === undefined || n === null) return '—';
+  if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+  if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
+  return n.toLocaleString();
+}
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function pick(arr, n) {
+  return shuffle([...arr]).slice(0, n);
+}
+
+async function bskyFetch(endpoint) {
+  const res = await fetch(`${BSKY_PROXY}?endpoint=${encodeURIComponent(endpoint)}`);
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.details || err.error || `Server error ${res.status}`);
+  }
+  return res.json();
+}
+
+async function fetchBskySearch(term) {
+  const data = await bskyFetch(`app.bsky.feed.searchPosts?q=${encodeURIComponent(term)}&limit=25&sort=top`);
+  return data.posts || [];
+}
+
+async function fetchAuthorProfile(did) {
+  try {
+    return await bskyFetch(`app.bsky.actor.getProfile?actor=${encodeURIComponent(did)}`);
+  } catch (_) {
+    return null;
+  }
+}
+
+async function buildRounds() {
+  const termSet = pick(SEARCH_TERMS, Math.min(ROUNDS + 2, SEARCH_TERMS.length));
+  const allRounds = [];
+
+  for (let t = 0; t < termSet.length && allRounds.length < ROUNDS; t++) {
+    try {
+      const posts = await fetchBskySearch(termSet[t]);
+      const valid = posts.filter((post) =>
+        post.likeCount !== undefined &&
+        post.record?.text?.length > 10
+      );
+      if (valid.length < POSTS_PER_ROUND) continue;
+
+      valid.sort((a, b) => (b.likeCount || 0) - (a.likeCount || 0));
+      const high = valid.slice(0, 3);
+      const mid = valid.slice(3, Math.max(4, Math.floor(valid.length * 0.4)));
+      const low = valid.slice(Math.floor(valid.length * 0.5));
+
+      const chosen = [
+        ...pick(high, 1),
+        ...pick(mid.length > 1 ? mid : valid.slice(1, 4), 2),
+        ...pick(low.length > 0 ? low : valid.slice(2, 5), 1),
+      ];
+      if (chosen.length < POSTS_PER_ROUND) continue;
+
+      const enriched = await Promise.all(chosen.map(async (post) => {
+        const profile = await fetchAuthorProfile(post.author.did);
+        return {
+          uri: post.uri,
+          text: post.record?.text || '',
+          likeCount: post.likeCount || 0,
+          repostCount: post.repostCount || 0,
+          replyCount: post.replyCount || 0,
+          indexedAt: post.indexedAt,
+          author: {
+            did: post.author.did,
+            handle: post.author.handle,
+            displayName: post.author.displayName || post.author.handle,
+            avatar: post.author.avatar || null,
+            followersCount: profile?.followersCount ?? null,
+          },
+        };
+      }));
+
+      allRounds.push(shuffle(enriched));
+    } catch (error) {
+      console.warn('Round build error:', error);
+    }
+  }
+
+  return allRounds;
+}
+
+function updateRoundBar() {
+  const bar = document.getElementById('round-bar');
+  bar.innerHTML = '';
+  for (let i = 0; i < ROUNDS; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'round-dot' + (i < currentRound ? ' done' : i === currentRound ? ' active' : '');
+    bar.appendChild(dot);
+  }
+  const label = document.createElement('div');
+  label.className = 'round-label';
+  label.textContent = `Round ${currentRound + 1} of ${ROUNDS}`;
+  bar.appendChild(label);
+}
+
+function renderRound() {
+  guessed = false;
+  const posts = rounds[currentRound];
+
+  document.getElementById('score-val').textContent = score;
+  document.getElementById('round-of').textContent = currentRound;
+  document.getElementById('result-panel').classList.remove('show');
+  document.getElementById('instruction').textContent = 'Pick the post with the most likes ↓';
+  updateRoundBar();
+
+  const grid = document.getElementById('posts-grid');
+  grid.innerHTML = '';
+
+  posts.forEach((post, i) => {
+    const card = document.createElement('div');
+    card.className = 'post-card';
+    card.dataset.idx = i;
+
+    const followers = post.author.followersCount !== null
+      ? `<span>${fmt(post.author.followersCount)}</span> followers`
+      : '<span>?</span> followers';
+
+    const avatarHtml = post.author.avatar
+      ? `<img src="${post.author.avatar}" alt="" onerror="this.parentElement.innerHTML='<div class=avatar-placeholder>👤</div>'">`
+      : '<div class="avatar-placeholder">👤</div>';
+
+    const text = post.text.length > 200 ? post.text.slice(0, 197) + '…' : post.text;
+
+    card.innerHTML = `
+      <div class="author-row">
+        <div class="avatar">${avatarHtml}</div>
+        <div class="author-info">
+          <div class="author-name">${escapeHtml(post.author.displayName)}</div>
+          <div class="author-handle">@${escapeHtml(post.author.handle)}</div>
+        </div>
+        <div class="follower-badge">${followers}</div>
+      </div>
+      <div class="post-text">${escapeHtml(text)}</div>
+      <div class="post-meta">
+        <div class="post-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          ???
+        </div>
+        <div class="post-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+          ???
+        </div>
+        <div class="post-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          ???
+        </div>
+      </div>
+      <div class="revealed-stat" id="revealed-${i}">
+        <div class="stat-row">
+          <div class="stat-label">Likes</div>
+          <div class="stat-number" id="like-num-${i}">—</div>
+        </div>
+      </div>
+    `;
+
+    card.addEventListener('click', () => makeGuess(i));
+    grid.appendChild(card);
+  });
+}
+
+function makeGuess(idx) {
+  if (guessed) return;
+  guessed = true;
+
+  const posts = rounds[currentRound];
+  const winnerIdx = posts.reduce((best, post, i) => post.likeCount > posts[best].likeCount ? i : best, 0);
+  const isCorrect = idx === winnerIdx;
+
+  if (isCorrect) score++;
+
+  const cards = document.querySelectorAll('.post-card');
+  cards.forEach((card, i) => {
+    if (i === winnerIdx) {
+      card.classList.add('winner');
+      if (i === idx) card.classList.add('correct-guess');
+    } else if (i === idx) {
+      card.classList.add('wrong-guess', 'loser');
+    } else {
+      card.classList.add('loser');
+    }
+
+    const revealEl = document.getElementById(`revealed-${i}`);
+    const numEl = document.getElementById(`like-num-${i}`);
+    revealEl.classList.add('show');
+    numEl.textContent = fmt(posts[i].likeCount);
+    if (i === winnerIdx) numEl.classList.add('highlight');
+
+    if (i === winnerIdx) {
+      revealEl.innerHTML += '<div class="winner-badge">🏆 Most liked</div>';
+    }
+  });
+
+  const winPost = posts[winnerIdx];
+  const guessPost = posts[idx];
+  const panel = document.getElementById('result-panel');
+  panel.classList.add('show');
+
+  if (isCorrect) {
+    document.getElementById('result-icon').textContent = '✅';
+    document.getElementById('result-heading').textContent = 'Nice guess!';
+    document.getElementById('result-detail').innerHTML =
+      `That post got <strong>${fmt(winPost.likeCount)} likes</strong>. The author had ${fmt(winPost.author.followersCount)} followers. Was follower count a useful clue?`;
+  } else {
+    document.getElementById('result-icon').textContent = '❌';
+    document.getElementById('result-heading').textContent = 'Not quite!';
+    document.getElementById('result-detail').innerHTML =
+      `You picked a post with <strong>${fmt(guessPost.likeCount)} likes</strong>, but the winner had <strong>${fmt(winPost.likeCount)} likes</strong>. The winner's author had ${fmt(winPost.author.followersCount)} followers — did that signal anything?`;
+  }
+
+  document.getElementById('score-val').textContent = score;
+  document.getElementById('instruction').textContent = 'Scroll down to see results ↓';
+
+  if (currentRound + 1 >= ROUNDS) {
+    document.getElementById('next-btn').textContent = 'See Final Results →';
+  }
+}
+
+function nextRound() {
+  currentRound++;
+  if (currentRound >= rounds.length) {
+    showFinal();
+    return;
+  }
+  renderRound();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showFinal() {
+  document.getElementById('game-area').style.display = 'none';
+  const panel = document.getElementById('final-panel');
+  panel.classList.add('show');
+  document.getElementById('final-num').textContent = score;
+  document.getElementById('final-denom').textContent = ROUNDS;
+  updateRoundBar();
+
+  const pct = score / ROUNDS;
+  let msg = '';
+  if (pct >= 0.8) msg = 'Impressive — or were you just lucky? Watts would say: probably a bit of both.';
+  else if (pct >= 0.6) msg = 'Decent score. Hard to tell skill from chance, isn\'t it?';
+  else if (pct >= 0.4) msg = 'Tough game. That\'s the whole point — virality resists prediction.';
+  else msg = 'Hard to predict, right? Welcome to Watts\' world.';
+  document.getElementById('final-msg').textContent = msg;
+}
+
+function escapeHtml(str) {
+  if (!str) return '';
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+async function init() {
+  rounds = [];
+  currentRound = 0;
+  score = 0;
+  guessed = false;
+
+  document.getElementById('loading').style.display = 'block';
+  document.getElementById('error-state').style.display = 'none';
+  document.getElementById('game-area').style.display = 'none';
+  document.getElementById('final-panel').classList.remove('show');
+  document.getElementById('round-bar').innerHTML = '';
+
+  try {
+    rounds = await buildRounds();
+    if (rounds.length < 3) throw new Error('Not enough posts fetched. Please try again.');
+
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('game-area').style.display = 'block';
+    document.getElementById('score-display').style.display = '';
+    renderRound();
+  } catch (error) {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('error-state').style.display = 'block';
+    document.getElementById('error-msg').textContent = error.message || 'Failed to load posts. Try again.';
+    console.error(error);
+  }
+}
+
+init();
+</script>
+</body>
+</html>
