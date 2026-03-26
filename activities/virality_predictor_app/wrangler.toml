@@ -1,0 +1,7 @@
+name = "bsky-virality-proxy"
+main = "worker.js"
+compatibility_date = "2024-09-23"
+
+# After deploying, set your Bluesky credentials as secrets (never commit them):
+#   wrangler secret put BSKY_HANDLE
+#   wrangler secret put BSKY_APP_PASS
