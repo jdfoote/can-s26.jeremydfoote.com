@@ -314,6 +314,26 @@
     word-break: break-word;
   }
 
+  .post-images {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .post-images img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .post-images.multi img {
+    flex: 1;
+    min-width: 0;
+  }
+
   .post-meta {
     display: flex;
     gap: 14px;
@@ -690,6 +710,12 @@ async function buildRounds() {
           repostCount: post.repostCount || 0,
           replyCount: post.replyCount || 0,
           indexedAt: post.indexedAt,
+          images: (post.embed?.$type === 'app.bsky.embed.images#view'
+            ? post.embed.images
+            : post.embed?.media?.$type === 'app.bsky.embed.images#view'
+            ? post.embed.media.images
+            : []
+          ).map(img => ({ thumb: img.thumb, alt: img.alt || '' })),
           author: {
             did: post.author.did,
             handle: post.author.handle,
@@ -762,6 +788,11 @@ function renderRound() {
         <div class="follower-badge">${followers}</div>
       </div>
       <div class="post-text">${escapeHtml(text)}</div>
+      ${post.images.length > 0 ? `
+        <div class="post-images${post.images.length > 1 ? ' multi' : ''}">
+          ${post.images.map(img => `<img src="${img.thumb}" alt="${escapeHtml(img.alt)}" loading="lazy">`).join('')}
+        </div>
+      ` : ''}
       <div class="post-meta">
         <div class="post-meta-item">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
