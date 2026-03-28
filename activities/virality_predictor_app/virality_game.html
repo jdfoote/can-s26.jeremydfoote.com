@@ -589,10 +589,10 @@ function getBskyProxy() {
   if (!isLocalHost) {
     return 'https://bsky-virality-proxy.bsky-virality.workers.dev/api/bsky';
   }
-  if (window.location.port === '5000') {
+  if (window.location.port === '5001') {
     return '/api/bsky';
   }
-  return 'http://localhost:5000/api/bsky';
+  return 'http://localhost:5001/api/bsky';
 }
 
 const BSKY_PROXY = getBskyProxy();
@@ -603,6 +603,13 @@ let rounds = [];
 let currentRound = 0;
 let score = 0;
 let guessed = false;
+
+function fmtDate(isoString) {
+  if (!isoString) return '';
+  const d = new Date(isoString);
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+    + ' ' + d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+}
 
 function fmt(n) {
   if (n === undefined || n === null) return '—';
@@ -633,7 +640,7 @@ async function bskyFetch(endpoint) {
 }
 
 async function fetchBskySearch(term) {
-  const data = await bskyFetch(`app.bsky.feed.searchPosts?q=${encodeURIComponent(term)}&limit=25&sort=top`);
+  const data = await bskyFetch(`app.bsky.feed.searchPosts?q=${encodeURIComponent(term)}&limit=25&sort=top&lang=en`);
   return data.posts || [];
 }
 
@@ -668,9 +675,11 @@ async function buildRounds() {
         ...pick(mid.length > 1 ? mid : valid.slice(1, 4), 2),
         ...pick(low.length > 0 ? low : valid.slice(2, 5), 1),
       ];
-      if (chosen.length < POSTS_PER_ROUND) continue;
+      // Deduplicate in case tier fallbacks overlap
+      const unique = [...new Map(chosen.map(p => [p.uri, p])).values()];
+      if (unique.length < POSTS_PER_ROUND) continue;
 
-      const enriched = await Promise.all(chosen.map(async (post) => {
+      const enriched = await Promise.all(unique.map(async (post) => {
         const profile = await fetchAuthorProfile(post.author.did);
         return {
           uri: post.uri,
@@ -746,6 +755,7 @@ function renderRound() {
         <div class="author-info">
           <div class="author-name">${escapeHtml(post.author.displayName)}</div>
           <div class="author-handle">@${escapeHtml(post.author.handle)}</div>
+          <div class="author-handle">${fmtDate(post.indexedAt)}</div>
         </div>
         <div class="follower-badge">${followers}</div>
       </div>
