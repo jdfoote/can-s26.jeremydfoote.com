@@ -8,8 +8,14 @@ import sys
 app = Flask(__name__)
 
 BSKY_BASE = "https://bsky.social/xrpc"
+CORS_HEADERS = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+}
 
-# ── Load .env file if present ─────────────────────────────────────────────────
+# Load .env file if present
+
 def load_dotenv():
     env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
     if not os.path.exists(env_path):
@@ -22,10 +28,10 @@ def load_dotenv():
             key, _, val = line.partition("=")
             os.environ.setdefault(key.strip(), val.strip())
 
+
 load_dotenv()
 
-# ── Auth ──────────────────────────────────────────────────────────────────────
-BSKY_HANDLE   = os.environ.get("BSKY_HANDLE", "")
+BSKY_HANDLE = os.environ.get("BSKY_HANDLE", "")
 BSKY_APP_PASS = os.environ.get("BSKY_APP_PASS", "")
 _access_token = None
 
@@ -36,6 +42,7 @@ class BlueskyAPIError(Exception):
         self.status_code = status_code
         self.message = message
 
+
 def login():
     global _access_token
     if not BSKY_HANDLE or not BSKY_APP_PASS:
@@ -45,18 +52,19 @@ def login():
 
     payload = json.dumps({
         "identifier": BSKY_HANDLE,
-        "password": BSKY_APP_PASS
+        "password": BSKY_APP_PASS,
     }).encode()
     req = urllib.request.Request(
         f"{BSKY_BASE}/com.atproto.server.createSession",
         data=payload,
         headers={"Content-Type": "application/json", "User-Agent": "Mozilla/5.0"},
-        method="POST"
+        method="POST",
     )
     with urllib.request.urlopen(req, timeout=10) as resp:
         data = json.loads(resp.read().decode())
     _access_token = data["accessJwt"]
     print(f"  Logged in as {data['handle']}")
+
 
 def should_refresh_auth(status_code, body):
     if status_code not in (400, 401):
@@ -74,8 +82,8 @@ def authed_request(url, retry=True):
         url,
         headers={
             "Authorization": f"Bearer {_access_token}",
-            "User-Agent": "Mozilla/5.0"
-        }
+            "User-Agent": "Mozilla/5.0",
+        },
     )
     try:
         with urllib.request.urlopen(req, timeout=10) as resp:
@@ -87,28 +95,41 @@ def authed_request(url, retry=True):
             return authed_request(url, retry=False)
         raise BlueskyAPIError(e.code, body) from e
 
-# ── Routes ────────────────────────────────────────────────────────────────────
+
+def json_response(payload, status=200):
+    response = jsonify(payload)
+    response.status_code = status
+    response.headers.update(CORS_HEADERS)
+    return response
+
+
 @app.route("/health")
 def health():
-    return jsonify({"status": "ok", "handle": BSKY_HANDLE})
+    return json_response({"status": "ok", "handle": BSKY_HANDLE})
 
-@app.route("/api/bsky")
+
+@app.route("/api/bsky", methods=["GET", "OPTIONS"])
 def bsky_proxy():
+    if request.method == "OPTIONS":
+        return ("", 204, CORS_HEADERS)
+
     endpoint = request.args.get("endpoint", "")
     if not endpoint:
-        return jsonify({"error": "missing endpoint"}), 400
+        return json_response({"error": "missing endpoint"}, 400)
     url = f"{BSKY_BASE}/{endpoint}"
     try:
         data = authed_request(url)
-        return jsonify(data)
+        return json_response(data)
     except BlueskyAPIError as e:
-        return jsonify({"error": f"Bluesky returned {e.status_code}", "details": e.message}), e.status_code
+        return json_response({"error": f"Bluesky returned {e.status_code}", "details": e.message}, e.status_code)
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        return json_response({"error": str(e)}, 500)
+
 
 @app.route("/")
 def index():
     return send_from_directory(os.path.dirname(os.path.abspath(__file__)), "virality_game.html")
+
 
 if __name__ == "__main__":
     print("\nLogging in to Bluesky...")
@@ -117,5 +138,5 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"  ERROR: {e}\n")
         sys.exit(1)
-    print("Starting server at http://localhost:5000\n")
-    app.run(debug=False, port=5000)
+    print("Starting server at http://localhost:5001\n")
+    app.run(debug=False, port=5001)

@@ -1,11 +1,8 @@
-// Bluesky authenticated proxy — Cloudflare Worker
+// Bluesky authenticated proxy - Cloudflare Worker
 // Secrets required (set via `wrangler secret put`):
-//   BSKY_HANDLE   — e.g. you.bsky.social
-//   BSKY_APP_PASS — your Bluesky app password
+//   BSKY_HANDLE
+//   BSKY_APP_PASS
 
-// Cache the access token within a single isolate instance to avoid
-// logging in on every request. Multiple isolate instances may each
-// do their own login, which is fine for a class-sized workload.
 let cachedToken = null;
 let tokenExpiry = 0;
 
@@ -23,19 +20,22 @@ async function login(env) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ identifier: env.BSKY_HANDLE, password: env.BSKY_APP_PASS }),
   });
+
   if (!res.ok) {
     const body = await res.text();
     throw new Error(`Bluesky login failed (${res.status}): ${body}`);
   }
+
   const data = await res.json();
   cachedToken = data.accessJwt;
-  // Tokens are valid for ~2 hours; refresh after 90 minutes to be safe
   tokenExpiry = Date.now() + 90 * 60 * 1000;
   return cachedToken;
 }
 
 async function getToken(env) {
-  if (cachedToken && Date.now() < tokenExpiry) return cachedToken;
+  if (cachedToken && Date.now() < tokenExpiry) {
+    return cachedToken;
+  }
   return login(env);
 }
 

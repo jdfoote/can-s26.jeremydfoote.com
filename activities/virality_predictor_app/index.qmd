@@ -1,0 +1,19 @@
+---
+title: Virality Predictor
+format:
+  html:
+    toc: false
+---
+
+This activity uses real Bluesky posts to test how well we can predict which content will take off.
+
+<div style="margin: 1.5rem 0; border: 1px solid #d0d7de; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+  <iframe
+    src="virality_game.html"
+    title="Virality Predictor"
+    style="width: 100%; min-height: 980px; border: 0; background: transparent;"
+    loading="lazy">
+  </iframe>
+</div>
+
+If the embedded version does not load, open the standalone game here: [Virality Predictor](virality_game.html).

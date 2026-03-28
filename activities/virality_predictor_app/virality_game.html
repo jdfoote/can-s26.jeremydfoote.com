@@ -31,7 +31,6 @@
     overflow-x: hidden;
   }
 
-  /* Subtle grid background */
   body::before {
     content: '';
     position: fixed;
@@ -90,7 +89,6 @@
     line-height: 1.6;
   }
 
-  /* Round indicator */
   .round-bar {
     display: flex;
     align-items: center;
@@ -117,7 +115,6 @@
     margin-left: 8px;
   }
 
-  /* Loading state */
   #loading {
     text-align: center;
     padding: 80px 0;
@@ -141,7 +138,6 @@
     color: var(--muted);
   }
 
-  /* Error */
   #error-state {
     text-align: center;
     padding: 60px 0;
@@ -160,7 +156,6 @@
   .error-box p { color: var(--red); font-size: 14px; line-height: 1.6; }
   .error-box .error-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; margin-bottom: 8px; opacity: 0.7; }
 
-  /* Posts grid */
   .posts-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -225,7 +220,6 @@
     box-shadow: 0 0 0 3px rgba(239,68,68,0.1);
   }
 
-  /* Selection shimmer */
   .post-card::after {
     content: '';
     position: absolute;
@@ -241,7 +235,6 @@
     opacity: 1;
   }
 
-  /* Author row */
   .author-row {
     display: flex;
     align-items: center;
@@ -296,7 +289,6 @@
     text-overflow: ellipsis;
   }
 
-  /* Follower badge */
   .follower-badge {
     background: var(--surface2);
     border: 1px solid var(--border);
@@ -314,7 +306,6 @@
     font-weight: 500;
   }
 
-  /* Post text */
   .post-text {
     font-size: 14.5px;
     line-height: 1.6;
@@ -323,7 +314,6 @@
     word-break: break-word;
   }
 
-  /* Post meta */
   .post-meta {
     display: flex;
     gap: 14px;
@@ -342,7 +332,6 @@
     opacity: 0.5;
   }
 
-  /* Revealed stats */
   .revealed-stat {
     margin-top: 14px;
     padding-top: 14px;
@@ -391,10 +380,8 @@
     margin-top: 8px;
   }
 
-  /* Instruction bar */
   .instruction {
     text-align: center;
-    font-size: 14px;
     color: var(--muted);
     margin-bottom: 24px;
     font-style: italic;
@@ -402,7 +389,6 @@
     font-size: 18px;
   }
 
-  /* Result panel */
   #result-panel {
     background: var(--surface);
     border: 1.5px solid var(--border);
@@ -436,7 +422,6 @@
     margin: 0 auto;
   }
 
-  /* Score bar */
   .score-display {
     font-family: 'DM Mono', monospace;
     font-size: 12px;
@@ -450,7 +435,6 @@
     font-weight: 500;
   }
 
-  /* Buttons */
   .btn-row {
     display: flex;
     justify-content: center;
@@ -486,7 +470,6 @@
 
   .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
 
-  /* Final summary */
   #final-panel {
     display: none;
     text-align: center;
@@ -530,7 +513,6 @@
 
   .watts-insight strong { color: var(--text); font-weight: 600; }
 
-  /* Watermark / Watts label */
   .watts-label {
     position: fixed;
     bottom: 20px;
@@ -588,7 +570,7 @@
     <div class="final-score-big"><em id="final-num">0</em> / <span id="final-denom">5</span></div>
     <div id="final-msg" style="color:var(--muted);font-size:15px;margin-top:4px;"></div>
     <div class="watts-insight">
-      <strong>Duncan Watts (2007)</strong> found that viral hits are nearly impossible to predict in advance — even controlling for content quality and author influence. Small random early advantages cascade into huge gaps. High follower count is a weak signal at best. If you guessed right, you may have been lucky.
+      <strong>Duncan Watts (2007)</strong> found that viral hits are nearly impossible to predict in advance — even controlling for content quality and author influence. Small random early advantages cascade into huge gaps. Follower count helps, but it's a weak signal. Much of virality is just luck — which post happened to get an early boost from the right person at the right time. That's why this game is so hard! 
     </div>
     <div class="btn-row" style="margin-top:28px;">
       <button class="btn btn-primary" onclick="init()">Play Again</button>
@@ -599,31 +581,40 @@
 <div class="watts-label">BASED ON WATTS ET AL. 2007</div>
 
 <script>
-// ─── Config ────────────────────────────────────────────────────────────────────
 const ROUNDS = 5;
 const POSTS_PER_ROUND = 4;
 
-// Automatically use local Flask proxy when running on localhost,
-// and the deployed Cloudflare Worker everywhere else (e.g. GitHub Pages).
-// Update the workers.dev URL below after running `wrangler deploy`.
-const BSKY_PROXY = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-  ? '/api/bsky'
-  : 'https://bsky-virality-proxy.bsky-virality.workers.dev';
+function getBskyProxy() {
+  const isLocalHost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  if (!isLocalHost) {
+    return 'https://bsky-virality-proxy.bsky-virality.workers.dev/api/bsky';
+  }
+  if (window.location.port === '5001') {
+    return '/api/bsky';
+  }
+  return 'http://localhost:5001/api/bsky';
+}
 
-// Search terms to pull diverse posts
+const BSKY_PROXY = getBskyProxy();
+
 const SEARCH_TERMS = ['networks', 'social networks', 'network science', 'communication', 'communication networks', 'cascade', 'diffusion'];
 
-// ─── State ─────────────────────────────────────────────────────────────────────
 let rounds = [];
 let currentRound = 0;
 let score = 0;
 let guessed = false;
 
-// ─── Helpers ───────────────────────────────────────────────────────────────────
+function fmtDate(isoString) {
+  if (!isoString) return '';
+  const d = new Date(isoString);
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+    + ' ' + d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+}
+
 function fmt(n) {
   if (n === undefined || n === null) return '—';
-  if (n >= 1000000) return (n/1000000).toFixed(1) + 'M';
-  if (n >= 1000) return (n/1000).toFixed(1) + 'K';
+  if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+  if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
   return n.toLocaleString();
 }
 
@@ -639,95 +630,83 @@ function pick(arr, n) {
   return shuffle([...arr]).slice(0, n);
 }
 
-// ─── Bluesky API (via local Flask backend) ────────────────────────────────────
 async function bskyFetch(endpoint) {
   const res = await fetch(`${BSKY_PROXY}?endpoint=${encodeURIComponent(endpoint)}`);
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
-    throw new Error(err.error || `Server error ${res.status}`);
+    throw new Error(err.details || err.error || `Server error ${res.status}`);
   }
   return res.json();
 }
 
 async function fetchBskySearch(term) {
-  const data = await bskyFetch(`app.bsky.feed.searchPosts?q=${encodeURIComponent(term)}&limit=25&sort=top`);
+  const data = await bskyFetch(`app.bsky.feed.searchPosts?q=${encodeURIComponent(term)}&limit=25&sort=top&lang=en`);
   return data.posts || [];
 }
 
 async function fetchAuthorProfile(did) {
   try {
     return await bskyFetch(`app.bsky.actor.getProfile?actor=${encodeURIComponent(did)}`);
-  } catch(_) { return null; }
+  } catch (_) {
+    return null;
+  }
 }
 
-// ─── Build rounds ──────────────────────────────────────────────────────────────
 async function buildRounds() {
-  const termSet = pick(SEARCH_TERMS, ROUNDS + 3);
+  const termSet = pick(SEARCH_TERMS, Math.min(ROUNDS + 2, SEARCH_TERMS.length));
   const allRounds = [];
 
   for (let t = 0; t < termSet.length && allRounds.length < ROUNDS; t++) {
     try {
       const posts = await fetchBskySearch(termSet[t]);
-      console.log(`[buildRounds] term="${termSet[t]}" raw posts:`, posts.length);
-      if (posts.length > 0) console.log('[buildRounds] sample post keys:', Object.keys(posts[0]));
-
-      // Filter: must have some likes, non-trivial text
-      const valid = posts.filter(p =>
-        p.likeCount !== undefined &&
-        p.record?.text?.length > 10
+      const valid = posts.filter((post) =>
+        post.likeCount !== undefined &&
+        post.record?.text?.length > 10
       );
-      console.log(`[buildRounds] after filter: ${valid.length} valid (need ${POSTS_PER_ROUND})`);
-      if (posts.length > 0 && valid.length === 0) {
-        const p = posts[0];
-        console.log('[buildRounds] first post debug — likeCount:', p.likeCount, '| textLen:', p.record?.text?.length, '| hasEmbed:', !!p.embed);
-      }
       if (valid.length < POSTS_PER_ROUND) continue;
 
-      // Sort by likes descending, pick from full range for variety
       valid.sort((a, b) => (b.likeCount || 0) - (a.likeCount || 0));
-
-      // Pick spread: 1 high, 2 mid, 1 low — so there's a clear winner but it's not always obvious
       const high = valid.slice(0, 3);
       const mid = valid.slice(3, Math.max(4, Math.floor(valid.length * 0.4)));
       const low = valid.slice(Math.floor(valid.length * 0.5));
 
       const chosen = [
         ...pick(high, 1),
-        ...pick(mid.length > 0 ? mid : valid.slice(1,4), 2),
-        ...pick(low.length > 0 ? low : valid.slice(2,5), 1)
+        ...pick(mid.length > 1 ? mid : valid.slice(1, 4), 2),
+        ...pick(low.length > 0 ? low : valid.slice(2, 5), 1),
       ];
-      if (chosen.length < POSTS_PER_ROUND) continue;
+      // Deduplicate in case tier fallbacks overlap
+      const unique = [...new Map(chosen.map(p => [p.uri, p])).values()];
+      if (unique.length < POSTS_PER_ROUND) continue;
 
-      // Fetch follower counts
-      const enriched = await Promise.all(chosen.map(async (p) => {
-        const profile = await fetchAuthorProfile(p.author.did);
+      const enriched = await Promise.all(unique.map(async (post) => {
+        const profile = await fetchAuthorProfile(post.author.did);
         return {
-          uri: p.uri,
-          text: p.record?.text || '',
-          likeCount: p.likeCount || 0,
-          repostCount: p.repostCount || 0,
-          replyCount: p.replyCount || 0,
-          indexedAt: p.indexedAt,
+          uri: post.uri,
+          text: post.record?.text || '',
+          likeCount: post.likeCount || 0,
+          repostCount: post.repostCount || 0,
+          replyCount: post.replyCount || 0,
+          indexedAt: post.indexedAt,
           author: {
-            did: p.author.did,
-            handle: p.author.handle,
-            displayName: p.author.displayName || p.author.handle,
-            avatar: p.author.avatar || null,
+            did: post.author.did,
+            handle: post.author.handle,
+            displayName: post.author.displayName || post.author.handle,
+            avatar: post.author.avatar || null,
             followersCount: profile?.followersCount ?? null,
-          }
+          },
         };
       }));
 
       allRounds.push(shuffle(enriched));
-    } catch (e) {
-      console.warn('Round build error:', e);
+    } catch (error) {
+      console.warn('Round build error:', error);
     }
   }
 
   return allRounds;
 }
 
-// ─── Render ────────────────────────────────────────────────────────────────────
 function updateRoundBar() {
   const bar = document.getElementById('round-bar');
   bar.innerHTML = '';
@@ -762,13 +741,12 @@ function renderRound() {
 
     const followers = post.author.followersCount !== null
       ? `<span>${fmt(post.author.followersCount)}</span> followers`
-      : `<span>?</span> followers`;
+      : '<span>?</span> followers';
 
     const avatarHtml = post.author.avatar
       ? `<img src="${post.author.avatar}" alt="" onerror="this.parentElement.innerHTML='<div class=avatar-placeholder>👤</div>'">`
-      : `<div class="avatar-placeholder">👤</div>`;
+      : '<div class="avatar-placeholder">👤</div>';
 
-    // Truncate text
     const text = post.text.length > 200 ? post.text.slice(0, 197) + '…' : post.text;
 
     card.innerHTML = `
@@ -777,6 +755,7 @@ function renderRound() {
         <div class="author-info">
           <div class="author-name">${escapeHtml(post.author.displayName)}</div>
           <div class="author-handle">@${escapeHtml(post.author.handle)}</div>
+          <div class="author-handle">${fmtDate(post.indexedAt)}</div>
         </div>
         <div class="follower-badge">${followers}</div>
       </div>
@@ -813,7 +792,7 @@ function makeGuess(idx) {
   guessed = true;
 
   const posts = rounds[currentRound];
-  const winnerIdx = posts.reduce((best, p, i) => p.likeCount > posts[best].likeCount ? i : best, 0);
+  const winnerIdx = posts.reduce((best, post, i) => post.likeCount > posts[best].likeCount ? i : best, 0);
   const isCorrect = idx === winnerIdx;
 
   if (isCorrect) score++;
@@ -829,20 +808,17 @@ function makeGuess(idx) {
       card.classList.add('loser');
     }
 
-    // Reveal likes
     const revealEl = document.getElementById(`revealed-${i}`);
     const numEl = document.getElementById(`like-num-${i}`);
     revealEl.classList.add('show');
     numEl.textContent = fmt(posts[i].likeCount);
     if (i === winnerIdx) numEl.classList.add('highlight');
 
-    // Add winner badge
     if (i === winnerIdx) {
-      revealEl.innerHTML += `<div class="winner-badge">🏆 Most liked</div>`;
+      revealEl.innerHTML += '<div class="winner-badge">🏆 Most liked</div>';
     }
   });
 
-  // Result panel
   const winPost = posts[winnerIdx];
   const guessPost = posts[idx];
   const panel = document.getElementById('result-panel');
@@ -852,12 +828,12 @@ function makeGuess(idx) {
     document.getElementById('result-icon').textContent = '✅';
     document.getElementById('result-heading').textContent = 'Nice guess!';
     document.getElementById('result-detail').innerHTML =
-      `That post got <strong>${fmt(winPost.likeCount)} likes</strong>. The author had ${fmt(winPost.author.followersCount)} followers. Was follower count a useful clue?`;
+      `That post got <strong>${fmt(winPost.likeCount)} likes</strong>.`;
   } else {
     document.getElementById('result-icon').textContent = '❌';
     document.getElementById('result-heading').textContent = 'Not quite!';
     document.getElementById('result-detail').innerHTML =
-      `You picked a post with <strong>${fmt(guessPost.likeCount)} likes</strong>, but the winner had <strong>${fmt(winPost.likeCount)} likes</strong>. The winner's author had ${fmt(winPost.author.followersCount)} followers — did that signal anything?`;
+      `You picked a post with <strong>${fmt(guessPost.likeCount)} likes</strong>, but the winner had <strong>${fmt(winPost.likeCount)} likes</strong>.`;
   }
 
   document.getElementById('score-val').textContent = score;
@@ -888,21 +864,18 @@ function showFinal() {
 
   const pct = score / ROUNDS;
   let msg = '';
-  if (pct >= 0.8) msg = "Impressive — or were you just lucky? Watts would say: probably a bit of both.";
-  else if (pct >= 0.6) msg = "Decent score. Hard to tell skill from chance, isn't it?";
-  else if (pct >= 0.4) msg = "Tough game. That's the whole point — virality resists prediction.";
-  else msg = "Hard to predict, right? Welcome to Watts' world.";
+  if (pct >= 0.8) msg = 'Impressive — or were you just lucky? Watts would say: probably a bit of both.';
+  else if (pct >= 0.4) msg = 'Decent score. Hard to tell skill from chance, isn\'t it?';
+  else msg = 'Hard to predict, right? Welcome to Watts\' world.';
   document.getElementById('final-msg').textContent = msg;
 }
 
 function escapeHtml(str) {
   if (!str) return '';
-  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-// ─── Init ──────────────────────────────────────────────────────────────────────
 async function init() {
-  // Reset state
   rounds = [];
   currentRound = 0;
   score = 0;
@@ -912,10 +885,7 @@ async function init() {
   document.getElementById('error-state').style.display = 'none';
   document.getElementById('game-area').style.display = 'none';
   document.getElementById('final-panel').classList.remove('show');
-
-  // Reset round bar
-  const bar = document.getElementById('round-bar');
-  bar.innerHTML = '';
+  document.getElementById('round-bar').innerHTML = '';
 
   try {
     rounds = await buildRounds();
@@ -925,11 +895,11 @@ async function init() {
     document.getElementById('game-area').style.display = 'block';
     document.getElementById('score-display').style.display = '';
     renderRound();
-  } catch (e) {
+  } catch (error) {
     document.getElementById('loading').style.display = 'none';
     document.getElementById('error-state').style.display = 'block';
-    document.getElementById('error-msg').textContent = e.message || 'Failed to load posts. Try again.';
-    console.error(e);
+    document.getElementById('error-msg').textContent = error.message || 'Failed to load posts. Try again.';
+    console.error(error);
   }
 }
 
