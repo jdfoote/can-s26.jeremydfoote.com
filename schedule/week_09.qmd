@@ -35,4 +35,4 @@ date: "2026-03-09"
 
 **Class Schedule:**
 
-* [Six Degrees of Wikipedia Activity](/assignments/Six-Degrees-of-Wikipedia-Activity.qmd)
+* Troubled Lands Activity

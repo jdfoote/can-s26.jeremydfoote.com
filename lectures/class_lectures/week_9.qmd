@@ -22,18 +22,17 @@ library(tidyverse)
 
 ## Dad Joke
 
-Why did the raisin go out with the prune?
+I married my wife for her looks
 
 <span class='fragment'>
-Because he couldn't find a date. 
+But not the ones she's been giving me lately!
 </span>
 
 ## Housekeeping
 
-> - Thursday - 6 Degrees of Wikipedia
+> - Thursday - Troubled Lands Activity
 > - Final Project Ideas due (yesterday)
 > - Self Assessment, Lab 6, and Social Search all due after Spring Break
-> - 6 degrees of Wikipedia on Thursday
 
 <!--
 ## Troubled Lands Reflection
@@ -62,6 +61,7 @@ Because he couldn't find a date.
 ## Review Questions
 
 > - What is a degree distribution?
+> - What is a scale-free distribution?
 
 <div style="position:relative; width:640px; height:480px; margin:0 auto;">
 <div class='fragment' style="position:absolute;top:0;left:0;">
@@ -117,10 +117,9 @@ df |>
 
 ## Review Questions
 
-> - What is a scale-free distribution?
 > -	When/where do we find scale-free distributions?
 > - What is an example of a network that would *not* have a scale-free distribution?
-> - What are the benefits of scale-free networks?
+> - What are the benefits and drawbacks of scale-free networks?
 
 ## Review Questions
 
@@ -169,15 +168,25 @@ p +
 
 ## Discussion Questions
 
-> - What are other situations outside of detecting illness outbreaks and focus interventions where the friendship paradox could be applied for good?
-> - If the friendship paradox shows that people who are more connected appear more often in others' social circles, how does this affect the way we view ourselves and others on social media?
+> - If networks naturally tend to follow the idea of preferential attachment, how can newer nodes, like a startup company or a new student, overcome this disadvantage and become a hub? 
+> - One of the implications for scale-free networks is that outcomes are unfair and random, but in real life, people may have attributes that allow them to get ahead. I'm confused how both of these are true.
 > - Does the friendship paradox only apply to popularity (degree), or could it apply to other attributes (e.g., wealth, happiness, etc.)?
 
 ## Discussion Questions
 
+> - How reliable is using friends of randomly selected individuals as a way to identify the most central or influential people in a network? 
+> - In the group-size effect, why are people more likely to experience larger groups instead of average-sized ones?
+
+## Discussion Questions
+
+> - If we can mathematically prove that through comparison with our connections most of us will be left feeling relatively inadequate, then why compare?
+> - Why do skewed networks react differently to random failures?
 > - Could other things outweigh rich-get-richer in real-world networks? What are some examples?
-> - When does the friendship paradox mean that popular people are over-represented? How can we avoid this bias?
-> - How does foci and homophily impact the friendship paradox? 
+
+## Discussion Questions
+
+> - Do the benefits of using social networks data to detect disease outbreaks earlier outweigh the potential privacy concerns of monitoring people's connections and online activity? 
+
 
 ## Visualization Challenge
 

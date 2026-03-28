@@ -29,9 +29,9 @@ Now I can't read it at all!
 
 ## Housekeeping
 
-> - Put questions on the discussion board!
+> - Sorry for the schedule confusion!
 > - Final project idea due next week
-> - Social Search assignment due March 16
+> - Social Search assignment due March 23
 >	  - Try to find someone with driver's license from HI
 >	  - No group texts
 >	  - Diagram search network
@@ -82,14 +82,20 @@ Now I can't read it at all!
 > - What was the Travers and Milgram experiment?
 > - How can we have such high triadic closure but still have short path lengths? What was the key insight from Watts and Strogatz?
 > - What does this have to do with Granovetter (weak ties)?
+> - What is similar to "random rewiring" in real life?
 
-## Questions from 3-2-1s
+## Break!
 
-> - What is a "groupy" network?
-> - How do "rewirings" work?
-> - How does gender relate to network distance?
-> - Social media and small worlds
-> - How do small-world dynamics and the strength of weak ties shape opportunities, inequality, and information flow in today's hyperconnected society?
+## Discussion Questions
 
+> - What are some of your best “small world” moments and what were the connections?
+> - Is the small world smaller now?
+> - To what extent do psychological factors (motivation, uncertainty, etc.), shape social chains?
+> - How does homophily affect the small world phenomenon?
+
+## Discussion Questions
+
+> - If the network shapes who you meet, who you marry, what jobs you get, what ideas you're exposed to, how much of who you are was actually chosen vs. just a product of your position in a network?
+> - Travers and Milgram found evidence of "funneling" through certain individuals, while Dodds suggests hubs are less important. Is this difference due to scale (U.S. based vs global), technology, (mail vs. email), or changes in network structures over time? 
 
 ## R Co-working time

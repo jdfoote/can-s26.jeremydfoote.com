@@ -27,4 +27,4 @@ date: "2026-03-02"
 
 ### Thursday
 
-* Troubled Lands Activity
+* [Six Degrees of Wikipedia Activity](/assignments/Six-Degrees-of-Wikipedia-Activity.qmd)

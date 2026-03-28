@@ -7,6 +7,8 @@ format:
     progress: true
     transition: convex
     reveal_plugins: ['notes']
+    width: 1000
+    height: 750
 ---
 
 ## Troubled Lands Explainer
@@ -38,8 +40,8 @@ format:
   - 2 Fields
   - 2 Pasture
 
-- Eroded if more rain than forests
-  - *2* become eroded
+- Eroded if *more* rain than forests
+  - **2** become eroded
   - Erosion order: Fallows, field, pasture, forest
 
 Can't plant on eroded, have to turn it to fallows first

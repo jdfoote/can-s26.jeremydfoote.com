@@ -3,7 +3,14 @@ title: "Week 10: Social influence and diffusion"
 date: "2026-03-23"
 ---
 
+<!-- TODO: Remember to change this schedule around next time I teach the class! -->
+
 ### Tuesday
+
+**Class Schedule:**
+
+* No in person class today.
+* Do [The Wisdom or Madness of Crowds Simulation](http://ncase.me/crowds/) and write a reflection on Brightspace.
 
 **Assignment Due:**
 
@@ -11,6 +18,8 @@ date: "2026-03-23"
 * [R Lab 6 - Visualizing Power](/assignments/r_lab_6_%E2%80%93_visualizing_power.qmd)
 * [Social Search Assignment](/assignments/Social-Search-Assignment.qmd)
 * [Reading Review](/syllabus/syllabus.qmd#reading-review-assignments)
+
+### Thursday
 
 **Readings:** 
 
@@ -33,6 +42,5 @@ date: "2026-03-23"
 
 ### Thursday
 
-**Class Schedule:**
-
-* Do [The Wisdom or Madness of Crowds Simulation](http://ncase.me/crowds/)
+- In Class Activity
+    - [Virality Prediction Game](/activities/virality_predictor_app/virality_game.html)

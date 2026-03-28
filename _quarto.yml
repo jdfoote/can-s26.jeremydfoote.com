@@ -11,6 +11,7 @@ resources:
     - "assignments/r_labs/*.qmd"
     - "assignments/ego_networks/*.qmd"
     - "CNAME"
+    - "activities/virality_predictor_app/virality_game.html"
     - "resources/**/*"
 
 pre-render:
