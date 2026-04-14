@@ -165,7 +165,7 @@
     "href": "schedule/week_15.html",
     "title": "Week 15: Class Presentations and Final Projects",
     "section": "",
-    "text": "Tuesday\nAssignment Due:\n\nSaturday: Feedback on final project to peers\nTuesday / Thursday: Final Project Presentation\nFriday: Final Project on Brightspace\nFriday: Final Self Assessment Reflection on Brightspace\n\nClass Schedule:\n\nFinal project presentations\n\n\n\nThursday\nClass Schedule:\n\nFinal project presentations\n\nResources:\n\n(Optional) Advanced network visualizations in R",
+    "text": "Tuesday\nAssignment Due:\n\nSaturday: Feedback on final project to peers\nTuesday / Thursday: Final Project Presentation\nFriday: Final Project on Brightspace\nFriday: Final Self Assessment Reflection on Brightspace\n\nClass Schedule:\n\nFinal project presentations:\n\nJulia / Bonnie\nNoah / Canaan / Ella / Madison\nAyush\nGunveer\nSahil\nXiaoyang\nTrinity\nNoelle C.\n\n\n\n\nThursday\nClass Schedule:\n\nFinal project presentations\n\nMaria M.\nLogan C.\nPaige B.\nDean C.\nKiara C.\nColin B.\nRafael D.\nNoelle W.\n\n\nResources:\n\n(Optional) Advanced network visualizations in R",
     "crumbs": [
       "Schedule",
       "Course content",
@@ -1225,7 +1225,7 @@
     "href": "lectures/class_lectures/week_13.html#housekeeping",
     "title": "Week 13 - Networks and Technology",
     "section": "Housekeeping",
-    "text": "Housekeeping\n\nEXAM ON THURSDAY!!\nSign up for a time to discuss self-assessment and final project\nFinal projects are due in 2 weeks!\n\nRough draft to 2 peers on April 20\nFeedback due by Saturday (April 22)\n\nPresentations Tuesday and Thursday (April 20 and 22)"
+    "text": "Housekeeping\n\nEXAM ON THURSDAY!!\nFinal projects are due in 2 weeks!\n\nRough draft to 2 peers on April 23\nFeedback due by Saturday (April 25)\n\nPresentations Tuesday and Thursday (April 28 and 30)"
   },
   {
     "objectID": "lectures/class_lectures/week_13.html#review-questions",
@@ -1242,11 +1242,25 @@
     "text": "Review Questions\n\nWhat is context collapse?\nHow does context collapse relate to network principles we have discussed?"
   },
   {
-    "objectID": "lectures/class_lectures/week_13.html#review-questions-2",
-    "href": "lectures/class_lectures/week_13.html#review-questions-2",
+    "objectID": "lectures/class_lectures/week_13.html#tech-break",
+    "href": "lectures/class_lectures/week_13.html#tech-break",
     "title": "Week 13 - Networks and Technology",
-    "section": "Review Questions",
-    "text": "Review Questions\n\nDoes technology help to explain the rise of extreme beliefs? (e.g., QAnon)\nHow might we use social networks to combat misinformation and extreme beliefs?\nWhich of your beliefs have changed? What changed them?"
+    "section": "Tech Break",
+    "text": "Tech Break"
+  },
+  {
+    "objectID": "lectures/class_lectures/week_13.html#discussion-questions",
+    "href": "lectures/class_lectures/week_13.html#discussion-questions",
+    "title": "Week 13 - Networks and Technology",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\n\nIf social media actually exposes people to more diverse information, but at the same time can still increase polarization, what does that say about how people process information and interact with others in networks?\nShould companies be required to open-source how their algorithms work since they contribute heavily to public discourse?\nHow could we design social media platforms to encourage more critical thinking and less polarization?"
+  },
+  {
+    "objectID": "lectures/class_lectures/week_13.html#discussion-questions-1",
+    "href": "lectures/class_lectures/week_13.html#discussion-questions-1",
+    "title": "Week 13 - Networks and Technology",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\n\nIs context collapse good or bad?\nDoes technology spread too much information too fast for people to think critically?\nExposure to opposing views on social media can increase political polarization - Would the findings from this reading still hold if the US had more than two major political parties?\nWhat role is/will algorithms have on dating and relationship formation?"
   },
   {
     "objectID": "lectures/class_lectures/week_11.html#dad-joke",
@@ -1260,14 +1274,14 @@
     "href": "lectures/class_lectures/week_11.html#housekeeping",
     "title": "Week 11 - Communities in Networks",
     "section": "Housekeeping",
-    "text": "Housekeeping\n\nMake an appointment for Self Assessment Reflection review\nSubmit Exam Questions ASAP\nInternet technologies demo on Thursday\nExam April 13\nExam review April 6\nGuest lecture April 8"
+    "text": "Housekeeping\n\nFinal project due dates were wrong on website. So sorry!!\nMake an appointment for Self Assessment Reflection review\nSubmit Exam Questions ASAP\nInternet technologies demo on Thursday or R labs? Vote?\nExam April 16\nGuest lecture (Scott Feld) + Exam review on April 9"
   },
   {
     "objectID": "lectures/class_lectures/week_11.html#plan-for-today",
     "href": "lectures/class_lectures/week_11.html#plan-for-today",
     "title": "Week 11 - Communities in Networks",
     "section": "Plan for today",
-    "text": "Plan for today\n\nGroups in networks review\nDiscussion questions\nR"
+    "text": "Plan for today\n\nFinish discussion from last week\nGroups in networks review\nDiscussion questions\nR"
   },
   {
     "objectID": "lectures/class_lectures/week_11.html#community-detection-review",
@@ -1295,21 +1309,21 @@
     "href": "lectures/class_lectures/week_11.html#discussion-questions",
     "title": "Week 11 - Communities in Networks",
     "section": "Discussion Questions",
-    "text": "Discussion Questions\n\nHow can random walks identify communities?\nDo k-plexes really happen? Are you really connected to everyone but one person?\nDo all groups have a periphery?\nClustering coefficient\nRich club coefficient\nHomophily vs. cliques"
+    "text": "Discussion Questions\n\nHow does betweenness help with community detection?\nIs there a situation in which those with less knowledge or experience create the core, and the more knowledgeable and experienced create the periphery?\nAre communities something that naturally exist or are they partly created by methods we use to detect them?\nIs “slacktivism” actually necessary for large-scale social movements to succeed?\nHow scalable are community detection algorithms?"
+  },
+  {
+    "objectID": "lectures/class_lectures/week_11.html#discussion-questions-1",
+    "href": "lectures/class_lectures/week_11.html#discussion-questions-1",
+    "title": "Week 11 - Communities in Networks",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\n\nIf networks determine access to information and opportunities, is inequality inevitable?\nCan the same network structure mean different things in different fields, such as social science and biology? If so, is there a common ground between these different kinds of networks?\nFrom the perspective of a marketing or advertising professional, would it be better to focus time and resources on the core group (influencers, celebrities, etc.) or the periphery (new people with the potential to share it and start a movement)? Which one is arguably more important?"
   },
   {
     "objectID": "lectures/class_lectures/week_11.html#visualization-challenge-review",
     "href": "lectures/class_lectures/week_11.html#visualization-challenge-review",
     "title": "Week 11 - Communities in Networks",
     "section": "Visualization Challenge Review",
-    "text": "Visualization Challenge Review\n\nGlanced at a handful and they are quite good!\nDiscussion about LLMs and coding\n\nI have been intentionally vague\nI want you to learn computational thinking, learn syntax of R\nI also want you to learn how to use AI to do cool stuff!\nI’m torn about what to expect / how to encourage\nFundamental knowledge makes AI stuff easier"
-  },
-  {
-    "objectID": "lectures/class_lectures/week_11.html#further-ai-discussion",
-    "href": "lectures/class_lectures/week_11.html#further-ai-discussion",
-    "title": "Week 11 - Communities in Networks",
-    "section": "Further AI discussion",
-    "text": "Further AI discussion\n\nSimilar concerns about AI-augmented reading.\n\nAI can help us to understand deeper, or to pretend that we understand deeper.\nHow can instructors encourage the former?"
+    "text": "Visualization Challenge Review\n\nGlanced at a handful and they are quite good!\nDiscussion about LLMs and coding\n\nI have been intentionally vague\nI want you to learn computational thinking, learn syntax of R\nI also want you to learn how to use AI to do cool stuff!\nI’m torn about what to expect / encourage\nFundamental knowledge makes AI stuff easier"
   },
   {
     "objectID": "lectures/class_lectures/week_1.html#about-me",
@@ -2737,14 +2751,21 @@
     "href": "lectures/class_lectures/week_10.html#discussion-questions",
     "title": "Diffusion and Contagion",
     "section": "Discussion Questions",
-    "text": "Discussion Questions\n\nOne thing I don’t fully understand is how you can tell in real life whether something is a simple or complex contagion. It seems clear in theory, but in practice I feel like it would be hard to know how many interactions someone actually needs before changing their behavior. -If social change depends more on network structure and repeated reinforcement than on a few “special people,” why do we still prefer to explain success by focusing on influencers, leaders, or exceptional individuals?\nIf success of a cultural item comes from luck and a network pushing that item, are things we hold in high regard just random?"
+    "text": "Discussion Questions\n\nOne thing I don’t fully understand is how you can tell in real life whether something is a simple or complex contagion. It seems clear in theory, but in practice I feel like it would be hard to know how many interactions someone actually needs before changing their behavior.\nIf social change depends more on network structure and repeated reinforcement than on a few “special people,” why do we still prefer to explain success by focusing on influencers, leaders, or exceptional individuals?"
   },
   {
     "objectID": "lectures/class_lectures/week_10.html#discussion-questions-1",
     "href": "lectures/class_lectures/week_10.html#discussion-questions-1",
     "title": "Diffusion and Contagion",
     "section": "Discussion Questions",
-    "text": "Discussion Questions\n\nDo you think in social sciences it will ever reach a point where things such as an economic crisis or the next hit movie will become predictable or is there too much randomness involved in society?\nIn the reading it says that history is not shaped by one “great man” is this universally true or are there exceptions like Alexander the Great, Julius Ceasar, or other individuals that have an importance of a certain magnitude? -If most trends spread through complex contagion, how can society ensure that reliable information spreads instead of misinformation?"
+    "text": "Discussion Questions\n\nIf success of a cultural item comes from luck and a network pushing that item, are things we hold in high regard just random?\nDo you think in social sciences it will ever reach a point where things such as an economic crisis or the next hit movie will become predictable or is there too much randomness involved in society?"
+  },
+  {
+    "objectID": "lectures/class_lectures/week_10.html#discussion-questions-2",
+    "href": "lectures/class_lectures/week_10.html#discussion-questions-2",
+    "title": "Diffusion and Contagion",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\n\nIn the reading it says that history is not shaped by one “great man” is this universally true or are there exceptions like Alexander the Great, Julius Ceasar, or other individuals that have an importance of a certain magnitude?\nIf most trends spread through complex contagion, how can society ensure that reliable information spreads instead of misinformation?"
   },
   {
     "objectID": "lectures/class_lectures/week_12.html#todays-dad-joke",
@@ -2800,7 +2821,7 @@
     "href": "lectures/class_lectures/week_12.html#wisdom-of-crowds-activity",
     "title": "Week 12 - Collective Behavior",
     "section": "Wisdom of Crowds Activity",
-    "text": "Wisdom of Crowds Activity\n\nGet out a piece of paper\nGuess how many pages are in this book and write down your guess\nTell your guess (and no other information) to the two people on either side of you\nGuess again how many pages are in the book and write it on a new line (Guess 2)"
+    "text": "Wisdom of Crowds Activity\n\nGet out a piece of paper\nGuess how many pages are in this book and record your guess on the Google Form\nTell your guess (and no other information) to the two people on either side of you\nGuess again how many pages are in the book and record it"
   },
   {
     "objectID": "lectures/class_lectures/week_12.html#activity-2",
@@ -2842,7 +2863,7 @@
     "href": "lectures/class_lectures/week_12.html#connections-to-other-network-concepts",
     "title": "Week 12 - Collective Behavior",
     "section": "Connections to other network concepts",
-    "text": "Connections to other network concepts\n\nHow does this relate to our week on small group networks?\n\nTransactive memory\nHierarchy\nCentralization"
+    "text": "Connections to other network concepts\n\nHow does this relate to our week on small group networks?\n\nTransactive memory\nHierarchy\nCentralization\nDiffusion and contagion"
   },
   {
     "objectID": "lectures/class_lectures/week_12.html#connections-to-other-network-concepts-1",
@@ -2856,18 +2877,18 @@
     "href": "lectures/class_lectures/week_12.html#discussion-questions",
     "title": "Week 12 - Collective Behavior",
     "section": "Discussion Questions",
-    "text": "Discussion Questions\n\nWhat are the most practical ways to design communication networks or platforms that promote decentralized influence?\nWhat are some real-life examples of collective intelligence making smart decisions regarding norms, such as when IP implicitly became the norm for network communication, as mentioned in the discussion video?\nIf collective intelligence relies on social structures more than on individual skills, then what might schools, organizations, or communities do to foster environments that promote informed participation and the real “wisdom of the crowd”?\n\n\n\nIf there’s time, talk about R"
+    "text": "Discussion Questions\n\nHow are shared understanding and groupthink different? Shared understanding is framed positively and groupthink is framed negatively. Is there a difference, or are they just framed differently?\nCan a group ever be more intelligent than its smartest member?\nIf decentralized networks improve accuracy, why do so many real-world systems (like social media, big companies, etc.) become highly centralized?\nThe experiments used examples with clear correct answers. How would the results change in situations where there is no “truth” (like political opinions, religious beliefs, etc.)?"
   },
   {
-    "objectID": "lectures/class_lectures/week_12.html#plan-for-today",
-    "href": "lectures/class_lectures/week_12.html#plan-for-today",
+    "objectID": "lectures/class_lectures/week_12.html#discussion-questions-1",
+    "href": "lectures/class_lectures/week_12.html#discussion-questions-1",
     "title": "Week 12 - Collective Behavior",
-    "section": "Plan for Today",
-    "text": "Plan for Today\n\nExam Review"
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\n\nIn what situations, if any, is it better for a group to have a centrally influential leader rather than a more decentralized structure?\nDo online groups show the same patterns of collective intelligence as in-person groups?\nIf you have high self-weight what are some ways you can notice this and balance it out so that you are not just stubborn and can grow? When are good times to have high self-weight and when are good times to have low self-weight?\nDo you typically go to a select few people for advice and put lots of weight into what they say or take the wisdom of crowds approach go to many people and average out what feedback you get not really put much weight into the opinion of one other person?\n\n\n\nIf there’s time, talk about R"
   },
   {
-    "objectID": "lectures/class_lectures/week_12.html#exam-review",
-    "href": "lectures/class_lectures/week_12.html#exam-review",
+    "objectID": "lectures/class_lectures/week_12.html#exam-review-1",
+    "href": "lectures/class_lectures/week_12.html#exam-review-1",
     "title": "Week 12 - Collective Behavior",
     "section": "Exam Review",
     "text": "Exam Review\n\nVisualization / ggraph\nLook at code and explain what it will look like\nFind the bug in code"
@@ -2880,29 +2901,29 @@
     "text": "Example\n\nWhat code produces this graph?\n\n\nG |&gt;\n  mutate(centrality = centrality_degree()) |&gt;\n  activate(edges) |&gt;\n  ggraph() +\n  geom_edge_fan(color = 'purple') +\n  geom_node_point(aes(size = centrality), color = 'green')"
   },
   {
-    "objectID": "lectures/class_lectures/week_12.html#exam-review-1",
-    "href": "lectures/class_lectures/week_12.html#exam-review-1",
-    "title": "Week 12 - Collective Behavior",
-    "section": "Exam Review",
-    "text": "Exam Review\nWhat would this code do?\nG |&gt;\n  activate(nodes) |&gt;\n  mutate(ec = centrality_eigen()) |&gt;\n  filter(ec &gt; 1) |&gt;\n  ggraph() +\n  geom_edge_fan(color = 'orange') +\n  geom_node_point(aes(size = ec), color = 'green')"
-  },
-  {
     "objectID": "lectures/class_lectures/week_12.html#exam-review-2",
     "href": "lectures/class_lectures/week_12.html#exam-review-2",
     "title": "Week 12 - Collective Behavior",
     "section": "Exam Review",
-    "text": "Exam Review\n\nCentrality\nNetwork representations (Edgelists and matrices)\nNetwork formation\n\nHomophily, focus theory, transitivity, social exchange theory, etc.\n\nTie strength and small worlds"
+    "text": "Exam Review\nWhat would this code do?\nG |&gt;\n  activate(nodes) |&gt;\n  mutate(ec = centrality_eigen()) |&gt;\n  filter(ec &gt; 1) |&gt;\n  ggraph() +\n  geom_edge_fan(color = 'orange') +\n  geom_node_point(aes(size = ec), color = 'green')"
   },
   {
     "objectID": "lectures/class_lectures/week_12.html#exam-review-3",
     "href": "lectures/class_lectures/week_12.html#exam-review-3",
     "title": "Week 12 - Collective Behavior",
     "section": "Exam Review",
-    "text": "Exam Review\n\nPower and social capital\nContagion and diffusion\nCentrality\nBipartite networks and projections\nRandom rewirings"
+    "text": "Exam Review\n\nCentrality\nNetwork representations (Edgelists and matrices)\nNetwork formation\n\nHomophily, focus theory, transitivity, social exchange theory, etc.\n\nTie strength and small worlds"
   },
   {
     "objectID": "lectures/class_lectures/week_12.html#exam-review-4",
     "href": "lectures/class_lectures/week_12.html#exam-review-4",
+    "title": "Week 12 - Collective Behavior",
+    "section": "Exam Review",
+    "text": "Exam Review\n\nPower and social capital\nContagion and diffusion\nCentrality\nBipartite networks and projections\nRandom rewirings"
+  },
+  {
+    "objectID": "lectures/class_lectures/week_12.html#exam-review-5",
+    "href": "lectures/class_lectures/week_12.html#exam-review-5",
     "title": "Week 12 - Collective Behavior",
     "section": "Exam Review",
     "text": "Exam Review\n\nFriendship paradox\nStrength of weak ties\nWisdom of crowds / collective intelligence"
