@@ -61,6 +61,10 @@ width: 180px;
   font-size: 80%;
 }
 
+.tiny{
+  font-size: 60%;
+}
+
 /*
 .reveal img{
   max-width: 85vw;
