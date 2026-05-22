@@ -14,7 +14,7 @@ Answer the following questions about your learning and participation thus far. P
 
 Next, I'd like you to look on Brightspace and Discord and review the work you've done, and think about your participation in class. I'd also like you to review the expectations for each grade in this class. 
 
-* Based on your answers above, the work you have done, and the guidelines in the syllabus, what grade would you assign yourself in the class? Why?
+* Based on your answers above, the work you have done, and the guidelines in the [syllabus](/syllabus/syllabus.qmd#grades), what grade would you assign yourself in the class? Why?
 
 Finally, some feedback for me (feel free to submit this at https://forms.gle/ZQbTXHiaqy7WrxFj7 if you'd prefer to be anonymous):
 

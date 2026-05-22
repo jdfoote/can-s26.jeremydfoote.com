@@ -15,11 +15,19 @@ date: "2026-04-06"
 
 * Woolley, A. et al. (2010). [Evidence for a collective intelligence factor in the performance of human groups](https://www.science.org/doi/full/10.1126/science.1193147). Science, 330(6004), 686-688.
 * Becker, J., Brackbill, D., & Centola, D. (2017). [Network dynamics of social influence in the wisdom of crowds](https://doi.org/10.1073/pnas.1615978114). Proceedings of the National Academy of Sciences, 201615978.
-* [Video discussion with Dr. Becker](https://youtu.be/sdI-b5mfjH4) (watch after reading paper)
 * (Optional) [Optimizing Collective Intelligence with Anita Woolley](https://www.youtube.com/watch?v=-qg4tS1-8qY)
 
 * [Book Guessing Form](https://forms.gle/4UY897MWH5FbFgFt7) (in-class activity)
 
+**Video Lecture:**
+
+{{< video https://youtu.be/s3-DFa-U8Nk >}} [12:23]
+
+**Conversation with Dr. Joshua Becker:**
+
+{{< video https://youtu.be/sdI-b5mfjH4 >}} [27:48]
+
 ### Thursday
 
+* Guest Lecture: Dr. Scott Feld
 * Exam Review

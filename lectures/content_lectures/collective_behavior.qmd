@@ -1,0 +1,67 @@
+---
+title: Collective Behavior
+format: 
+  revealjs:
+    css: /resources/custom_css.css
+    theme: white
+    progress: true
+    transition: convex
+    reveal_plugins: ['notes']
+    incremental: true
+---
+
+## How do groups make good decisions?
+
+- As we know, groups are not just a collection of individuals
+- Different network structures and group processes can lead to very different outcomes
+- Key concepts:
+    - Collective intelligence
+    - Shared understanding
+    - Decision-making processes
+
+## Collective intelligence
+
+- Wisdom of crowds
+    - Collecting diverse, independent opinions can lead to better decisions
+    - Example: Estimating the weight of an ox
+    - Aggregation can happen through markets, averaging, etc.
+    - Even taking a simple average can outperform individual experts
+
+## Collective intelligence and communication networks
+
+- Network structure can influence collective intelligence
+    - Decentralized networks can improve estimates
+    - Centralized networks can lead to conformity
+
+
+## Shared understanding
+
+- Groups need shared understanding
+- Shared mental models
+    - Common knowledge about the task, goals, and group roles
+    - Facilitates coordination and cooperation
+    - Can be developed through communication and shared experiences
+- Homophily can lead to shared understanding but also to groupthink
+
+## Group processes
+
+- Woolley et al.'s "c factor" of collective intelligence
+    - Social sensitivity
+    - Equal participation
+    - Number of women in group
+- Also specific decision-making processes:
+    - Voting
+    - Consensus
+    - Single leader decision
+
+## Threats to good group decisions
+
+- Groupthink
+    - Desire for harmony leads to poor decision-making
+    - Suppression of dissenting opinions
+- Social loafing
+    - Individuals exert less effort in a group
+- Polarization
+    - Group discussions can lead to more extreme positions
+- Conformity
+    - Pressure to conform can suppress unique insights

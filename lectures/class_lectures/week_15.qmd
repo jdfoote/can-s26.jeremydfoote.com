@@ -7,6 +7,8 @@ format:
     progress: true
     transition: convex
     reveal_plugins: ['notes']
+    width: 1200
+    height: 800
 ---
 
 ```{r setup, include=FALSE}
@@ -29,14 +31,34 @@ By its bark
 
 ## Housekeeping
 
-> - Get feedback to your peers! (And upload to Brightspace)
-> - Final draft DUE April 24
+> - Get feedback to your peers on Thursday! (And upload to Brightspace)
+> - Presentations on Tuesday and Thursday
+> - Final draft DUE May 1
 > - Self Assessment Reflection
 > - Feedback for me (Purdue / Google Form / email / Discord)
 > - Sign up to meet with me (virtually is great)
-> - Presentations on Thursday
 
-## Discussion
+
+## Presentation Assignments {.tiny}
+
+- Tuesday
+  - Julia / Bonnie
+  - Noah / Canaan / Ella / Madison
+  - Ayush
+  - Gunveer
+  - Sahil
+  - Xiaoyang
+  - Trinity
+  - Noelle C.
+- Thursday
+  - Maria M.
+  - Logan C.
+  - Paige B.
+  - Dean C.
+  - Kiara C.
+  - Colin B.
+  - Rafael D.
+  - Noelle W.
 
 
 
@@ -45,3 +67,19 @@ By its bark
 > - How can networks produce or maintain racially biased outcomes?
 > - How does this tie into ideas about social/cultural/economic capital?
 > - How can we use what we know about networks to reduce racial inequality?
+
+## Discussion Questions
+
+> - What are some examples of invisible social capital that you have utilized in your own network?
+> - Do you think that upcoming technology like AI, will help get rid of inequality, or like companies and laws maintain that inequality or make it worse?
+> - When addressing inequality, do you think it is more important to focus on fixing hiring practices or improving everyone's access to networks?
+
+## Discussion Questions
+
+> - How much should policy focus on building cross-class social connections versus improving economic resources directly? What are things policymakers could do to increase economic connectedness? 
+> - The readings suggest increasing cross-class ties could raise income mobility by ~20%. What kinds of policies could realistically increase economic connectedness?
+> - If social networks shape economic outcomes so strongly, should society focus more on changing who people are connected to, or on improving the opportunities within existing networks? 
+
+## Discussion Questions
+
+> -I'm still a little confused about how we actually separate the effects of social capital from other factors like income or education. It seems like they are all really connected, so I don't fully understand how researchers can tell that networks themselves are the cause of differences in outcomes and not just a reflection of those other things.

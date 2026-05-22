@@ -23,8 +23,8 @@ library(networkdata)
 #df = read_csv('./resources/wisdom_of_crowds_activity.csv') |>
 #  filter(is.na(Guess)==F)
 
-BOOK_1_LENGTH = 294
-BOOK_2_LENGTH = 374
+BOOK_1_LENGTH = 225
+BOOK_2_LENGTH = 312
 
 ```
 
@@ -124,9 +124,9 @@ Times were hard.
 ## Wisdom of Crowds Activity
 
 > - Get out a piece of paper
-> - Guess how many pages are in this book and write down your guess
+> - Guess how many pages are in this book and record your guess on the Google Form
 > - Tell your guess (and no other information) to the two people on either side of you
-> - Guess again how many pages are in the book and write it on a new line (Guess 2)
+> - Guess again how many pages are in the book and record it
 
 ## Activity 2
 
@@ -176,6 +176,7 @@ df |>
 >   - Transactive memory
 >   - Hierarchy
 >   - Centralization
+>   - Diffusion and contagion
 
 ## Connections to other network concepts
 > - How could you design a group / network to get the benefits of the wisdom of crowds?
@@ -184,17 +185,24 @@ df |>
 
 ## Discussion Questions
 
-> - What are the most practical ways to design communication networks or platforms that promote decentralized influence?
-> - What are some real-life examples of collective intelligence making smart decisions regarding norms, such as when IP implicitly became the norm for network communication, as mentioned in the discussion video?
-> - If collective intelligence relies on social structures more than on individual skills, then what might schools, organizations, or communities do to foster environments that promote informed participation and the real "wisdom of the crowd"?
+> - How are shared understanding and groupthink different? Shared understanding is framed positively and groupthink is framed negatively. Is there a difference, or are they just framed differently?
+> - Can a group ever be more intelligent than its smartest member?
+> - If decentralized networks improve accuracy, why do so many real-world systems (like social media, big companies, etc.) become highly centralized?
+> - The experiments used examples with clear correct answers. How would the results change in situations where there is no "truth" (like political opinions, religious beliefs, etc.)?
+
+## Discussion Questions
+
+> - In what situations, if any, is it better for a group to have a centrally influential leader rather than a more decentralized structure? 
+> - Do online groups show the same patterns of collective intelligence as in-person groups?
+> - If you have high self-weight what are some ways you can notice this and balance it out so that you are not just stubborn and can grow? When are good times to have high self-weight and when are good times to have low self-weight?
+> - Do you typically go to a select few people for advice and put lots of weight into what they say or take the wisdom of crowds approach go to many people and average out what feedback you get not really put much weight into the opinion of one other person?
 
 <aside class="notes">
 - If there's time, talk about R
 </aside>
 
-## Plan for Today
 
-> - Exam Review
+# Exam Review
 
 
 ## Exam Review

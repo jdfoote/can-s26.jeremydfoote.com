@@ -43,15 +43,16 @@ My thoughts are with his family.
 
 ## Housekeeping
 
+> - Final project due dates were wrong on website. So sorry!!
 > - Make an appointment for Self Assessment Reflection review
 > - Submit Exam Questions ASAP
-> - Internet technologies demo on Thursday
-> - Exam April 13
-> - Exam review April 6
-> - Guest lecture April 8
+> - Internet technologies demo on Thursday or R labs? Vote?
+> - Exam April 16
+> - Guest lecture (Scott Feld) + Exam review on April 9
 
 ## Plan for today
 
+> - Finish discussion from last week
 > - Groups in networks review
 > - Discussion questions
 > - R
@@ -114,12 +115,18 @@ ggraph(layout='stress') +
 
 ## Discussion Questions
 
-> - How can random walks identify communities?
-> - Do k-plexes really happen? Are you really connected to everyone but one person?
-> - Do all groups have a periphery?
-> - Clustering coefficient
-> - Rich club coefficient
-> - Homophily vs. cliques
+> - How does betweenness help with community detection?
+> - Is there a situation in which those with less knowledge or experience create the core, and the more knowledgeable and experienced create the periphery?
+> - Are communities something that naturally exist or are they partly created by methods we use to detect them?
+> - Is "slacktivism" actually necessary for large-scale social movements to succeed?
+> - How scalable are community detection algorithms?
+
+## Discussion Questions
+
+> - If networks determine access to information and opportunities, is inequality inevitable?
+> - Can the same network structure mean different things in different fields, such as social science and biology? If so, is there a common ground between these different kinds of networks?
+> - From the perspective of a marketing or advertising professional, would it be better to focus time and resources on the core group (influencers, celebrities, etc.) or the periphery (new people with the potential to share it and start a movement)? Which one is arguably more important? 
+> - 
 
 ## Visualization Challenge Review
 
@@ -128,11 +135,5 @@ ggraph(layout='stress') +
 >   - I have been intentionally vague
 >   - I want you to learn computational thinking, learn syntax of R
 >   - I also want you to learn how to use AI to do cool stuff!
->   - I'm torn about what to expect / how to encourage
+>   - I'm torn about what to expect / encourage
 >   - Fundamental knowledge makes AI stuff easier
-
-## Further AI discussion 
-
-> - Similar concerns about AI-augmented reading.
->   - AI can help us to understand deeper, or to pretend that we understand deeper.
->   - How can instructors encourage the former?
