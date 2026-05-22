@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viral? Guess Which Post Won</title>
+<title>Virality Prediction Game</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -83,7 +84,7 @@
     color: var(--muted);
     font-size: 15px;
     font-weight: 300;
-    max-width: 500px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
@@ -314,6 +315,26 @@
     word-break: break-word;
   }
 
+  .post-images {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .post-images img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .post-images.multi img {
+    flex: 1;
+    min-width: 0;
+  }
+
   .post-meta {
     display: flex;
     gap: 14px;
@@ -529,9 +550,11 @@
 
 <div class="container">
   <header>
-    <div class="eyebrow">Watts' Virality Puzzle</div>
+    <div class="eyebrow">The Virality Game</div>
     <h1>Which post<br><em>went viral?</em></h1>
-    <p class="subtitle">Each round shows you real Bluesky posts from the same day and topic. Guess which one got the most likes.</p>
+    <p class="subtitle">For the last decade plus, Duncan Watts and his collaborators have published a <a href="https://doi.org/10.1126/science.1121066" target="_blank" style="color:var(--accent)">number</a> of <a href="https://doi.org/10.1287/mnsc.2015.2158" target="_blank" style="color:var(--accent)">research</a> <a href="https://doi.org/10.1126/science.aal3856" target="_blank" style="color:var(--accent)">papers</a> showing that virality in online platforms is largely unpredictable. Of course, the quality of the content and the popularity of the poster matters, but they show that there is still a lot of luck.
+     <br/><br/> 
+    In this game, you will see if they are right. Each round you will be shown four real Bluesky posts, including when they were posted and the follower count of the poster. Guess which one got the most likes.</p>
   </header>
 
   <div class="round-bar" id="round-bar"></div>
@@ -688,6 +711,12 @@ async function buildRounds() {
           repostCount: post.repostCount || 0,
           replyCount: post.replyCount || 0,
           indexedAt: post.indexedAt,
+          images: (post.embed?.$type === 'app.bsky.embed.images#view'
+            ? post.embed.images
+            : post.embed?.media?.$type === 'app.bsky.embed.images#view'
+            ? post.embed.media.images
+            : []
+          ).map(img => ({ thumb: img.thumb, alt: img.alt || '' })),
           author: {
             did: post.author.did,
             handle: post.author.handle,
@@ -760,6 +789,11 @@ function renderRound() {
         <div class="follower-badge">${followers}</div>
       </div>
       <div class="post-text">${escapeHtml(text)}</div>
+      ${post.images.length > 0 ? `
+        <div class="post-images${post.images.length > 1 ? ' multi' : ''}">
+          ${post.images.map(img => `<img src="${img.thumb}" alt="${escapeHtml(img.alt)}" loading="lazy">`).join('')}
+        </div>
+      ` : ''}
       <div class="post-meta">
         <div class="post-meta-item">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
